@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data_loader/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_loader/data_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/base_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/base_model.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
+            <state relative-caret-position="-22">
               <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -88,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1143">
@@ -119,6 +119,7 @@
             <state>
               <caret column="16" selection-start-column="16" selection-end-column="16" />
               <folding>
+                <element signature="e#76#175#0" expanded="true" />
                 <marker date="1565005586080" expanded="true" signature="16:21" ph="..." />
               </folding>
             </state>
@@ -128,10 +129,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
+            <state relative-caret-position="329">
               <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#213#271#0" expanded="true" />
                 <marker date="1565008038208" expanded="true" signature="204:272" ph="..." />
                 <marker date="1565008038208" expanded="true" signature="293:294" ph="..." />
               </folding>
@@ -139,15 +141,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/base/base_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
+            <state relative-caret-position="330">
+              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#82#102#0" expanded="true" />
-                <marker date="1565008038153" expanded="true" signature="73:82" ph="..." />
+                <element signature="e#684#1132#0" expanded="true" />
+                <marker date="1565058853968" expanded="true" signature="73:82" ph="..." />
               </folding>
             </state>
           </provider>
@@ -156,9 +159,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-17">
+              <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
               <folding>
-                <element signature="e#1#13#0" expanded="true" />
                 <element signature="e#187#1355#0" expanded="true" />
               </folding>
             </state>
@@ -214,13 +217,13 @@
         <option value="$PROJECT_DIR$/base/base_train.py" />
         <option value="$PROJECT_DIR$/utils/config.py" />
         <option value="$PROJECT_DIR$/trainers/trainer.py" />
-        <option value="$PROJECT_DIR$/base/base_model.py" />
         <option value="$PROJECT_DIR$/main/main.py" />
         <option value="$PROJECT_DIR$/utils/utils.py" />
         <option value="$PROJECT_DIR$/models/model.py" />
         <option value="$PROJECT_DIR$/configs/example.json" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/data_loader/data_generator.py" />
+        <option value="$PROJECT_DIR$/base/base_model.py" />
       </list>
     </option>
   </component>
@@ -305,7 +308,7 @@
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="nn.Module&#9;null&#9;null&#10;replace&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/SRP_example_proj" />
+    <property name="last_opened_file_path" value="G:/LQ_SRP_SmartMeter" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -436,63 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/base_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-          <folding>
-            <marker date="1565005586080" expanded="true" signature="16:21" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/base_networks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding>
-            <element signature="e#186#990#0" expanded="true" />
-            <element signature="e#1026#1247#0" expanded="true" />
-            <element signature="e#1410#2312#0" expanded="true" />
-            <element signature="e#2349#2740#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/base_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="94" selection-start-line="22" selection-start-column="94" selection-end-line="22" selection-end-column="94" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#82#102#0" expanded="true" />
-            <marker date="1565008038153" expanded="true" signature="73:82" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#1#13#0" expanded="true" />
-            <element signature="e#187#1355#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <marker date="1565008038208" expanded="true" signature="204:272" ph="..." />
-            <marker date="1565008038208" expanded="true" signature="293:294" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -517,18 +463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1565058043182" expanded="true" signature="265:266" ph="..." />
-            <marker date="1565058043182" expanded="true" signature="265:270" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1143">
@@ -539,6 +473,78 @@
             <element signature="e#554#575#0" expanded="true" />
             <element signature="e#1290#2608#0" expanded="true" />
             <marker date="1565058168043" expanded="true" signature="653:719" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/base_networks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding>
+            <element signature="e#186#990#0" expanded="true" />
+            <element signature="e#1026#1247#0" expanded="true" />
+            <element signature="e#1410#2312#0" expanded="true" />
+            <element signature="e#2349#2740#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="23" column="56" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1565058043182" expanded="true" signature="265:266" ph="..." />
+            <marker date="1565058043182" expanded="true" signature="265:270" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/base_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" selection-start-column="16" selection-end-column="16" />
+          <folding>
+            <element signature="e#76#175#0" expanded="true" />
+            <marker date="1565005586080" expanded="true" signature="16:21" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding>
+            <element signature="e#187#1355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#213#271#0" expanded="true" />
+            <marker date="1565008038208" expanded="true" signature="204:272" ph="..." />
+            <marker date="1565008038208" expanded="true" signature="293:294" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/base_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#82#102#0" expanded="true" />
+            <element signature="e#684#1132#0" expanded="true" />
+            <marker date="1565058853968" expanded="true" signature="73:82" ph="..." />
           </folding>
         </state>
       </provider>

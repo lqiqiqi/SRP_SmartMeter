@@ -11,9 +11,9 @@ class BaseModel:
         if not os.path.exists(model_dir):
             os.mkdir(model_dir)
         if epoch is not None:
-            torch.save(self.config.model.state_dict(), model_dir + '/' + self.config.model_name + '_param_epoch_%d.pkl' % epoch)
+            torch.save(self.state_dict(), model_dir + '/' + self.config.model_name + '_param_epoch_%d.pkl' % epoch)
         else: # save final model
-            torch.save(self.config.model.state_dict(), model_dir + '/' + self.config.model_name + '_param.pkl')
+            torch.save(self.state_dict(), model_dir + '/' + self.config.model_name + '_param.pkl')
 
         print('Trained model is saved.')
 
@@ -22,7 +22,7 @@ class BaseModel:
 
         model_name = model_dir + '/' + self.config.model_name + '_param.pkl' # get final model
         if os.path.exists(model_name):
-            self.config.model.load_state_dict(torch.load(model_name))
+            self.load_state_dict(torch.load(model_name))
             print('Trained generator model is loaded.')
             return True
         else:
