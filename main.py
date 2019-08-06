@@ -26,10 +26,11 @@ def main():
     # create an instance of the model you want
     model = Net(config)
     #load model if exists
-    model.load_model()
+    if config.load_model:
+        model.load_model()
 
     # set the logger
-    log_dir = os.path.join(config.save_dir, 'logs')
+    log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
     logger = Logger(log_dir)

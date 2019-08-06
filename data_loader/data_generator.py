@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import math
 import torch
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader
@@ -10,6 +11,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
         highdata = torch.from_numpy(y).type('torch.FloatTensor')
         self.Label = highdata
         lowdata = torch.nn.functional.interpolate(highdata, scale_factor=0.2)
+        lowdata = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
         self.Data = lowdata
 
     def __getitem__(self, index):
