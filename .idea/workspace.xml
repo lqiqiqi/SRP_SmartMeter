@@ -40,13 +40,13 @@
         <counts>
           <entry key="Python Console" value="27" />
           <entry key="json" value="110" />
-          <entry key="py" value="2190" />
+          <entry key="py" value="2200" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="110" />
-          <entry key="Python" value="2217" />
+          <entry key="Python" value="2227" />
         </counts>
       </usages-collector>
     </session>
@@ -82,12 +82,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+            <state>
+              <caret column="9" selection-start-column="9" selection-end-column="9" />
               <folding>
-                <element signature="e#0#15#0" expanded="true" />
                 <element signature="e#37#262#0" expanded="true" />
                 <element signature="e#292#449#0" expanded="true" />
+                <element signature="e#537#1268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -558,12 +558,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+        <state>
+          <caret column="9" selection-start-column="9" selection-end-column="9" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
             <element signature="e#37#262#0" expanded="true" />
             <element signature="e#292#449#0" expanded="true" />
+            <element signature="e#537#1268#0" expanded="true" />
           </folding>
         </state>
       </provider>
