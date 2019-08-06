@@ -11,6 +11,6 @@
   "test_batch_size":1,
   "save_dir":"./saving_model",
   "lr":0.00001,
-  "gpu_mode": "True",
-  "load_model": "True"
+  "gpu_mode": true,
+  "load_model": true
 }
