@@ -77,10 +77,10 @@ class DataGenerator:
             # test_set = get_test_set(self.data_dir, self.test_dataset, self.scale_factor, is_gray=is_gray,
             #                         normalize=False)
 
-            data = self.read_combine_data(0, 20)
+            data = self.read_combine_data(1, 20)
             txt = TxtDataset(data)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
-                              batch_size=self.config.test_batch_size,
+                              batch_size=self.config.batch_size,
                               shuffle=False)
 
