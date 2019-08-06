@@ -26,7 +26,7 @@ def main():
     # create an instance of the model you want
     model = Net(config)
     #load model if exists
-    if config.load_model:
+    if config.load_model is True:
         model.load_model()
 
     # set the logger
