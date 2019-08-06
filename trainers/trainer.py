@@ -93,9 +93,6 @@ class Tester(BaseTrain):
 
     def test(self):
 
-        if self.config.gpu_mode:
-            self.model.cuda()
-
         # load model
         self.model.load_model()
 
