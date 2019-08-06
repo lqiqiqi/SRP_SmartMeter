@@ -75,7 +75,7 @@ class Trainer(BaseTrain):
                 self.model.save_model(epoch + 1)
 
         # Plot avg. loss
-        utils.plot_loss(self.config, [avg_loss], self.config.num_epochs, save_dir=self.config.save_dir)
+        utils.plot_loss(self.config, [avg_loss])
         print('avg_loss: ', avg_loss[-1])
         print("Training is finished.")
 
