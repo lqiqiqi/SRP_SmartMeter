@@ -5,7 +5,7 @@
   "num_threads":4,
   "num_channels":1,
   "scale_factor":5,
-  "num_epochs":100,
+  "num_epochs":2,
   "save_epochs":10,
   "batch_size":20,
   "test_batch_size":1,
