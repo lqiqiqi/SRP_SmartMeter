@@ -61,7 +61,7 @@ class DataGenerator:
             data = self.read_combine_data(0, 1800)
             txt = TxtDataset(data)
 
-            return DataLoader(dataset=txt, num_workers=self.num_threads, batch_size=self.batch_size,
+            return DataLoader(dataset=txt, num_workers=self.config.num_threads, batch_size=self.config.batch_size,
                               shuffle=True)
 
         elif self.dataset == 'test':
