@@ -13,7 +13,8 @@ class Trainer(BaseTrain):
     def train(self):
 
         # weigh initialization
-        self.model.weight_init(mean=0.0, std=0.02)
+        if self.config.load_model is False:
+            self.model.weight_init(mean=0.0, std=0.02)
 
         # optimizer
         self.momentum = 0.9
