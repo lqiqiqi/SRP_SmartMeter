@@ -1,7 +1,9 @@
 import torch.nn as nn
 import torch.optim as optim
-from base.base_train import BaseTrain
 from torch.autograd import Variable
+from base.base_train import BaseTrain
+from utils import utils
+
 
 
 class Trainer(BaseTrain):
@@ -25,7 +27,7 @@ class Trainer(BaseTrain):
             self.MSE_loss = nn.MSELoss()
 
         print('---------- Networks architecture -------------')
-        # utils.print_network(self.model)
+        utils.print_network(self.model)
         print('----------------------------------------------')
 
         # load dataset
@@ -72,7 +74,7 @@ class Trainer(BaseTrain):
                 self.model.save_model(epoch + 1)
 
         # Plot avg. loss
-    #         utils.plot_loss([avg_loss], self.num_epochs, save_dir=self.save_dir)
+        utils.plot_loss([avg_loss], self.config.num_epochs, save_dir=self.config.save_dir)
         print('avg_loss: ', avg_loss[-1])
         print("Training is finished.")
 
