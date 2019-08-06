@@ -40,6 +40,8 @@ class DataGenerator:
             filepath = self.filedir + '/' + self.filenames[i]
             # 遍历单个文件，读取行数
             tempData = np.expand_dims(np.genfromtxt(filepath, delimiter=','), 0)
+            if i % 20 == 0:
+                print('Loading No.{} file'.format(i))
             if i == i1:
                 data = tempData
             else:
