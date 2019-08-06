@@ -45,7 +45,7 @@ def plot_loss(config, avg_losses, show=False):
         os.makedirs(fig_dir)
 
     save_fn = 'Loss_values_epoch_{:d}'.format(config.num_epochs) + '.png'
-    save_fn = os.path.join(config.save_dir, save_fn)
+    save_fn = os.path.join(fig_dir, save_fn)
     plt.savefig(save_fn)
 
     if show:
