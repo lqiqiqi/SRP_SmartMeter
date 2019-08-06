@@ -3,9 +3,8 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
 from base.base_train import BaseTrain
-from sDTW import SoftDTWLoss
+from trainers.sDTW import SoftDTWLoss
 from utils import utils
-
 
 
 class Trainer(BaseTrain):

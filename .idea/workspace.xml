@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainers/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,14 +41,14 @@
         <counts>
           <entry key="Python Console" value="27" />
           <entry key="json" value="161" />
-          <entry key="py" value="3040" />
+          <entry key="py" value="3058" />
           <entry key="sDTW" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="161" />
-          <entry key="Python" value="3114" />
+          <entry key="Python" value="3132" />
         </counts>
       </usages-collector>
     </session>
@@ -66,28 +65,6 @@
                 <element signature="e#306#1435#0" expanded="true" />
                 <marker date="1565099214777" expanded="true" signature="301:302" ph="..." />
                 <marker date="1565099214777" expanded="true" signature="301:306" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trainers/sDTW">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#353#1420#0" expanded="true" />
-                <element signature="e#1459#1914#0" expanded="true" />
-                <element signature="e#2294#6108#0" expanded="true" />
-                <element signature="e#6173#8468#0" expanded="true" />
-                <element signature="e#8439#8943#0" expanded="true" />
-                <element signature="e#9000#9325#0" expanded="true" />
-                <element signature="e#9521#10012#0" expanded="true" />
-                <element signature="e#10046#10057#0" expanded="true" />
-                <element signature="e#10091#11157#0" expanded="true" />
-                <element signature="e#11221#11413#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -137,15 +114,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+            <state relative-caret-position="154">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
                 <element signature="e#213#271#0" expanded="true" />
                 <element signature="e#328#2827#0" expanded="true" />
                 <element signature="e#2942#3000#0" expanded="true" />
-                <marker date="1565099885819" expanded="true" signature="271:339" ph="..." />
-                <marker date="1565099885819" expanded="true" signature="360:361" ph="..." />
+                <element signature="e#3046#4448#0" expanded="true" />
+                <marker date="1565100068222" expanded="true" signature="279:347" ph="..." />
+                <marker date="1565100068222" expanded="true" signature="368:369" ph="..." />
               </folding>
             </state>
           </provider>
@@ -631,15 +609,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="115" column="19" selection-start-line="115" selection-start-column="19" selection-end-line="115" selection-end-column="19" />
+        <state relative-caret-position="154">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
             <element signature="e#213#271#0" expanded="true" />
             <element signature="e#328#2827#0" expanded="true" />
             <element signature="e#2942#3000#0" expanded="true" />
-            <marker date="1565099885819" expanded="true" signature="271:339" ph="..." />
-            <marker date="1565099885819" expanded="true" signature="360:361" ph="..." />
+            <element signature="e#3046#4448#0" expanded="true" />
+            <marker date="1565100068222" expanded="true" signature="279:347" ph="..." />
+            <marker date="1565100068222" expanded="true" signature="368:369" ph="..." />
           </folding>
         </state>
       </provider>
