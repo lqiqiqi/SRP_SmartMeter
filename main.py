@@ -17,8 +17,8 @@ def main():
     #     print("missing or invalid arguments")
     #     exit(0)
 
-    # if config.gpu_mode and not torch.cuda.is_available():
-        # raise Exception("No GPU found, please run without --gpu_mode=False")
+    if config.gpu_mode and not torch.cuda.is_available():
+        raise Exception("No GPU found, please run without --gpu_mode=False")
 
     # create your data generator
     data = DataGenerator(config, 'debug')
@@ -31,7 +31,7 @@ def main():
     # set the logger
     log_dir = os.path.join(config.save_dir, 'logs')
     if not os.path.exists(log_dir):
-        os.mkdir(log_dir)
+        os.makedirs(log_dir)
     logger = Logger(log_dir)
 
     # create trainer and pass all the previous components to it
