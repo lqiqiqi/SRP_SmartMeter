@@ -21,7 +21,7 @@ def main():
         raise Exception("No GPU found, please run without --gpu_mode=False")
 
     # create your data generator
-    data = DataGenerator(config, 'debug').load_dataset()
+    data = DataGenerator(config, 'train').load_dataset()
 
     # create an instance of the model you want
     model = Net(config)
