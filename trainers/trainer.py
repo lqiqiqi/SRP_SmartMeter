@@ -14,7 +14,6 @@ class Trainer(BaseTrain):
 
         #load model if model exists weigh initialization
         if self.config.load_model is True:
-            print('debug load model!!!!')
             self.model.load_model()
         else:
             self.model.weight_init(mean=0.0, std=0.02)

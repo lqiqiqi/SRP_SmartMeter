@@ -18,7 +18,6 @@ class BaseModel:
         print('Trained model is saved.')
 
     def load_model(self):
-        print('start to load model')
         model_dir = os.path.join(self.config.save_dir, 'model_'+ self.config.exp_name)
 
         model_name = model_dir + '/' + self.config.model_name + '_param.pkl' # get final model
