@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/trainers/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,13 +41,13 @@
         <counts>
           <entry key="Python Console" value="27" />
           <entry key="json" value="110" />
-          <entry key="py" value="2200" />
+          <entry key="py" value="2252" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="110" />
-          <entry key="Python" value="2227" />
+          <entry key="Python" value="2279" />
         </counts>
       </usages-collector>
     </session>
@@ -79,15 +80,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="9" selection-end-column="9" />
+            <state relative-caret-position="132">
+              <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
               <folding>
+                <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#37#262#0" expanded="true" />
                 <element signature="e#292#449#0" expanded="true" />
-                <element signature="e#537#1268#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,16 +150,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-99">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="228">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <element signature="e#213#271#0" expanded="true" />
-                <marker date="1565063218549" expanded="true" signature="229:297" ph="..." />
-                <marker date="1565063218549" expanded="true" signature="318:319" ph="..." />
+                <element signature="e#328#2698#0" expanded="true" />
+                <marker date="1565071295723" expanded="true" signature="229:297" ph="..." />
+                <marker date="1565071295723" expanded="true" signature="318:319" ph="..." />
               </folding>
             </state>
           </provider>
@@ -232,10 +234,10 @@
         <option value="$PROJECT_DIR$/models/model.py" />
         <option value="$PROJECT_DIR$/base/base_model.py" />
         <option value="$PROJECT_DIR$/configs/example.json" />
-        <option value="$PROJECT_DIR$/trainers/trainer.py" />
         <option value="$PROJECT_DIR$/data_loader/data_generator.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/utils/utils.py" />
+        <option value="$PROJECT_DIR$/trainers/trainer.py" />
       </list>
     </option>
   </component>
@@ -397,11 +399,11 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12556732" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12556732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32843137" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32843137" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -508,19 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#213#271#0" expanded="true" />
-            <marker date="1565063218549" expanded="true" signature="229:297" ph="..." />
-            <marker date="1565063218549" expanded="true" signature="318:319" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -558,12 +547,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
+        <state relative-caret-position="132">
+          <caret line="28" column="25" lean-forward="true" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding>
+            <element signature="e#0#9#0" expanded="true" />
             <element signature="e#37#262#0" expanded="true" />
             <element signature="e#292#449#0" expanded="true" />
-            <element signature="e#537#1268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#213#271#0" expanded="true" />
+            <element signature="e#328#2698#0" expanded="true" />
+            <marker date="1565071295723" expanded="true" signature="229:297" ph="..." />
+            <marker date="1565071295723" expanded="true" signature="318:319" ph="..." />
           </folding>
         </state>
       </provider>

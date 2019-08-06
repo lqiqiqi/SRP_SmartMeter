@@ -21,7 +21,7 @@ def print_network(net):
     print('Total number of parameters: %d' % num_params)
 
 # Plot losses
-def plot_loss(avg_losses, num_epochs, save_dir='', show=False):
+def plot_loss(config, avg_losses, num_epochs, save_dir='', show=False):
 
     fig, ax = plt.subplots()
     ax.set_xlim(0, num_epochs)
@@ -41,7 +41,7 @@ def plot_loss(avg_losses, num_epochs, save_dir='', show=False):
 
     # save figure
     if not os.path.exists(save_dir):
-        os.makedirs(save_dir)
+        os.makedirs(save_dir + '/fig_' + config.exp_name )
 
     save_fn = 'Loss_values_epoch_{:d}'.format(num_epochs) + '.png'
     save_fn = os.path.join(save_dir, save_fn)
