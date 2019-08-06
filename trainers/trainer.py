@@ -112,8 +112,8 @@ class Tester(BaseTrain):
         loss_dtw = 0
         for input, target in test_data_loader:
 
-                x_ = Variable(input)
-                y_ = Variable(target)
+            x_ = Variable(input)
+            y_ = Variable(target)
 
             # prediction
             model_out = self.model(x_)
