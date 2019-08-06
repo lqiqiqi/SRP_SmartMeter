@@ -15,9 +15,6 @@ class Trainer(BaseTrain):
         #load model if model exists weigh initialization
         if self.config.load_model is True:
             self.model.load_model()
-            if self.model.load_model is False: # 如果想要load模型，但是没有，就还是初始化。
-                self.model.weight_init(mean=0.0, std=0.02)
-                print('weight is initilized')
         else:
             self.model.weight_init(mean=0.0, std=0.02)
             print('weight is initilized')

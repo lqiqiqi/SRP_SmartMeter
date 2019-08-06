@@ -27,6 +27,8 @@ class BaseModel:
             return True
         else:
             print('No model exists to load.')
+            self.weight_init(mean=0.0, std=0.02)
+            print('weight is initilized')
             return False
 
 
