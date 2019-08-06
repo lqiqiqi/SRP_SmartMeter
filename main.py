@@ -17,7 +17,7 @@ def main():
     #     print("missing or invalid arguments")
     #     exit(0)
 
-    if config.gpu_mode and not torch.cuda.is_available():
+    if config.gpu_mode is True and not torch.cuda.is_available(): #虽然开启gpu模式，但是找不到GPU
         raise Exception("No GPU found, please run without --gpu_mode=False")
 
     # create your data generator
