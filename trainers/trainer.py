@@ -102,22 +102,22 @@ class Tester(BaseTrain):
         # load dataset
         test_data_loader = self.data
 
-        self.DTW_loss = SoftDTWLoss()
-
         self.model.eval()
-        loss_dtw = 0
-        for input, target in test_data_loader:
-
-            x_ = Variable(input)
-            y_ = Variable(target)
-
-            # prediction
-            model_out = self.model(x_)
-            loss_dtw += self.DTW_loss(model_out, y_)
-
-        avg_dtw = loss_dtw / len(test_data_loader)
-
-        print('avg_dtw: ', avg_dtw)
+        # self.DTW_loss = SoftDTWLoss()
+        #
+        # loss_dtw = 0
+        # for input, target in test_data_loader:
+        #
+        #     x_ = Variable(input)
+        #     y_ = Variable(target)
+        #
+        #     # prediction
+        #     model_out = self.model(x_)
+        #     loss_dtw += self.DTW_loss(model_out, y_)
+        #
+        # avg_dtw = loss_dtw / len(test_data_loader)
+        #
+        # print('avg_dtw: ', avg_dtw)
 
         if self.config.gpu_mode:
             self.model.cuda()
