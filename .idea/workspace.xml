@@ -113,15 +113,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+            <state relative-caret-position="396">
+              <caret line="115" column="52" lean-forward="true" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
                 <element signature="e#213#271#0" expanded="true" />
                 <element signature="e#328#2827#0" expanded="true" />
                 <element signature="e#2942#3000#0" expanded="true" />
-                <marker date="1565103502154" expanded="true" signature="279:347" ph="..." />
-                <marker date="1565103502154" expanded="true" signature="368:369" ph="..." />
+                <marker date="1565103629389" expanded="true" signature="279:347" ph="..." />
+                <marker date="1565103629389" expanded="true" signature="368:369" ph="..." />
               </folding>
             </state>
           </provider>
@@ -608,15 +608,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+        <state relative-caret-position="396">
+          <caret line="115" column="52" lean-forward="true" selection-start-line="115" selection-start-column="52" selection-end-line="115" selection-end-column="52" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
             <element signature="e#213#271#0" expanded="true" />
             <element signature="e#328#2827#0" expanded="true" />
             <element signature="e#2942#3000#0" expanded="true" />
-            <marker date="1565103502154" expanded="true" signature="279:347" ph="..." />
-            <marker date="1565103502154" expanded="true" signature="368:369" ph="..." />
+            <marker date="1565103629389" expanded="true" signature="279:347" ph="..." />
+            <marker date="1565103629389" expanded="true" signature="368:369" ph="..." />
           </folding>
         </state>
       </provider>

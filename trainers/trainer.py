@@ -113,7 +113,7 @@ class Tester(BaseTrain):
 
             # prediction
             model_out = self.model(x_)
-            loss_dtw += torch.sqrt(self.DTW_loss(model_out, y_))
+            loss_dtw += self.DTW_loss(model_out, y_)
 
         avg_dtw = loss_dtw / len(test_data_loader)
 
