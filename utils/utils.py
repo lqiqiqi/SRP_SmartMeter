@@ -21,20 +21,21 @@ def print_network(net):
 
 # Plot losses
 def plot_loss(avg_losses, num_epochs, save_dir='', show=False):
+    avg_losses_np = avg_losses.detach().cpu().numpy()
     fig, ax = plt.subplots()
     ax.set_xlim(0, num_epochs)
     temp = 0.0
-    for i in range(len(avg_losses)):
-        temp = max(np.max(avg_losses[i]), temp)
+    for i in range(len(avg_losses_np)):
+        temp = max(np.max(avg_losses_np[i]), temp)
     ax.set_ylim(0, temp*1.1)
     plt.xlabel('# of Epochs')
     plt.ylabel('Loss values')
 
-    if len(avg_losses) == 1:
-        plt.plot(avg_losses[0], label='loss')
+    if len(avg_losses_np) == 1:
+        plt.plot(avg_losses_np[0], label='loss')
     else:
-        plt.plot(avg_losses[0], label='G_loss')
-        plt.plot(avg_losses[1], label='D_loss')
+        plt.plot(avg_losses_np[0], label='G_loss')
+        plt.plot(avg_losses_np[1], label='D_loss')
     plt.legend()
 
     # save figure
