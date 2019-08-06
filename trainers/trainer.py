@@ -1,7 +1,9 @@
+import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
 from base.base_train import BaseTrain
+from sDTW import SoftDTWLoss
 from utils import utils
 
 
@@ -53,13 +55,13 @@ class Trainer(BaseTrain):
                     x_ = Variable(input.cuda())
                     y_ = Variable(target.cuda())
                 else:
-                    x_ = Variable(input.cuda())
-                    y_ = Variable(target.cuda())
+                    x_ = Variable(input)
+                    y_ = Variable(target)
 
                 # update network
                 self.optimizer.zero_grad()
                 model_out = self.model(x_)
-                loss = self.MSE_loss(model_out, y_)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_))
                 loss.backward()
                 self.optimizer.step()
 
@@ -84,3 +86,66 @@ class Trainer(BaseTrain):
 
         # Save final trained parameters of model
         self.model.save_model(epoch=None)
+
+
+class Tester(BaseTrain):
+    def __init__(self, model, config, data, logger):
+        super(Tester, self).__init__(model, config, data, logger)
+
+    def test(self):
+
+        if self.config.gpu_mode:
+            self.model.cuda()
+
+        # load model
+        self.model.load_model()
+
+        # Test
+        print('Test is started.')
+
+        # load dataset
+        test_data_loader = self.data
+
+        self.DTW_loss = SoftDTWLoss()
+
+        self.model.eval()
+        loss_dtw = 0
+        for input, target in test_data_loader:
+
+                x_ = Variable(input)
+                y_ = Variable(target)
+
+            # prediction
+            model_out = self.model(x_)
+            loss_dtw += torch.sqrt(self.MSE_loss(model_out, y_))
+
+        avg_dtw = loss_dtw / len(test_data_loader)
+
+        print('avg_dtw: ', avg_dtw)
+
+        if self.config.gpu_mode:
+            self.model.cuda()
+            self.MSE_loss = nn.MSELoss().cuda()
+        else:
+            self.MSE_loss = nn.MSELoss()
+
+        loss = 0
+        for input, target in test_data_loader:
+            # input data (low resolution)
+            if self.config.gpu_mode:
+                x_ = Variable(input.cuda())
+                y_ = Variable(target.cuda())
+            else:
+                x_ = Variable(input)
+                y_ = Variable(target)
+
+            # prediction
+            model_out = self.model(x_)
+
+            loss += torch.sqrt(self.MSE_loss(model_out, y_))
+
+        avg_loss = loss / len(test_data_loader)
+
+        print('avg_loss: ', avg_loss)
+        print('Test is finished')
+

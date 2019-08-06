@@ -1,6 +1,7 @@
 import os
 import torch
 from trainers.trainer import Trainer
+from trainers.trainer import Tester
 from data_loader.data_generator import DataGenerator
 from utils.utils import get_args
 from utils.config import get_config_from_json
@@ -20,9 +21,6 @@ def main():
     if config.gpu_mode is True and not torch.cuda.is_available(): #虽然开启gpu模式，但是找不到GPU
         raise Exception("No GPU found, please run without --gpu_mode=False")
 
-    # create your data generator
-    data = DataGenerator(config, 'train').load_dataset()
-
     # create an instance of the model you want
     model = Net(config)
 
@@ -32,9 +30,17 @@ def main():
         os.makedirs(log_dir)
     logger = Logger(log_dir)
 
-    # create trainer and pass all the previous components to it
-    trainer = Trainer(model, config, data, logger)
-    trainer.train()
+    # # create your data generator
+    # data = DataGenerator(config, 'train').load_dataset()
+    # # create trainer and pass all the previous components to it
+    # trainer = Trainer(model, config, data, logger)
+    # trainer.train()
+
+    # create your data generator
+    data = DataGenerator(config, 'test').load_dataset()
+    # create tester and pass all the previous components to it
+    tester = Tester(model, config, data, logger)
+    tester.test()
 
 
 if __name__ == '__main__':
