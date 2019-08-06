@@ -13,7 +13,10 @@ class Trainer(BaseTrain):
     def train(self):
 
         # weigh initialization
-        if self.config.load_model is False:
+        if self.config.load_model is True:
+            self.model.load_model()
+            print('debug load model!!!!')
+        else:
             self.model.weight_init(mean=0.0, std=0.02)
             print('weight is initilized')
 

@@ -25,10 +25,6 @@ def main():
 
     # create an instance of the model you want
     model = Net(config)
-    #load model if exists
-    if config.load_model is True:
-        model.load_model()
-        print('debug load model!!!!')
 
     # set the logger
     log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)
