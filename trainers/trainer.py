@@ -15,6 +15,7 @@ class Trainer(BaseTrain):
         # weigh initialization
         if self.config.load_model is False:
             self.model.weight_init(mean=0.0, std=0.02)
+            print('weight is initilized')
 
         # optimizer
         self.momentum = 0.9
