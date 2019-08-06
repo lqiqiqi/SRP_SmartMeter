@@ -9,10 +9,11 @@ from torch.utils.data import DataLoader
 class TxtDataset(Dataset):  # 这是一个Dataset子类
     def __init__(self, y):
         highdata = torch.from_numpy(y).type('torch.FloatTensor')
-        self.Label = highdata
+        highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
+        self.Label = highdata_log
         lowdata = torch.nn.functional.interpolate(highdata, scale_factor=0.2)
-        lowdata = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
-        self.Data = lowdata
+        lowdata_log = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
+        self.Data = lowdata_log
 
     def __getitem__(self, index):
         txt = self.Data[index]
