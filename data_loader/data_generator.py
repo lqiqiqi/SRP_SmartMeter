@@ -69,7 +69,7 @@ class DataGenerator:
         elif self.dataset == 'test':
             print('Loading test datasets...')
 
-            data = self.read_combine_data(1801, 2000)
+            data = self.read_combine_data(1801, 1999) # 2000 out of index
             txt = TxtDataset(data)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
