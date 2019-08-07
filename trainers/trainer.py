@@ -1,3 +1,4 @@
+import math
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -48,7 +49,7 @@ class Trainer(BaseTrain):
         for epoch in range(self.config.num_epochs):
 
             epoch_loss = 0
-            for iter, (input, target) in enumerate(train_data_loader):
+            for iter, (input, target, _) in enumerate(train_data_loader):
                 # input data (low resolution image)
                 if self.config.gpu_mode:
                     x_ = Variable(input.cuda())
@@ -106,7 +107,7 @@ class Tester(BaseTrain):
         # self.DTW_loss = SoftDTWLoss()
         #
         # loss_dtw = 0
-        # for input, target in test_data_loader:
+        # for input, target, groundtruth in test_data_loader:
         #
         #     x_ = Variable(input)
         #     y_ = Variable(target)
@@ -126,22 +127,30 @@ class Tester(BaseTrain):
             self.MSE_loss = nn.MSELoss()
 
         loss = 0
-        for input, target in test_data_loader:
+        loss_log = 0
+        for input, target, groundtruth in test_data_loader:
             # input data (low resolution)
             if self.config.gpu_mode:
                 x_ = Variable(input.cuda())
-                y_ = Variable(target.cuda())
+                y_ = Variable(groundtruth.cuda())
+                y_log = Variable(target.cuda())
             else:
                 x_ = Variable(input)
-                y_ = Variable(target)
+                y_ = Variable(groundtruth)
+                y_log = Variable(target)
 
             # prediction
             model_out = self.model(x_)
+            relog = torch.mul(torch.add(torch.exp(torch.mul(model_out, math.log(100))), -1), 1/100)
 
-            loss += torch.sqrt(self.MSE_loss(model_out, y_))
+            loss += torch.sqrt(self.MSE_loss(relog, y_)) # RMSE for re-log result and original meter data
+            loss_log += torch.sqrt(self.MSE_loss(model_out, y_)) # RMSE for log result
+
 
         avg_loss = loss / len(test_data_loader)
+        avg_loss_log = loss_log / len(test_data_loader)
 
-        print('avg_loss: ', avg_loss)
+        print('avg_loss with original data: ', avg_loss)
+        print('avg_loss_log with log data: ', avg_loss_log)
         print('Test is finished')
 

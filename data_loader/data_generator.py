@@ -11,6 +11,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
         highdata = torch.from_numpy(y).type('torch.FloatTensor')
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
         self.Label = highdata_log
+        self.GroundTruth = highdata
         lowdata = torch.nn.functional.interpolate(highdata, scale_factor=0.2)
         lowdata_log = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
         self.Data = lowdata_log
@@ -18,7 +19,8 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
     def __getitem__(self, index):
         txt = self.Data[index]
         label = self.Label[index]
-        return txt, label  # 返回标签
+        groundtruth = self.GroundTruth[index]
+        return txt, label, groundtruth  # 返回标签
 
     def __len__(self):
         return len(self.Data)
