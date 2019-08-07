@@ -47,6 +47,7 @@ def plot_loss(config, avg_losses, show=False, origin=False):
 
     if origin is True:
         save_fn = 'Loss_values_epoch_{:d}'.format(config.num_epochs) + '_origin.png'
+        save_fn = os.path.join(fig_dir, save_fn)
     else:
         save_fn = 'Loss_values_epoch_{:d}'.format(config.num_epochs) + '.png'
         save_fn = os.path.join(fig_dir, save_fn)

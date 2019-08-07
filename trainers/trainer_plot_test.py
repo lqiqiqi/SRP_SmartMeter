@@ -86,7 +86,6 @@ class Trainer(BaseTrain):
             with torch.no_grad():
                 loss_test, loss_log_test = self.test(test_data_loader)
 
-            print('caculate epoch test loss ')
             epoch_loss_test = loss_test / len(test_data_loader)
             epoch_loss_log_test = loss_log_test / len(test_data_loader)
 
@@ -94,9 +93,7 @@ class Trainer(BaseTrain):
             avg_loss_log_test.append(float(epoch_loss_log_test))
 
         # Plot avg. loss
-        print('fig 1')
         utils.plot_loss(self.config, [avg_loss, avg_loss_log_test])
-        print('fig 2')
         utils.plot_loss(self.config, [avg_loss_test], origin=True)
 
         print('avg_loss: ', avg_loss[-1])
