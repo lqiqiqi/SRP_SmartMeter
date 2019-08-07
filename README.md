@@ -56,6 +56,19 @@ avg_loss_log with log data:  tensor(1.3050, device='cuda:0') RMSE
 
       发生了数据泄露，因为test和train几乎重叠。检查后发现，shuffle在data_generator的init环节，这样获取train和test数据的时候都会shuffle。就可能得到同样的数据。
 
+
+
+​			修改shuffle之后，继续使用未收敛的模型，继续训练。
+
+​			avg_loss:  0.38546088
+
+​			avg_loss_log with original data:  97.3842544555664
+​			avg_loss_log with log data:  0.3861064016819
+
+
+
+
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
