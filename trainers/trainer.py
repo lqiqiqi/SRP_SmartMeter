@@ -144,7 +144,7 @@ class Tester(BaseTrain):
             relog = torch.mul(torch.add(torch.exp(torch.mul(model_out, math.log(100))), -1), 1/100)
 
             loss += torch.sqrt(self.MSE_loss(relog, y_)) # RMSE for re-log result and original meter data
-            loss_log += torch.sqrt(self.MSE_loss(model_out, y_)) # RMSE for log result
+            loss_log += torch.sqrt(self.MSE_loss(model_out, y_log)) # RMSE for log result
 
 
         avg_loss = loss / len(test_data_loader)
