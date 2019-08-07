@@ -22,6 +22,11 @@
 
 ![train0804_resnet](../LQ_SRP_SmartMeter/pic/train0804_resnet.PNG)
 
+avg_loss with original data:  tensor(121.3739, device='cuda:0')
+avg_loss_log with log data:  tensor(1.3050, device='cuda:0')
+
+
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`

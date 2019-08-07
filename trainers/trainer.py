@@ -179,7 +179,8 @@ class Tester(BaseTrain):
 
             # prediction
             relog = torch.mul(torch.add(torch.exp(torch.mul(x_, math.log(100))), -1), 1 / 100) # 恢复low resolution data
-            interp_out_linear = torch.nn.functional.interpolate(relog, scale_factor=self.config.scale_factor,
+            print(relog.size())
+            interp_out_linear = torch.nn.functional.interpolate(relog.unsqueeze(0), scale_factor=self.config.scale_factor,
                                                                 mode = 'linear')
             interp_out_bicubic = torch.nn.functional.interpolate(relog, scale_factor=self.config.scale_factor,
                                                                 mode='bicubic')
