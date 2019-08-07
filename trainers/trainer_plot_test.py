@@ -65,7 +65,7 @@ class Trainer(BaseTrain):
                 self.optimizer.zero_grad()
                 model_out = self.model(x_)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_))
-                loss.backward()
+                loss.backward() # 结果得到是tensor
                 self.optimizer.step()
 
                 # log
@@ -77,7 +77,7 @@ class Trainer(BaseTrain):
                 step += 1
 
             # avg. loss per epoch
-            avg_loss.append(epoch_loss / len(train_data_loader))
+            avg_loss.append((epoch_loss / len(train_data_loader)).detach().cpu().numpy())
 
             if (epoch + 1) % self.config.save_epochs == 0:
                 self.model.save_model(epoch + 1)
@@ -102,7 +102,7 @@ class Trainer(BaseTrain):
                     relog = torch.mul(torch.add(torch.exp(torch.mul(model_out_test, math.log(100))), -1), 1 / 100)
 
                     loss_test += torch.sqrt(self.MSE_loss(relog, y_test))  # RMSE for re-log result and original meter data
-                    loss_log_test += torch.sqrt(self.MSE_loss(model_out_test, y_log_test))  # RMSE for log result
+                    loss_log_test += torch.sqrt(self.MSE_loss(model_out_test, y_log_test))  # RMSE for log result # 结果得到是np.float
 
                 epoch_loss_test = loss_test / len(test_data_loader)
                 epoch_loss_log_test = loss_log_test / len(test_data_loader)

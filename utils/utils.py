@@ -28,7 +28,7 @@ def plot_loss(config, avg_losses, show=False, origin=False):
     temp = 0.0
     for i in range(len(avg_losses)):
         temp = max(np.max(avg_losses[i]), temp) # 取最大loss做y轴
-    ax.set_ylim(0, temp.detach().cpu().numpy()*1.1)
+    ax.set_ylim(0, temp*1.1)
     plt.xlabel('# of Epochs')
     plt.ylabel('Loss values')
 
