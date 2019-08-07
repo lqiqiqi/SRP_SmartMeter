@@ -48,7 +48,7 @@ class DataGenerator:
             tempData = np.expand_dims(np.genfromtxt(filepath, delimiter=','), 0)
             if i % 20 == 0:
                 print('Loading No.{} file'.format(i))
-            if i == i1:
+            if i == indices[0]:
                 data = tempData
             else:
                 data = np.concatenate((data, tempData))
