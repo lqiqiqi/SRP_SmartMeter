@@ -5,6 +5,7 @@ import torch
 import random
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader
+from torch.utils.data.sampler import SubsetRandomSampler
 
 
 class TxtDataset(Dataset):  # 这是一个Dataset子类
@@ -36,12 +37,12 @@ class DataGenerator:
 
         self.filedir = config.data_dir
         #获取文件夹中的文件名称列表
-        self.filenames=os.listdir(self.filedir)
-        random.shuffle(self.filenames)# 对文件名进行shuffle
+        self.filenames = os.listdir(self.filedir)
+
         #TODO 数据要用log处理
 
-    def read_combine_data(self, i1, i2):
-        for i in range(i1, i2+1):
+    def read_combine_data(self, indices):
+        for i in indices:
             filepath = self.filedir + '/' + self.filenames[i]
             # 遍历单个文件，读取行数
             tempData = np.expand_dims(np.genfromtxt(filepath, delimiter=','), 0)
@@ -54,25 +55,31 @@ class DataGenerator:
         return np.expand_dims(data, 1)
 
 
-    def load_dataset(self, ):
-        if self.config.num_channels == 1:
-            is_gray = True
-        else:
-            is_gray = False
+    def load_dataset(self):
+        validation_split = 0.1
+        random_seed = 42
+
+        dataset_size = len(self.filenames)
+        indices = list(range(dataset_size))
+        split = int(np.floor(validation_split * dataset_size))
+
+        np.random.seed(random_seed)
+        np.random.shuffle(indices)
+        train_indices, val_indices = indices[split:], indices[:split]
 
         if self.dataset == 'train':
             print('Loading train datasets...')
 
-            data = self.read_combine_data(1, 1800)
+            data = self.read_combine_data(train_indices)
             txt = TxtDataset(data, self.config)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads, batch_size=self.config.batch_size,
-                              shuffle=True)
+                              shuffle=False)
 
         elif self.dataset == 'test':
             print('Loading test datasets...')
 
-            data = self.read_combine_data(1801, 1999) # 2000 out of index
+            data = self.read_combine_data(val_indices) # 2000 out of index
             txt = TxtDataset(data, self.config)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
@@ -84,7 +91,7 @@ class DataGenerator:
             # test_set = get_test_set(self.data_dir, self.test_dataset, self.scale_factor, is_gray=is_gray,
             #                         normalize=False)
 
-            data = self.read_combine_data(1, 20)
+            data = self.read_combine_data(val_indices[:20])
             txt = TxtDataset(data, self.config)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
