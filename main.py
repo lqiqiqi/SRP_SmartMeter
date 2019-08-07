@@ -3,6 +3,7 @@ import torch
 from trainers.trainer_plot_test import Trainer
 # from trainers.trainer import Tester
 from data_loader.data_generator import DataGenerator
+from data_loader.data_generator import shuffle
 from utils.utils import get_args
 from utils.config import get_config_from_json
 from utils.logger import Logger
@@ -30,10 +31,11 @@ def main():
         os.makedirs(log_dir)
     logger = Logger(log_dir)
 
+    train_indices, test_indices = shuffle()
     # create your data generator
-    data_train = DataGenerator(config, 'train').load_dataset()
+    data_train = DataGenerator(config, 'debug').load_dataset(train_indices, test_indices)
     # create your data generator
-    data_test = DataGenerator(config, 'test').load_dataset()
+    data_test = DataGenerator(config, 'debug').load_dataset(train_indices, test_indices)
 
     # create trainer and pass all the previous components to it
     trainer = Trainer(model, config, data_train, logger, data_test)

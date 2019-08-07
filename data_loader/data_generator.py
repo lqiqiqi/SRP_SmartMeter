@@ -8,6 +8,21 @@ from torch.utils.data import DataLoader
 from torch.utils.data.sampler import SubsetRandomSampler
 
 
+def shuffle():
+    validation_split = 0.1
+    random_seed = 42
+    dataset_size = 2000
+
+    indices = list(range(dataset_size))
+    split = int(np.floor(validation_split * dataset_size))
+
+    np.random.seed(random_seed)
+    np.random.shuffle(indices)
+    train_indices, val_indices = indices[split:], indices[:split]
+
+    return train_indices, val_indices
+
+
 class TxtDataset(Dataset):  # 这是一个Dataset子类
     def __init__(self, y, config):
         self.config = config
@@ -55,17 +70,7 @@ class DataGenerator:
         return np.expand_dims(data, 1)
 
 
-    def load_dataset(self):
-        validation_split = 0.1
-        random_seed = 42
-
-        dataset_size = len(self.filenames)
-        indices = list(range(dataset_size))
-        split = int(np.floor(validation_split * dataset_size))
-
-        np.random.seed(random_seed)
-        np.random.shuffle(indices)
-        train_indices, val_indices = indices[split:], indices[:split]
+    def load_dataset(self, train_indices, test_indices):
 
         if self.dataset == 'train':
             print('Loading train datasets...')
@@ -79,7 +84,7 @@ class DataGenerator:
         elif self.dataset == 'test':
             print('Loading test datasets...')
 
-            data = self.read_combine_data(val_indices) # 2000 out of index
+            data = self.read_combine_data(test_indices) # 2000 out of index
             txt = TxtDataset(data, self.config)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
@@ -91,7 +96,7 @@ class DataGenerator:
             # test_set = get_test_set(self.data_dir, self.test_dataset, self.scale_factor, is_gray=is_gray,
             #                         normalize=False)
 
-            data = self.read_combine_data(val_indices[:20])
+            data = self.read_combine_data(test_indices[:20])
             txt = TxtDataset(data, self.config)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
