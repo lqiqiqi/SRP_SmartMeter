@@ -1,5 +1,7 @@
 # 实验记录
 
+avg_loss with linear:  tensor(995.5957, device='cuda:0')
+
 1. train_0804
 
    ```

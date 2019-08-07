@@ -18,7 +18,7 @@ class Trainer(BaseTrain):
         if self.config.load_model is True:
             self.model.load_model()
         else:
-            self.model.weight_init(mean=0.0, std=0.02)
+            self.model.weight_init()
             print('weight is initilized')
 
         # optimizer

@@ -6,7 +6,7 @@ from data_loader.data_generator import DataGenerator
 from utils.utils import get_args
 from utils.config import get_config_from_json
 from utils.logger import Logger
-from models.model import Net
+from models.model_xavier_init import Net
 
 def main():
     # capture the config path from the run arguments
@@ -30,19 +30,19 @@ def main():
         os.makedirs(log_dir)
     logger = Logger(log_dir)
 
-    # # create your data generator
-    # data = DataGenerator(config, 'train').load_dataset()
-    # # create trainer and pass all the previous components to it
-    # trainer = Trainer(model, config, data, logger)
-    # trainer.train()
-
     # create your data generator
-    data = DataGenerator(config, 'test').load_dataset()
-    # create tester and pass all the previous components to it
-    tester = Tester(model, config, data, logger)
-    with torch.no_grad():
-        # tester.test()
-        tester.test_interpolate()
+    data = DataGenerator(config, 'debug').load_dataset()
+    # create trainer and pass all the previous components to it
+    trainer = Trainer(model, config, data, logger)
+    trainer.train()
+
+    # # create your data generator
+    # data = DataGenerator(config, 'test').load_dataset()
+    # # create tester and pass all the previous components to it
+    # tester = Tester(model, config, data, logger)
+    # with torch.no_grad():
+    #     tester.test()
+    #     # tester.test_interpolate()
 
 
 if __name__ == '__main__':
