@@ -164,6 +164,12 @@ class Tester(BaseTrain):
         # load dataset
         test_data_loader = self.data
 
+        if self.config.gpu_mode:
+            self.model.cuda()
+            self.MSE_loss = nn.MSELoss().cuda()
+        else:
+            self.MSE_loss = nn.MSELoss()
+
         loss_linear = 0
         loss_bicubic = 0
         for input, target, groundtruth in test_data_loader:

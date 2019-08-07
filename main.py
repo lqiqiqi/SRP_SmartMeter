@@ -37,7 +37,7 @@ def main():
     # trainer.train()
 
     # create your data generator
-    data = DataGenerator(config, 'test').load_dataset()
+    data = DataGenerator(config, 'debug').load_dataset()
     # create tester and pass all the previous components to it
     tester = Tester(model, config, data, logger)
     with torch.no_grad():
