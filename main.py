@@ -1,7 +1,7 @@
 import os
 import torch
-from trainers.trainer import Trainer
-from trainers.trainer import Tester
+from trainers.trainer_plot_test import Trainer
+# from trainers.trainer import Tester
 from data_loader.data_generator import DataGenerator
 from utils.utils import get_args
 from utils.config import get_config_from_json
@@ -31,18 +31,20 @@ def main():
     logger = Logger(log_dir)
 
     # create your data generator
-    data = DataGenerator(config, 'train').load_dataset()
-    # create trainer and pass all the previous components to it
-    trainer = Trainer(model, config, data, logger)
-    trainer.train()
-
+    data_train = DataGenerator(config, 'test').load_dataset()
     # create your data generator
-    data = DataGenerator(config, 'test').load_dataset()
-    # create tester and pass all the previous components to it
-    tester = Tester(model, config, data, logger)
-    with torch.no_grad():
-        tester.test()
-        # tester.test_interpolate()
+    data_test = DataGenerator(config, 'debug').load_dataset()
+
+    # create trainer and pass all the previous components to it
+    trainer = Trainer(model, config, data_train, logger, data_test)
+    trainer.train_test()
+
+
+    # # create tester and pass all the previous components to it
+    # tester = Tester(model, config, data, logger)
+    # with torch.no_grad():
+    #     tester.test()
+    #     # tester.test_interpolate()
 
 
 if __name__ == '__main__':

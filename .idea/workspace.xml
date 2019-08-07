@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/configs/0805_2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trainers/trainer_plot_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base/base_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/base/base_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_loader/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_loader/data_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,45 +35,54 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="0805_fsrcnn_resnet_xavier" value="1" />
-          <entry key="json" value="4" />
-          <entry key="py" value="26" />
+          <entry key="json" value="5" />
+          <entry key="py" value="28" />
           <entry key="sDTW" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="5" />
-          <entry key="Python" value="27" />
+          <entry key="JSON" value="6" />
+          <entry key="Python" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="27" />
-          <entry key="json" value="185" />
-          <entry key="py" value="4016" />
+          <entry key="json" value="200" />
+          <entry key="py" value="4619" />
           <entry key="sDTW" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="185" />
-          <entry key="Python" value="4090" />
+          <entry key="JSON" value="200" />
+          <entry key="Python" value="4693" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+            <state relative-caret-position="66">
+              <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1565158174847" expanded="true" signature="313:314" ph="..." />
-                <marker date="1565158174847" expanded="true" signature="313:318" ph="..." />
+                <marker date="1565166378540" expanded="true" signature="325:326" ph="..." />
+                <marker date="1565166378540" expanded="true" signature="325:330" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/configs/0805_2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="44">
+              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -74,10 +90,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+            <state relative-caret-position="154">
+              <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#578#1401#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,8 +103,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1276">
-              <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
+            <state>
+              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#228#678#0" expanded="true" />
@@ -95,7 +112,8 @@
                 <element signature="e#765#786#0" expanded="true" />
                 <element signature="e#860#1046#0" expanded="true" />
                 <element signature="e#1097#1542#0" expanded="true" />
-                <marker date="1565148647918" expanded="true" signature="1006:1072" ph="..." />
+                <element signature="e#1583#2910#0" expanded="true" />
+                <marker date="1565163710199" expanded="true" signature="1020:1086" ph="..." />
               </folding>
             </state>
           </provider>
@@ -104,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+            <state relative-caret-position="-352">
+              <caret line="29" column="29" lean-forward="true" selection-end-line="204" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#288#346#0" expanded="true" />
@@ -119,15 +137,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/base_networks.py">
+        <entry file="file://$PROJECT_DIR$/trainers/trainer_plot_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state relative-caret-position="2618">
+              <caret line="119" column="68" lean-forward="true" selection-start-line="119" selection-start-column="68" selection-end-line="119" selection-end-column="68" />
               <folding>
-                <element signature="e#186#990#0" expanded="true" />
-                <element signature="e#1026#1247#0" expanded="true" />
-                <element signature="e#1410#2312#0" expanded="true" />
-                <element signature="e#2349#2740#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#306#364#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/base_train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+              <folding>
+                <marker date="1565164996903" expanded="true" signature="16:21" ph="..." />
               </folding>
             </state>
           </provider>
@@ -164,8 +192,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/0805_fsrcnn_resnet_xavier.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="110">
+              <caret line="5" column="19" lean-forward="true" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -213,10 +241,8 @@
         <option value="$PROJECT_DIR$/base/base_networks.py" />
         <option value="$PROJECT_DIR$/models/Model.py" />
         <option value="$PROJECT_DIR$/utils/logger.py" />
-        <option value="$PROJECT_DIR$/base/base_train.py" />
         <option value="$PROJECT_DIR$/utils/config.py" />
         <option value="$PROJECT_DIR$/main/main.py" />
-        <option value="$PROJECT_DIR$/utils/utils.py" />
         <option value="$PROJECT_DIR$/configs/example.json" />
         <option value="$PROJECT_DIR$/configs/train0804.json" />
         <option value="$PROJECT_DIR$/models/model.py" />
@@ -224,12 +250,16 @@
         <option value="$PROJECT_DIR$/configs/train0804_resnet.json" />
         <option value="$PROJECT_DIR$/model_interpolate.py" />
         <option value="$PROJECT_DIR$/models/model_interpolate.py" />
-        <option value="$PROJECT_DIR$/data_loader/data_generator.py" />
         <option value="$PROJECT_DIR$/configs/0805_fsrcnn_resnet_xavier.json" />
         <option value="$PROJECT_DIR$/trainers/trainer.py" />
         <option value="$PROJECT_DIR$/models/model_xavier_init.py" />
         <option value="$PROJECT_DIR$/base/base_model.py" />
+        <option value="$PROJECT_DIR$/data_loader/data_generator.py" />
+        <option value="$PROJECT_DIR$/base/base_train.py" />
+        <option value="$PROJECT_DIR$/utils/utils.py" />
+        <option value="$PROJECT_DIR$/trainers/trainer_plot_test.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/configs/0805_2.json" />
       </list>
     </option>
   </component>
@@ -239,7 +269,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
@@ -441,17 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/base_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-          <folding>
-            <element signature="e#76#175#0" expanded="true" />
-            <marker date="1565005586080" expanded="true" signature="16:21" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/logger.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1628">
@@ -490,22 +509,6 @@
           <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
           <folding>
             <element signature="e#187#1414#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1276">
-          <caret line="85" column="46" selection-start-line="85" selection-start-column="46" selection-end-line="85" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#228#678#0" expanded="true" />
-            <element signature="e#642#732#0" expanded="true" />
-            <element signature="e#765#786#0" expanded="true" />
-            <element signature="e#860#1046#0" expanded="true" />
-            <element signature="e#1097#1542#0" expanded="true" />
-            <marker date="1565148647918" expanded="true" signature="1006:1072" ph="..." />
           </folding>
         </state>
       </provider>
@@ -568,17 +571,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0805_fsrcnn_resnet_xavier.json">
+    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state>
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#228#678#0" expanded="true" />
+            <element signature="e#642#732#0" expanded="true" />
+            <element signature="e#765#786#0" expanded="true" />
+            <element signature="e#860#1046#0" expanded="true" />
+            <element signature="e#1097#1542#0" expanded="true" />
+            <element signature="e#1583#2910#0" expanded="true" />
+            <marker date="1565163710199" expanded="true" signature="1020:1086" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+        <state relative-caret-position="-352">
+          <caret line="29" column="29" lean-forward="true" selection-end-line="204" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#288#346#0" expanded="true" />
@@ -590,25 +603,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/base/base_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding>
+            <marker date="1565164996903" expanded="true" signature="16:21" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_plot_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2618">
+          <caret line="119" column="68" lean-forward="true" selection-start-line="119" selection-start-column="68" selection-end-line="119" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#306#364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
+        <state relative-caret-position="154">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#578#1401#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+        <state relative-caret-position="66">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1565158174847" expanded="true" signature="313:314" ph="..." />
-            <marker date="1565158174847" expanded="true" signature="313:318" ph="..." />
+            <marker date="1565166378540" expanded="true" signature="325:326" ph="..." />
+            <marker date="1565166378540" expanded="true" signature="325:330" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0805_fsrcnn_resnet_xavier.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="19" lean-forward="true" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0805_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="42" />
         </state>
       </provider>
     </entry>

@@ -21,13 +21,13 @@ def print_network(net):
     print('Total number of parameters: %d' % num_params)
 
 # Plot losses
-def plot_loss(config, avg_losses, show=False):
+def plot_loss(config, avg_losses, show=False, origin=False):
 
     fig, ax = plt.subplots()
     ax.set_xlim(0, config.num_epochs)
     temp = 0.0
     for i in range(len(avg_losses)):
-        temp = max(np.max(avg_losses[i]), temp)
+        temp = max(np.max(avg_losses[i]), temp) # 取最大loss做y轴
     ax.set_ylim(0, temp.detach().cpu().numpy()*1.1)
     plt.xlabel('# of Epochs')
     plt.ylabel('Loss values')
@@ -35,11 +35,14 @@ def plot_loss(config, avg_losses, show=False):
     if len(avg_losses) == 1:
         plt.plot(avg_losses[0], label='loss')
     else:
-        plt.plot(avg_losses[0], label='G_loss')
-        plt.plot(avg_losses[1], label='D_loss')
+        plt.plot(avg_losses[0], label='train_loss')
+        plt.plot(avg_losses[1], label='test_loss')
     plt.legend()
 
-    fig_dir = config.save_dir + '/fig_' + config.exp_name
+    if origin is True:
+        fig_dir = config.save_dir + '/fig_' + config.exp_name + 'origin'
+    else:
+        fig_dir = config.save_dir + '/fig_' + config.exp_name
     # save figure
     if not os.path.exists(fig_dir):
         os.makedirs(fig_dir)

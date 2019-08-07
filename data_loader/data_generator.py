@@ -2,6 +2,7 @@ import os
 import numpy as np
 import math
 import torch
+import random
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader
 
@@ -36,6 +37,7 @@ class DataGenerator:
         self.filedir = config.data_dir
         #获取文件夹中的文件名称列表
         self.filenames=os.listdir(self.filedir)
+        random.shuffle(self.filenames)# 对文件名进行shuffle
         #TODO 数据要用log处理
 
     def read_combine_data(self, i1, i2):

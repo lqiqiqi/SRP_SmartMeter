@@ -20,14 +20,25 @@ avg_loss with linear:  tensor(995.5957, device='cuda:0')
    {  "exp_name": "second_train",  "model_name":"FSRCNN_resnet",  "data_dir":"../LQ_SRP_SmartMeter/data",  "num_threads":4,  "num_channels":1,  "scale_factor":5,  "num_epochs":100,  "save_epochs":10,  "batch_size":20,  "test_batch_size":1,  "save_dir":"../saving_model",  "lr":0.00001,  "gpu_mode": true,  "load_model": true}
    ```
 
-训练（最后一个epoch)：avg_loss: 0.1192
+训练（最后一个epoch)：avg_loss: 0.3452 (RMSE) 图中是MSE 0.11
 
 ![train0804_resnet](../LQ_SRP_SmartMeter/pic/train0804_resnet.PNG)
 
-avg_loss with original data:  tensor(121.3739, device='cuda:0')
-avg_loss_log with log data:  tensor(1.3050, device='cuda:0')
+avg_loss with original data:  tensor(121.3739, device='cuda:0') RMSE
+avg_loss_log with log data:  tensor(1.3050, device='cuda:0') RMSE
 
+3. 0805_fsrcnn_resnet_xavier
 
+   ```
+   {  "exp_name": "third_train",  "model_name":"FSRCNN_resnet_xavier",  "data_dir":"../LQ_SRP_SmartMeter/data",  "num_threads":4,  "num_channels":1,  "scale_factor":5,  "num_epochs":100,  "save_epochs":10,  "batch_size":20,  "test_batch_size":1,  "save_dir":"../saving_model",  "lr":0.00001,  "gpu_mode": true,  "load_model": true}
+   ```
+
+   训练（最后一个epoch)：avg_loss: 0.2098 (RMSE)
+
+   avg_loss with original data:  tensor(2346.6040, device='cuda:0') 过拟合了
+   avg_loss_log with log data:  tensor(0.6105, device='cuda:0')
+
+   ![0805_fsrcnn_resnet_xavier](../LQ_SRP_SmartMeter/pic/0805_fsrcnn_resnet_xavier.PNG)
 
 # 注意事项
 
