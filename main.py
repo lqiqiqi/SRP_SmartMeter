@@ -41,7 +41,8 @@ def main():
     # create tester and pass all the previous components to it
     tester = Tester(model, config, data, logger)
     with torch.no_grad():
-        tester.test()
+        # tester.test()
+        tester.test_interpolate()
 
 
 if __name__ == '__main__':

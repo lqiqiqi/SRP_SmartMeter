@@ -7,12 +7,13 @@ from torch.utils.data import DataLoader
 
 
 class TxtDataset(Dataset):  # 这是一个Dataset子类
-    def __init__(self, y):
+    def __init__(self, y, config):
+        self.config = config
         highdata = torch.from_numpy(y).type('torch.FloatTensor')
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
         self.Label = highdata_log
         self.GroundTruth = highdata
-        lowdata = torch.nn.functional.interpolate(highdata, scale_factor=0.2)
+        lowdata = torch.nn.functional.interpolate(highdata, scale_factor=1/self.config.scale_factor)
         lowdata_log = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
         self.Data = lowdata_log
 
@@ -61,7 +62,7 @@ class DataGenerator:
             print('Loading train datasets...')
 
             data = self.read_combine_data(1, 1800)
-            txt = TxtDataset(data)
+            txt = TxtDataset(data, self.config)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads, batch_size=self.config.batch_size,
                               shuffle=True)
@@ -70,7 +71,7 @@ class DataGenerator:
             print('Loading test datasets...')
 
             data = self.read_combine_data(1801, 1999) # 2000 out of index
-            txt = TxtDataset(data)
+            txt = TxtDataset(data, self.config)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
                               batch_size=self.config.test_batch_size,
@@ -82,7 +83,7 @@ class DataGenerator:
             #                         normalize=False)
 
             data = self.read_combine_data(1, 20)
-            txt = TxtDataset(data)
+            txt = TxtDataset(data, self.config)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
                               batch_size=self.config.batch_size,

@@ -155,3 +155,43 @@ class Tester(BaseTrain):
         print('avg_loss_log with log data: ', avg_loss_log)
         print('Test is finished')
 
+
+    def test_interpolate(self):
+
+        # Test
+        print('Test is started.')
+
+        # load dataset
+        test_data_loader = self.data
+
+        loss_linear = 0
+        loss_bicubic = 0
+        for input, target, groundtruth in test_data_loader:
+            # input data (low resolution)
+            if self.config.gpu_mode:
+                x_ = Variable(input.cuda())
+                y_ = Variable(groundtruth.cuda())
+                y_log = Variable(target.cuda())
+            else:
+                x_ = Variable(input)
+                y_ = Variable(groundtruth)
+                y_log = Variable(target)
+
+            # prediction
+            relog = torch.mul(torch.add(torch.exp(torch.mul(x_, math.log(100))), -1), 1 / 100) # 恢复low resolution data
+            interp_out_linear = torch.nn.functional.interpolate(relog, scale_factor=self.config.scale_factor,
+                                                                mode = 'linear')
+            interp_out_bicubic = torch.nn.functional.interpolate(relog, scale_factor=self.config.scale_factor,
+                                                                mode='bicubic')
+
+            loss_linear += torch.sqrt(self.MSE_loss(interp_out_linear, y_)) # RMSE for re-log result and original meter data
+            loss_bicubic += torch.sqrt(self.MSE_loss(interp_out_bicubic, y_))  # RMSE for re-log result and original meter data
+
+
+        avg_loss_linear = loss_linear / len(test_data_loader)
+        avg_loss_bicubic = loss_bicubic / len(test_data_loader)
+
+        print('avg_loss with linear: ', avg_loss_linear)
+        print('avg_loss with bibcubic: ', avg_loss_bicubic)
+        print('Test is finished')
+
