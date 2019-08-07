@@ -39,16 +39,17 @@ def plot_loss(config, avg_losses, show=False, origin=False):
         plt.plot(avg_losses[1], label='test_loss')
     plt.legend()
 
-    if origin is True:
-        fig_dir = config.save_dir + '/fig_' + config.exp_name + 'origin'
-    else:
-        fig_dir = config.save_dir + '/fig_' + config.exp_name
+
+    fig_dir = config.save_dir + '/fig_' + config.exp_name
     # save figure
     if not os.path.exists(fig_dir):
         os.makedirs(fig_dir)
 
-    save_fn = 'Loss_values_epoch_{:d}'.format(config.num_epochs) + '.png'
-    save_fn = os.path.join(fig_dir, save_fn)
+    if origin is True:
+        save_fn = 'Loss_values_epoch_{:d}'.format(config.num_epochs) + '_origin.png'
+    else:
+        save_fn = 'Loss_values_epoch_{:d}'.format(config.num_epochs) + '.png'
+        save_fn = os.path.join(fig_dir, save_fn)
     plt.savefig(save_fn)
 
     if show:

@@ -99,16 +99,17 @@ class Trainer(BaseTrain):
 
                     # prediction
                     model_out_test = self.model(x_test)
-                    relog = torch.mul(torch.add(torch.exp(torch.mul(model_out_test, math.log(100))), -1), 1 / 100)
 
-                    loss_test += torch.sqrt(self.MSE_loss(relog, y_test))  # RMSE for re-log result and original meter data
-                    loss_log_test += torch.sqrt(self.MSE_loss(model_out_test, y_log_test))  # RMSE for log result # 结果得到是np.float
+                relog = torch.mul(torch.add(torch.exp(torch.mul(model_out_test, math.log(100))), -1), 1 / 100)
 
-                epoch_loss_test = loss_test / len(test_data_loader)
-                epoch_loss_log_test = loss_log_test / len(test_data_loader)
+                loss_test += torch.sqrt(self.MSE_loss(relog, y_test))  # RMSE for re-log result and original meter data
+                loss_log_test += torch.sqrt(self.MSE_loss(model_out_test, y_log_test))  # RMSE for log result # 结果得到是np.float
 
-                avg_loss_test.append(float(epoch_loss_test))
-                avg_loss_log_test.append(float(epoch_loss_log_test))
+            epoch_loss_test = loss_test / len(test_data_loader)
+            epoch_loss_log_test = loss_log_test / len(test_data_loader)
+
+            avg_loss_test.append(float(epoch_loss_test))
+            avg_loss_log_test.append(float(epoch_loss_log_test))
 
 
         # Plot avg. loss
