@@ -60,7 +60,7 @@ class DataGenerator:
         if self.dataset == 'train':
             print('Loading train datasets...')
 
-            data = self.read_combine_data(0, 1800)
+            data = self.read_combine_data(1, 1800)
             txt = TxtDataset(data)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads, batch_size=self.config.batch_size,
@@ -69,7 +69,7 @@ class DataGenerator:
         elif self.dataset == 'test':
             print('Loading test datasets...')
 
-            data = self.read_combine_data(1801, 1999)
+            data = self.read_combine_data(1801, 2000)
             txt = TxtDataset(data)
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,

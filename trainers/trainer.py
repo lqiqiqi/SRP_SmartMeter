@@ -131,9 +131,9 @@ class Tester(BaseTrain):
         for input, target, groundtruth in test_data_loader:
             # input data (low resolution)
             if self.config.gpu_mode:
-                x_ = Variable(input.cuda())
-                y_ = Variable(groundtruth.cuda())
-                y_log = Variable(target.cuda())
+                x_ = Variable(input.cuda(), volatile=True)
+                y_ = Variable(groundtruth.cuda(), volatile=True)
+                y_log = Variable(target.cuda(), volatile=True)
             else:
                 x_ = Variable(input)
                 y_ = Variable(groundtruth)
