@@ -40,7 +40,8 @@ def main():
     data = DataGenerator(config, 'test').load_dataset()
     # create tester and pass all the previous components to it
     tester = Tester(model, config, data, logger)
-    tester.test()
+    with torch.no_grad():
+        tester.test()
 
 
 if __name__ == '__main__':

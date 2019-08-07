@@ -104,8 +104,7 @@ class Tester(BaseTrain):
         test_data_loader = self.data
 
         self.model.eval()
-        torch.no_grad()
-        
+
         # self.DTW_loss = SoftDTWLoss()
         #
         # loss_dtw = 0
