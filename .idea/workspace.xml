@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainers/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,43 +29,43 @@
         <counts>
           <entry key="0805_fsrcnn_resnet_xavier" value="1" />
           <entry key="json" value="4" />
-          <entry key="py" value="25" />
+          <entry key="py" value="26" />
           <entry key="sDTW" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="5" />
-          <entry key="Python" value="26" />
+          <entry key="Python" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="27" />
           <entry key="json" value="185" />
-          <entry key="py" value="4011" />
+          <entry key="py" value="4016" />
           <entry key="sDTW" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="185" />
-          <entry key="Python" value="4085" />
+          <entry key="Python" value="4090" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+            <state relative-caret-position="275">
+              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
               <folding>
-                <element signature="e#306#1507#0" expanded="true" />
-                <marker date="1565157659497" expanded="true" signature="313:314" ph="..." />
-                <marker date="1565157659497" expanded="true" signature="313:318" ph="..." />
+                <element signature="e#0#9#0" expanded="true" />
+                <marker date="1565158174847" expanded="true" signature="313:314" ph="..." />
+                <marker date="1565158174847" expanded="true" signature="313:318" ph="..." />
               </folding>
             </state>
           </provider>
@@ -77,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utils/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
+            <state relative-caret-position="748">
               <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -107,7 +104,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="308">
               <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -137,6 +134,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/base_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#82#102#0" expanded="true" />
+                <element signature="e#150#622#0" expanded="true" />
+                <marker date="1565157937784" expanded="true" signature="73:82" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/model.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="220">
@@ -144,19 +156,6 @@
               <folding>
                 <element signature="e#187#1414#0" expanded="true" />
                 <element signature="e#1617#2053#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/model_xavier_init.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-              <folding>
-                <element signature="e#187#1414#0" expanded="true" />
-                <element signature="e#1450#1560#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -220,7 +219,6 @@
         <option value="$PROJECT_DIR$/utils/utils.py" />
         <option value="$PROJECT_DIR$/configs/example.json" />
         <option value="$PROJECT_DIR$/configs/train0804.json" />
-        <option value="$PROJECT_DIR$/base/base_model.py" />
         <option value="$PROJECT_DIR$/models/model.py" />
         <option value="$PROJECT_DIR$/trainers/sDTW" />
         <option value="$PROJECT_DIR$/configs/train0804_resnet.json" />
@@ -228,9 +226,10 @@
         <option value="$PROJECT_DIR$/models/model_interpolate.py" />
         <option value="$PROJECT_DIR$/data_loader/data_generator.py" />
         <option value="$PROJECT_DIR$/configs/0805_fsrcnn_resnet_xavier.json" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/trainers/trainer.py" />
         <option value="$PROJECT_DIR$/models/model_xavier_init.py" />
+        <option value="$PROJECT_DIR$/base/base_model.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -240,7 +239,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
@@ -414,29 +413,6 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12556732" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32843137" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
-      <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.23202614" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32843137" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -505,16 +481,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/sDTW" />
-    <entry file="file://$PROJECT_DIR$/utils/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model_interpolate.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -540,18 +506,6 @@
             <element signature="e#860#1046#0" expanded="true" />
             <element signature="e#1097#1542#0" expanded="true" />
             <marker date="1565148647918" expanded="true" signature="1006:1072" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/base_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="31" column="24" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#82#102#0" expanded="true" />
-            <marker date="1565081079873" expanded="true" signature="73:82" ph="..." />
           </folding>
         </state>
       </provider>
@@ -590,6 +544,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/model_xavier_init.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+          <folding>
+            <element signature="e#187#1414#0" expanded="true" />
+            <element signature="e#1450#1560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/base_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#82#102#0" expanded="true" />
+            <element signature="e#150#622#0" expanded="true" />
+            <marker date="1565157937784" expanded="true" signature="73:82" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0805_fsrcnn_resnet_xavier.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -597,21 +575,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="e#306#1507#0" expanded="true" />
-            <marker date="1565157659497" expanded="true" signature="313:314" ph="..." />
-            <marker date="1565157659497" expanded="true" signature="313:318" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="308">
           <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -624,13 +590,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/model_xavier_init.py">
+    <entry file="file://$PROJECT_DIR$/utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="44" column="42" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
+        <state relative-caret-position="748">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="34" selection-end-line="47" selection-end-column="34" />
           <folding>
-            <element signature="e#187#1414#0" expanded="true" />
-            <element signature="e#1450#1560#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1565158174847" expanded="true" signature="313:314" ph="..." />
+            <marker date="1565158174847" expanded="true" signature="313:318" ph="..." />
           </folding>
         </state>
       </provider>
