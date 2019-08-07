@@ -182,17 +182,17 @@ class Tester(BaseTrain):
             print(relog.size())
             interp_out_linear = torch.nn.functional.interpolate(relog, scale_factor=self.config.scale_factor,
                                                                 mode = 'linear')
-            interp_out_bicubic = torch.nn.functional.interpolate(relog.unsqueeze(0), scale_factor=self.config.scale_factor,
-                                                                mode='bicubic')
+            # interp_out_bicubic = torch.nn.functional.interpolate(relog.unsqueeze(0), scale_factor=self.config.scale_factor,
+            #                                                     mode='bicubic')
 
             loss_linear += torch.sqrt(self.MSE_loss(interp_out_linear, y_)) # RMSE for re-log result and original meter data
-            loss_bicubic += torch.sqrt(self.MSE_loss(interp_out_bicubic, y_))  # RMSE for re-log result and original meter data
+            # loss_bicubic += torch.sqrt(self.MSE_loss(interp_out_bicubic, y_))  # RMSE for re-log result and original meter data
 
 
         avg_loss_linear = loss_linear / len(test_data_loader)
-        avg_loss_bicubic = loss_bicubic / len(test_data_loader)
+        # avg_loss_bicubic = loss_bicubic / len(test_data_loader)
 
         print('avg_loss with linear: ', avg_loss_linear)
-        print('avg_loss with bibcubic: ', avg_loss_bicubic)
+        # print('avg_loss with bibcubic: ', avg_loss_bicubic)
         print('Test is finished')
 

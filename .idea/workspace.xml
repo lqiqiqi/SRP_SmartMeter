@@ -113,15 +113,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="184" column="83" selection-start-line="184" selection-start-column="83" selection-end-line="184" selection-end-column="83" />
+            <state relative-caret-position="468">
+              <caret line="196" column="33" lean-forward="true" selection-start-line="196" selection-start-column="33" selection-end-line="196" selection-end-column="33" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
                 <element signature="e#288#346#0" expanded="true" />
                 <element signature="e#378#2877#0" expanded="true" />
                 <element signature="e#3069#4558#0" expanded="true" />
-                <marker date="1565150203859" expanded="true" signature="291:359" ph="..." />
-                <marker date="1565150203859" expanded="true" signature="380:381" ph="..." />
+                <element signature="e#5002#6666#0" expanded="true" />
+                <marker date="1565150683980" expanded="true" signature="291:359" ph="..." />
+                <marker date="1565150683980" expanded="true" signature="380:381" ph="..." />
               </folding>
             </state>
           </provider>
@@ -237,7 +238,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="728" />
@@ -600,15 +601,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="184" column="83" selection-start-line="184" selection-start-column="83" selection-end-line="184" selection-end-column="83" />
+        <state relative-caret-position="468">
+          <caret line="196" column="33" lean-forward="true" selection-start-line="196" selection-start-column="33" selection-end-line="196" selection-end-column="33" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
             <element signature="e#288#346#0" expanded="true" />
             <element signature="e#378#2877#0" expanded="true" />
             <element signature="e#3069#4558#0" expanded="true" />
-            <marker date="1565150203859" expanded="true" signature="291:359" ph="..." />
-            <marker date="1565150203859" expanded="true" signature="380:381" ph="..." />
+            <element signature="e#5002#6666#0" expanded="true" />
+            <marker date="1565150683980" expanded="true" signature="291:359" ph="..." />
+            <marker date="1565150683980" expanded="true" signature="380:381" ph="..." />
           </folding>
         </state>
       </provider>
