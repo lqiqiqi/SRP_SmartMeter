@@ -104,6 +104,8 @@ class Tester(BaseTrain):
         test_data_loader = self.data
 
         self.model.eval()
+        torch.no_grad()
+        
         # self.DTW_loss = SoftDTWLoss()
         #
         # loss_dtw = 0
@@ -131,9 +133,9 @@ class Tester(BaseTrain):
         for input, target, groundtruth in test_data_loader:
             # input data (low resolution)
             if self.config.gpu_mode:
-                x_ = Variable(input.cuda(), volatile=True)
-                y_ = Variable(groundtruth.cuda(), volatile=True)
-                y_log = Variable(target.cuda(), volatile=True)
+                x_ = Variable(input.cuda())
+                y_ = Variable(groundtruth.cuda())
+                y_log = Variable(target.cuda())
             else:
                 x_ = Variable(input)
                 y_ = Variable(groundtruth)
