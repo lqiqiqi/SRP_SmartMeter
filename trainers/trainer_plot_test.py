@@ -109,9 +109,14 @@ class Trainer(BaseTrain):
         loss_log_test = 0
         for input_test, target_test, groundtruth in test_data_loader:
             # input data (low resolution)
-            x_test = Variable(input_test)
-            y_test = Variable(groundtruth)
-            y_log_test = Variable(target_test)
+            if self.config.gpu_mode:
+                x_test = Variable(input_test.cuda())
+                y_test = Variable(groundtruth.cuda())
+                y_log_test = Variable(target_test.cuda())
+            else:
+                x_test = Variable(input_test)
+                y_test = Variable(groundtruth)
+                y_log_test = Variable(target_test)
 
             # prediction
             model_out_test = self.model(x_test)
