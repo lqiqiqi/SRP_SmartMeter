@@ -22,10 +22,12 @@ avg_loss with linear:  tensor(995.5957, device='cuda:0')
 
 训练（最后一个epoch)：avg_loss: 0.3452 (RMSE) 图中是MSE 0.11
 
-![train0804_resnet](../LQ_SRP_SmartMeter/pic/train0804_resnet.PNG)
-
 avg_loss with original data:  tensor(121.3739, device='cuda:0') RMSE
 avg_loss_log with log data:  tensor(1.3050, device='cuda:0') RMSE
+
+![train0804_resnet](../LQ_SRP_SmartMeter/pic/train0804_resnet.PNG)
+
+
 
 3. 0805_fsrcnn_resnet_xavier
 
@@ -39,6 +41,10 @@ avg_loss_log with log data:  tensor(1.3050, device='cuda:0') RMSE
    avg_loss_log with log data:  tensor(0.6105, device='cuda:0')
 
    ![0805_fsrcnn_resnet_xavier](../LQ_SRP_SmartMeter/pic/0805_fsrcnn_resnet_xavier.PNG)
+
+   4. 0805_2：FSRCNN_resnet_xavier_l2reg 
+
+       相比于上一个增加了L2reg，在SGD设置weight_decay = 1.0  
 
 # 注意事项
 

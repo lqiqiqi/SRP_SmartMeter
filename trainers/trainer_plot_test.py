@@ -107,8 +107,8 @@ class Trainer(BaseTrain):
                 epoch_loss_test = loss_test / len(test_data_loader)
                 epoch_loss_log_test = loss_log_test / len(test_data_loader)
 
-                avg_loss_test.append(epoch_loss_test / len(train_data_loader))
-                avg_loss_log_test.append(epoch_loss_log_test / len(train_data_loader))
+                avg_loss_test.append(float(epoch_loss_test))
+                avg_loss_log_test.append(float(epoch_loss_log_test))
 
 
         # Plot avg. loss

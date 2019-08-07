@@ -31,7 +31,7 @@ def main():
     logger = Logger(log_dir)
 
     # create your data generator
-    data_train = DataGenerator(config, 'test').load_dataset()
+    data_train = DataGenerator(config, 'debug').load_dataset()
     # create your data generator
     data_test = DataGenerator(config, 'debug').load_dataset()
 

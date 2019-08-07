@@ -80,7 +80,7 @@ class DataGenerator:
                               shuffle=False)
 
         elif self.dataset == 'debug':
-            print('Loading test datasets...')
+            print('Loading debug datasets...')
             # test_set = get_test_set(self.data_dir, self.test_dataset, self.scale_factor, is_gray=is_gray,
             #                         normalize=False)
 
