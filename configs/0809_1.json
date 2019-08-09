@@ -4,7 +4,7 @@
   "data_dir":"../LQ_SRP_SmartMeter/data",
   "num_threads":4,
   "num_channels":1,
-  "scale_factor":5,
+  "scale_factor":10,
   "num_epochs":150,
   "save_epochs":30,
   "batch_size":60,
