@@ -9,9 +9,9 @@ from torch.utils.data.sampler import SubsetRandomSampler
 
 
 def shuffle():
-    validation_split = 0.1
+    validation_split = 0.125
     random_seed = 42
-    dataset_size = 2000
+    dataset_size = 16000
 
     indices = list(range(dataset_size))
     split = int(np.floor(validation_split * dataset_size))
