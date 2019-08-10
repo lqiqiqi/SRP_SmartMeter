@@ -1,0 +1,16 @@
+{
+  "exp_name": "8_train",
+  "model_name":"FSRCNN_resnet_xavier_l2reg_batchsize32",
+  "data_dir":"../LQ_SRP_SmartMeter/data_split",
+  "num_threads":4,
+  "num_channels":1,
+  "scale_factor":10,
+  "num_epochs":5,
+  "save_epochs":30,
+  "batch_size":32,
+  "test_batch_size":1,
+  "save_dir":"../saving_model",
+  "lr":0.0001,
+  "gpu_mode": true,
+  "load_model": true
+}
