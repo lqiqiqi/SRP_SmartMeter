@@ -29,7 +29,7 @@ class Net(torch.nn.Module, BaseModel):
         self.mid_part = torch.nn.Sequential(*self.layers)
 
         # Deconvolution
-        self.last_part = nn.ConvTranspose1d(d, self.config.num_channels, 25, self.config.scale_factor, 0, output_padding=0)
+        self.last_part = nn.ConvTranspose1d(d, self.config.num_channels, 50, self.config.scale_factor, 0, output_padding=0)
         # self.last_part = torch.nn.Sequential(
         #     Upsample2xBlock(d, d, upsample='rnc', activation=None, norm=None),
         #     Upsample2xBlock(d, num_channels, upsample='rnc', activation=None, norm=None)
