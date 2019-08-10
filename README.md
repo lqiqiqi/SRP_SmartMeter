@@ -184,6 +184,10 @@ PreluBackward                 974.085us        751.953us                1       
 
 测试了一下open()函数和list append的方法，和np.genfromtxt。发现后者特别慢，接近前者的六倍。
 
+## 0810_3:FSRCNN_s30
+
+- 相比于上次，把s从12改为30，把batch_size还是设为60
+
 
 
 # 注意事项
