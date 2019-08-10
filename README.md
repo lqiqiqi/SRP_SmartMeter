@@ -76,6 +76,109 @@ avg_loss_log with original data:  108.02339935302734
 avg_loss_log with log data:  0.9740539193153381
 Training and test is finished.
 
+## 0810_1
+
+- 改进了加载数据的方式，使之可以利用Dataloader的subprocess的功能。
+
+- 在前70次epoch学习率使用1\*10-4， 后80次epoch学习率1\*10-6
+
+
+
+
+
+## 运行时间测试
+
+可以看到np.genfromtxt()耗时很长，在神经网络那块没有什么特别好的改进方法。
+
+```
+cProfile output
+--------------------------------------------------------------------------------
+         62114651 function calls (62058441 primitive calls) in 28.096 seconds
+
+   Ordered by: internal time
+   List reduced from 10660 to 15 due to restriction <15>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      200    6.777    0.034   24.906    0.125 /home/jason/.local/lib/python3.6/site-packages/numpy/lib/npyio.py:1543(genfromtxt)
+  6000200    3.554    0.000    6.925    0.000 /home/jason/.local/lib/python3.6/site-packages/numpy/lib/_iotools.py:236(_delimited_splitter)
+  6000000    2.851    0.000    2.851    0.000 /home/jason/.local/lib/python3.6/site-packages/numpy/lib/_iotools.py:708(_loose_call)
+  6000200    2.527    0.000   10.973    0.000 /home/jason/.local/lib/python3.6/site-packages/numpy/lib/_iotools.py:266(__call__)
+ 12006429    2.191    0.000    2.191    0.000 {method 'split' of 'str' objects}
+     9113    1.567    0.000    1.567    0.000 {built-in method __new__ of type object at 0x7f9711013ce0}
+  6000800    1.521    0.000    1.521    0.000 /home/jason/.local/lib/python3.6/site-packages/numpy/lib/_iotools.py:20(_decode_line)
+     5654    1.337    0.000    1.337    0.000 {built-in method numpy.array}
+  6006659    1.184    0.000    1.184    0.000 {method 'strip' of 'str' objects}
+12064364/12063523    0.849    0.000    0.849    0.000 {built-in method builtins.len}
+  6100539    0.502    0.000    0.502    0.000 {method 'append' of 'list' objects}
+   114/78    0.293    0.003    0.349    0.004 {built-in method _imp.create_dynamic}
+      200    0.260    0.001   25.167    0.126 /home/jason/Desktop/SRP_SmartMeter/data_loader/data_generator.py:10(load_data)
+     2219    0.208    0.000    0.208    0.000 {built-in method marshal.loads}
+4502/4422    0.109    0.000    0.280    0.000 {built-in method builtins.__build_class__}
+```
+
+
+```
+--------------------------------------------------------------------------------
+  autograd profiler output (CPU mode)
+--------------------------------------------------------------------------------
+        top 15 events sorted by cpu_time_total
+
+------------------------------  ---------------  ---------------  ---------------  ---------------  ---------------
+Name                                   CPU time        CUDA time            Calls        CPU total       CUDA total
+------------------------------  ---------------  ---------------  ---------------  ---------------  ---------------
+PreluBackward                        8326.570us          0.000us                1       8326.570us          0.000us
+prelu_backward                       8323.527us          0.000us                1       8323.527us          0.000us
+PreluBackward                        4635.385us          0.000us                1       4635.385us          0.000us
+prelu_backward                       4632.611us          0.000us                1       4632.611us          0.000us
+PreluBackward                        4206.233us          0.000us                1       4206.233us          0.000us
+CudnnConvolutionBackward             4101.947us          0.000us                1       4101.947us          0.000us
+cudnn_convolution_backward           4099.762us          0.000us                1       4099.762us          0.000us
+PreluBackward                        2012.373us          0.000us                1       2012.373us          0.000us
+prelu_backward                       2010.241us          0.000us                1       2010.241us          0.000us
+PreluBackward                        1983.735us          0.000us                1       1983.735us          0.000us
+prelu_backward                       1981.831us          0.000us                1       1981.831us          0.000us
+PreluBackward                        1975.513us          0.000us                1       1975.513us          0.000us
+PreluBackward                        1973.999us          0.000us                1       1973.999us          0.000us
+prelu_backward                       1973.588us          0.000us                1       1973.588us          0.000us
+prelu_backward                       1971.625us          0.000us                1       1971.625us          0.000us
+```
+
+
+```
+autograd profiler output (CUDA mode)
+
+top 15 events sorted by cpu_time_total
+Because the autograd profiler uses the CUDA event API,
+the CUDA time column reports approximately max(cuda_time, cpu_time).
+Please ignore this output if your code does not use CUDA.
+
+------
+
+Name                           CPU time        CUDA time            Calls        CPU total       CUDA total
+
+------
+
+add                          4085.399us       4064.453us                1       4085.399us       4064.453us
+UnsqueezeBackward0           4062.531us         42.969us                1       4062.531us         42.969us
+PreluBackward                1994.197us        748.535us                1       1994.197us        748.535us
+prelu_backward               1985.754us        745.605us                1       1985.754us        745.605us
+PreluBackward                1963.171us        722.656us                1       1963.171us        722.656us
+prelu_backward               1956.976us        719.727us                1       1956.976us        719.727us
+PreluBackward                1950.442us        719.849us                1       1950.442us        719.849us
+PreluBackward                1947.622us        728.516us                1       1947.622us        728.516us
+prelu_backward               1944.592us        716.797us                1       1944.592us        716.797us
+PreluBackward                1943.332us        724.609us                1       1943.332us        724.609us
+prelu_backward               1940.594us        723.633us                1       1940.594us        723.633us
+prelu_backward               1936.856us        721.680us                1       1936.856us        721.680us
+mse_loss                     1600.102us        839.844us                1       1600.102us        839.844us
+mse_loss_forward             1591.055us        835.938us                1       1591.055us        835.938us
+PreluBackward                 974.085us        751.953us                1        974.085us        751.953us
+```
+
+测试了一下open()函数和list append的方法，和np.genfromtxt。发现后者特别慢，接近前者的六倍。
+
+
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`

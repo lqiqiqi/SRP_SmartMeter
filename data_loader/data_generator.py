@@ -8,7 +8,12 @@ from torch.utils.data.sampler import SubsetRandomSampler
 
 
 def load_data(filepath):
-    data = np.genfromtxt(filepath, delimiter=',')
+    # data = np.genfromtxt(filepath, delimiter=',')
+    data = []
+    with open(filepath) as FileObj:
+        for lines in FileObj:
+            data.append(float(lines))
+        data = np.array(data)
     return data
 
 def shuffle():
