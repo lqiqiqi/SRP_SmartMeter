@@ -31,7 +31,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
         self.config = config
         self.filenames_ = []
         for file in os.listdir(self.config.data_dir):
-            self.filenames_.extend(os.join(self.config.data_dir, file))
+            self.filenames_.extend(os.path.join(self.config.data_dir, file))
         if dataset == 'train':
             indices, _ = shuffle()
         elif dataset == 'test':
