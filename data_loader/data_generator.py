@@ -42,10 +42,13 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
         self.filenames = [self.filenames_[i] for i in indices]
 
     def __getitem__(self, index):
+        # highdata_raw二维，经过dataloader输出为三维，与conv层match
         highdata_raw = np.expand_dims(load_data(self.filenames[index]), 0)
         highdata = torch.from_numpy(highdata_raw).type('torch.FloatTensor')
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
-        lowdata = torch.nn.functional.interpolate(highdata, scale_factor=1 / self.config.scale_factor)
+
+        # interpolate需要三维输入，先升为三维后，再squeeze降维
+        lowdata = torch.nn.functional.interpolate(np.expand_dims(highdata, 0), scale_factor=1 / self.config.scale_factor).squeeze(0)
         lowdata_log = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
 
         return lowdata_log, highdata_log, highdata  # 返回txt, label, groundtruth
