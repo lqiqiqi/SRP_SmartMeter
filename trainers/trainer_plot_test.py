@@ -2,6 +2,7 @@ import math
 import torch
 import torch.nn as nn
 import torch.optim as optim
+from torch.optim import lr_scheduler
 from torch.autograd import Variable
 from base.base_train import BaseTrain
 from trainers.sDTW import SoftDTWLoss
@@ -23,7 +24,8 @@ class Trainer(BaseTrain):
 
         # optimizer
         self.momentum = 0.9
-        self.optimizer = optim.SGD(self.model.parameters(), lr=self.config.lr, momentum=self.momentum, weight_decay=1.0)
+        self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=70, gamma=0.01)
 
         # loss function
         if self.config.gpu_mode:
@@ -50,7 +52,7 @@ class Trainer(BaseTrain):
 
         self.model.train() # It just sets the training mode.model.eval() to set testing mode
         for epoch in range(self.config.num_epochs):
-
+            scheduler.step()
             epoch_loss = 0
             for iter, (input, target, _) in enumerate(train_data_loader):
                 # input data (low resolution image)

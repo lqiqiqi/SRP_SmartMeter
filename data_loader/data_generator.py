@@ -2,11 +2,14 @@ import os
 import numpy as np
 import math
 import torch
-import random
 from torch.utils.data.dataset import Dataset
 from torch.utils.data import DataLoader
 from torch.utils.data.sampler import SubsetRandomSampler
 
+
+def load_data(filepath):
+    data = np.genfromtxt(filepath, delimiter=',')
+    return data
 
 def shuffle():
     validation_split = 0.125
@@ -24,24 +27,31 @@ def shuffle():
 
 
 class TxtDataset(Dataset):  # 这是一个Dataset子类
-    def __init__(self, y, config):
+    def __init__(self, config, dataset):
         self.config = config
-        highdata = torch.from_numpy(y).type('torch.FloatTensor')
-        highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
-        self.Label = highdata_log
-        self.GroundTruth = highdata
-        lowdata = torch.nn.functional.interpolate(highdata, scale_factor=1/self.config.scale_factor)
-        lowdata_log = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
-        self.Data = lowdata_log
+        self.filenames_ = []
+        for file in os.listdir(self.config.data_dir):
+            self.filenames_.extend(os.join(self.config.data_dir, file))
+        if dataset == 'train':
+            indices, _ = shuffle()
+        elif dataset == 'test':
+            _, indices = shuffle()
+        elif dataset == 'debug':
+            _, indices = shuffle()
+            indices = indices[:20]
+        self.filenames = [self.filenames_[i] for i in indices]
 
     def __getitem__(self, index):
-        txt = self.Data[index]
-        label = self.Label[index]
-        groundtruth = self.GroundTruth[index]
-        return txt, label, groundtruth  # 返回标签
+        highdata_raw = np.expand_dims(np.expand_dims(load_data(self.filenames[index]), 0), 0)
+        highdata = torch.from_numpy(highdata_raw).type('torch.FloatTensor')
+        highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
+        lowdata = torch.nn.functional.interpolate(highdata, scale_factor=1 / self.config.scale_factor)
+        lowdata_log = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
+
+        return lowdata_log, highdata_log, highdata  # 返回txt, label, groundtruth
 
     def __len__(self):
-        return len(self.Data)
+        return len(self.filenames)
 
 
 class DataGenerator:
@@ -54,29 +64,12 @@ class DataGenerator:
         #获取文件夹中的文件名称列表
         self.filenames = os.listdir(self.filedir)
 
-        #TODO 数据要用log处理
-
-    def read_combine_data(self, indices):
-        for i in indices:
-            filepath = self.filedir + '/' + self.filenames[i]
-            # 遍历单个文件，读取行数
-            tempData = np.expand_dims(np.genfromtxt(filepath, delimiter=','), 0)
-            if i % 20 == 0:
-                print('Loading No.{} file'.format(i))
-            if i == indices[0]:
-                data = tempData
-            else:
-                data = np.concatenate((data, tempData))
-        return np.expand_dims(data, 1)
-
-
-    def load_dataset(self, train_indices, test_indices):
+    def load_dataset(self):
 
         if self.dataset == 'train':
             print('Loading train datasets...')
 
-            data = self.read_combine_data(train_indices)
-            txt = TxtDataset(data, self.config)
+            txt = TxtDataset(self.config, 'train')
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads, batch_size=self.config.batch_size,
                               shuffle=False)
@@ -84,8 +77,7 @@ class DataGenerator:
         elif self.dataset == 'test':
             print('Loading test datasets...')
 
-            data = self.read_combine_data(test_indices) # 2000 out of index
-            txt = TxtDataset(data, self.config)
+            txt = TxtDataset(self.config, 'test')
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
                               batch_size=self.config.test_batch_size,
@@ -93,11 +85,8 @@ class DataGenerator:
 
         elif self.dataset == 'debug':
             print('Loading debug datasets...')
-            # test_set = get_test_set(self.data_dir, self.test_dataset, self.scale_factor, is_gray=is_gray,
-            #                         normalize=False)
 
-            data = self.read_combine_data(test_indices[:20])
-            txt = TxtDataset(data, self.config)
+            txt = TxtDataset(self.config, 'debug')
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
                               batch_size=self.config.batch_size,
