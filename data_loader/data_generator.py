@@ -48,7 +48,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
 
         # interpolate需要三维输入，先升为三维后，再squeeze降维
-        lowdata = torch.nn.functional.interpolate(np.expand_dims(highdata, 0), scale_factor=1 / self.config.scale_factor).squeeze(0)
+        lowdata = torch.nn.functional.interpolate(highdata.unsqueeze(0), scale_factor=1 / self.config.scale_factor).squeeze(0)
         lowdata_log = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
 
         return lowdata_log, highdata_log, highdata  # 返回txt, label, groundtruth
