@@ -31,4 +31,17 @@ class BaseModel:
             print('weight is initilized')
             return False
 
+    def load_spec_model(self):
+        model_dir = os.path.join(self.config.save_dir, 'model_'+ self.config.exp_name)
+
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_30.pkl' # get specific model
+        if os.path.exists(model_name):
+            self.load_state_dict(torch.load(model_name))
+            print('Trained generator model is loaded.')
+            return True
+        else:
+            print('No model exists to load.')
+            self.weight_init()
+            print('weight is initilized')
+            return False
 
