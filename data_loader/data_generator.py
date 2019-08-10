@@ -42,7 +42,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
         self.filenames = [self.filenames_[i] for i in indices]
 
     def __getitem__(self, index):
-        highdata_raw = np.expand_dims(np.expand_dims(load_data(self.filenames[index]), 0), 0)
+        highdata_raw = np.expand_dims(load_data(self.filenames[index]), 0)
         highdata = torch.from_numpy(highdata_raw).type('torch.FloatTensor')
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
         lowdata = torch.nn.functional.interpolate(highdata, scale_factor=1 / self.config.scale_factor)
