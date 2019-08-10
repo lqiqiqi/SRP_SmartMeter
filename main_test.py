@@ -36,6 +36,7 @@ def main():
     # data_train = DataGenerator(config, 'debug').load_dataset()
     # create your data generator
     data_test = DataGenerator(config, 'test').load_dataset()
+    data_train = None
 
     # create trainer and pass all the previous components to it
     # trainer = Trainer(model, config, data_train, logger, data_test)
@@ -45,7 +46,7 @@ def main():
     # # create tester and pass all the previous components to it
     # 使用最后一个模型：在trainer.py中使用load_model函数
     # 使用非最后一个模型：在base_model模块中指定特定模型，并在trainer.py中使用load_spec_model函数
-    tester = Tester(model, config, data_test, logger)
+    tester = Tester(model, config, data_train, logger, data_test)
     with torch.no_grad():
         tester.test()
     #     # tester.test_interpolate()

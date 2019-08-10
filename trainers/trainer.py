@@ -89,8 +89,8 @@ class Trainer(BaseTrain):
 
 
 class Tester(BaseTrain):
-    def __init__(self, model, config, data, logger):
-        super(Tester, self).__init__(model, config, data, logger)
+    def __init__(self, model, config, data_train, logger, data_test):
+        super(Tester, self).__init__(model, config, data_train, logger, data_test)
 
     def test(self):
 
@@ -102,7 +102,7 @@ class Tester(BaseTrain):
         print('Test is started.')
 
         # load dataset
-        test_data_loader = self.data
+        test_data_loader = self.data_test
 
         self.model.eval()
 
