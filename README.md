@@ -40,7 +40,7 @@ avg_loss_log with log data:  tensor(0.6105, device='cuda:0')
 
 ## 0805_2：FSRCNN_resnet_xavier_l2reg 
 
-相比于上一个增加了L2reg，在SGD设置weight_decay = 1.0  
+- 相比于上一个增加了L2reg，在SGD设置weight_decay = 1.0  
 
 avg_loss:  0.59554976
 avg_loss_log with original data:  105.55343627929688
@@ -63,6 +63,8 @@ avg_loss_log with log data:  0.5951287746429443
 
 ## 0809_1:FSRCNN_resnet_xavier_l2reg_batchsize60
 
+- **从这里开始scale_factor改为10**
+
 ```
 {  "exp_name": "6_train",  "model_name":"FSRCNN_resnet_xavier_l2reg_batchsize60",  "data_dir":"../LQ_SRP_SmartMeter/data_split",  "num_threads":4,  "num_channels":1,  "scale_factor":10,  "num_epochs":150,  "save_epochs":30,  "batch_size":60,  "test_batch_size":1,  "save_dir":"../saving_model",  "lr":0.00001,  "gpu_mode": true,  "load_model": true}
 ```
@@ -76,15 +78,20 @@ avg_loss_log with original data:  108.02339935302734
 avg_loss_log with log data:  0.9740539193153381
 Training and test is finished.
 
-## 0810_1
+## 0810_1：FSRCNN_resnet_xavier_l2reg_batchsize32
 
 - 改进了加载数据的方式，使之可以利用Dataloader的subprocess的功能。
-
 - 在前70次epoch学习率使用1\*10-4， 后80次epoch学习率1\*10-6
+- 相比于上一个模型，把batchsize改为32，使用Adam优化器
 
 
 
+只进行了30个epoch，发现loss几乎没有什么变化。
 
+avg_loss with original data:  tensor(105.2026, device='cuda:0')
+avg_loss_log with log data:  tensor(0.5026, device='cuda:0')
+
+结论：测试结果差不多。说明减小batch_size从60到32并没有显著作用。
 
 ## 运行时间测试
 

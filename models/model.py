@@ -10,7 +10,7 @@ class Net(torch.nn.Module, BaseModel):
         BaseModel.__init__(self, config)
 
         d = 56 # out channels of first layer
-        s = 12 # out channels of hidden layer
+        s = 30 # out channels of hidden layer
         m = 4 # number of layer of hidden layer block
 
         # Feature extraction
