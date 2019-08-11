@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainers/trainer_multiGPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer_multiGPU.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,7 +33,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="0805_fsrcnn_resnet_xavier" value="1" />
-          <entry key="json" value="24" />
+          <entry key="json" value="25" />
           <entry key="model_VDSR" value="1" />
           <entry key="py" value="54" />
           <entry key="sDTW" value="1" />
@@ -40,23 +42,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="25" />
+          <entry key="JSON" value="26" />
           <entry key="Python" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="27" />
-          <entry key="json" value="355" />
+          <entry key="json" value="359" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="6502" />
+          <entry key="py" value="6503" />
           <entry key="sDTW" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="355" />
-          <entry key="Python" value="6698" />
+          <entry key="JSON" value="359" />
+          <entry key="Python" value="6699" />
         </counts>
       </usages-collector>
     </session>
@@ -66,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-132">
               <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="49" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -80,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/0811_2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="32" />
+            <state relative-caret-position="66">
+              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -98,26 +100,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/model_VDSR.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-187">
-              <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="55">
+              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
                 <element signature="e#186#921#0" expanded="true" />
-                <element signature="e#1177#1977#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/models/model_xavier_init.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#1450#1560#0" expanded="true" />
-                <element signature="e#1597#2222#0" expanded="true" />
+                <element signature="e#958#1140#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,7 +115,16 @@
         <entry file="file://$PROJECT_DIR$/configs/0811_3.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+              <caret line="6" column="21" lean-forward="true" selection-end-line="15" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/configs/0811_4.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -135,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer_multiGPU.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
+            <state relative-caret-position="295">
+              <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#5194#6171#0" expanded="true" />
@@ -149,11 +146,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="56" selection-end-column="87" />
+            <state relative-caret-position="948">
+              <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#227#438#0" expanded="true" />
+                <element signature="e#459#798#0" expanded="true" />
                 <element signature="e#894#1373#0" expanded="true" />
                 <element signature="e#2180#2344#0" expanded="true" />
                 <element signature="e#2383#3330#0" expanded="true" />
@@ -253,11 +251,12 @@
         <option value="$PROJECT_DIR$/models/model_VDSR" />
         <option value="$PROJECT_DIR$/trainers/trianer_multiGPU.py" />
         <option value="$PROJECT_DIR$/models/model_VDSR.py" />
-        <option value="$PROJECT_DIR$/trainers/trainer_multiGPU.py" />
         <option value="$PROJECT_DIR$/configs/0811_3.json" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/configs/0811_1.json" />
         <option value="$PROJECT_DIR$/models/model_xavier_init.py" />
+        <option value="$PROJECT_DIR$/trainers/trainer_multiGPU.py" />
+        <option value="$PROJECT_DIR$/configs/0811_4.json" />
       </list>
     </option>
   </component>
@@ -691,46 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="56" selection-end-column="87" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#227#438#0" expanded="true" />
-            <element signature="e#894#1373#0" expanded="true" />
-            <element signature="e#2180#2344#0" expanded="true" />
-            <element signature="e#2383#3330#0" expanded="true" />
-            <marker date="1565437194326" expanded="true" signature="1408:1409" ph="..." />
-            <marker date="1565437194326" expanded="true" signature="2171:2237" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1565518080643" expanded="true" signature="364:365" ph="..." />
-            <marker date="1565518080643" expanded="true" signature="364:369" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_multiGPU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="91" column="42" lean-forward="true" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#5194#6171#0" expanded="true" />
-            <element signature="e#6450#6922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/base_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -745,36 +704,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/model_VDSR.py">
+    <entry file="file://$PROJECT_DIR$/configs/0811_1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-187">
-          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#186#921#0" expanded="true" />
-            <element signature="e#1177#1977#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0811_3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        <state relative-caret-position="44">
+          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/0811_2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0811_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="66">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -787,6 +727,73 @@
             <element signature="e#1450#1560#0" expanded="true" />
             <element signature="e#1597#2222#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/model_VDSR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#186#921#0" expanded="true" />
+            <element signature="e#958#1140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="15" selection-start-line="15" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1565518080643" expanded="true" signature="364:365" ph="..." />
+            <marker date="1565518080643" expanded="true" signature="364:369" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="948">
+          <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#227#438#0" expanded="true" />
+            <element signature="e#459#798#0" expanded="true" />
+            <element signature="e#894#1373#0" expanded="true" />
+            <element signature="e#2180#2344#0" expanded="true" />
+            <element signature="e#2383#3330#0" expanded="true" />
+            <marker date="1565437194326" expanded="true" signature="1408:1409" ph="..." />
+            <marker date="1565437194326" expanded="true" signature="2171:2237" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_multiGPU.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="49" column="67" selection-start-line="49" selection-start-column="67" selection-end-line="49" selection-end-column="67" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#5194#6171#0" expanded="true" />
+            <element signature="e#6450#6922#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0811_3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="21" lean-forward="true" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0811_4.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>

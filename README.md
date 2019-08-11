@@ -234,12 +234,14 @@ avg_loss_log with log data:  0.48817479610443115
 
 - s取32，lr使用指数下降。好像checkpoint中显示s为32，有点乱了。
 
+  但是结合下一个使用explr的方法发现explr不适合。
+  
   avg_loss:  0.4696042
-  avg_loss_log with original data:  87.22552490234375
+avg_loss_log with original data:  87.22552490234375
   avg_loss_log with log data:  0.4876382648944855
 
   ![0811_2_origin_test](../LQ_SRP_SmartMeter/pic/0811_2_origin_test.PNG)
-
+  
   ![0811_2_train_test](../LQ_SRP_SmartMeter/pic/0811_2_train_test.PNG)
 
 # 注意事项
