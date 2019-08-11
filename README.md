@@ -201,7 +201,16 @@ avg_loss_log with log data:  0.48817479610443115
 ## 0810_1: FSRCNN_s32
 
 - 相比于上次s改为32
+
 - 加入earlystopping
+
+  ![0811_1_origin_test](../LQ_SRP_SmartMeter/pic/0811_1_origin_test.PNG)
+
+  ![0811_1_train_test](../LQ_SRP_SmartMeter/pic/0811_1_train_test.PNG)
+
+  avg_loss:  0.2632
+  avg_loss_log with original data:  120106
+  avg_loss_log with log data:  0.3617780
 
 
 
