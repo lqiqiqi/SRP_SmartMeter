@@ -7,7 +7,7 @@ from data_loader.data_generator import shuffle
 from utils.utils import get_args
 from utils.config import get_config_from_json
 from utils.logger import Logger
-from models.model_xavier_init import Net
+from models.model_VDSR import Net
 
 def main():
     # capture the config path from the run arguments
@@ -23,7 +23,8 @@ def main():
         raise Exception("No GPU found, please run without --gpu_mode=False")
 
     # create an instance of the model you want
-    model = Net(config)
+    # model = Net(config)
+    model = torch.nn.DataParallel(Net(config), device_ids=[0,1])
 
     # set the logger
     log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)
@@ -33,9 +34,9 @@ def main():
 
     train_indices, test_indices = shuffle()
     # create your data generator
-    data_train = DataGenerator(config, 'train').load_dataset()
+    data_train = DataGenerator(config, 'debug').load_dataset()
     # create your data generator
-    data_test = DataGenerator(config, 'test').load_dataset()
+    data_test = DataGenerator(config, 'debug').load_dataset()
 
     # create trainer and pass all the previous components to it
     trainer = Trainer(model, config, data_train, logger, data_test)
