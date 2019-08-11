@@ -96,10 +96,10 @@ class Trainer(BaseTrain):
             avg_loss_test.append(float(epoch_loss_test))
             avg_loss_log_test.append(float(epoch_loss_log_test))
 
-            if es.step(float(epoch_loss_test)):
-                self.model.save_model(epoch=None)
-                print('Early stop at %2d epoch' % (epoch + 1))
-                break
+            # if es.step(float(epoch_loss_test)):
+            #     self.model.save_model(epoch=None)
+            #     print('Early stop at %2d epoch' % (epoch + 1))
+            #     break
 
         # Plot avg. loss
         utils.plot_loss(self.config, [avg_loss, avg_loss_log_test])
