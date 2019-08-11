@@ -98,6 +98,7 @@ class Trainer(BaseTrain):
 
             if es.step(float(epoch_loss_test)):
                 self.model.save_model(epoch=None)
+                print('Early stop at %2d epoch' % (epoch + 1))
                 break
 
         # Plot avg. loss
