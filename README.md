@@ -212,7 +212,35 @@ avg_loss_log with log data:  0.48817479610443115
   avg_loss_log with original data:  120106
   avg_loss_log with log data:  0.3617780
 
+  
 
+  
+
+## 0811_1：FSRCNN_s32
+
+- s取32
+
+  avg_loss:  0.252497
+  avg_loss_log with original data:  2946184.0
+  avg_loss_log with log data:  0.3606629967689514
+
+  问题：test loss超级大
+
+  ![0811_1_2_origin_test](../LQ_SRP_SmartMeter/pic/0811_1_2_origin_test.PNG)
+
+  ![0811_1_2_train_test](../LQ_SRP_SmartMeter/pic/0811_1_2_train_test.PNG)
+
+## 0811_2：FSRCNN_s32_explr
+
+- s取32，lr使用指数下降。好像checkpoint中显示s为32，有点乱了。
+
+  avg_loss:  0.4696042
+  avg_loss_log with original data:  87.22552490234375
+  avg_loss_log with log data:  0.4876382648944855
+
+  ![0811_2_origin_test](../LQ_SRP_SmartMeter/pic/0811_2_origin_test.PNG)
+
+  ![0811_2_train_test](../LQ_SRP_SmartMeter/pic/0811_2_train_test.PNG)
 
 # 注意事项
 
