@@ -1,6 +1,6 @@
 import os
 import torch
-from trainers.trainer_plot_test import Trainer
+from trainers.trainer_multiGPU import Trainer
 # from trainers.trainer import Tester
 from data_loader.data_generator import DataGenerator
 from data_loader.data_generator import shuffle
