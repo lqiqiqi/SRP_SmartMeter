@@ -7,6 +7,7 @@ from torch.autograd import Variable
 from base.base_train import BaseTrain
 from trainers.sDTW import SoftDTWLoss
 from utils import utils
+from utils.earlystopping import EarlyStopping
 
 
 class Trainer(BaseTrain):
@@ -49,6 +50,7 @@ class Trainer(BaseTrain):
         avg_loss_log_test = []
         step = 0
 
+        es = EarlyStopping(patience=8)
 
         self.model.train() # It just sets the training mode.model.eval() to set testing mode
         for epoch in range(self.config.num_epochs):
@@ -93,6 +95,10 @@ class Trainer(BaseTrain):
 
             avg_loss_test.append(float(epoch_loss_test))
             avg_loss_log_test.append(float(epoch_loss_log_test))
+
+            if es.step(float(epoch_loss_test)):
+                self.model.save_model(epoch=None)
+                break
 
         # Plot avg. loss
         utils.plot_loss(self.config, [avg_loss, avg_loss_log_test])

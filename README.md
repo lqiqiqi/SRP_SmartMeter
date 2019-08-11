@@ -186,7 +186,14 @@ PreluBackward                 974.085us        751.953us                1       
 
 ## 0810_3:FSRCNN_s30
 
-- 相比于上次，把s从12改为30，把batch_size还是设为60
+- 相比于上次，把batch_size还是设为60
+- 与0809_1基本是一样的，除了改进了lr的下降方式。
+
+avg_loss:  0.46983755
+avg_loss_log with original data:  87.02009582519531
+avg_loss_log with log data:  0.48817479610443115
+
+
 
 
 
