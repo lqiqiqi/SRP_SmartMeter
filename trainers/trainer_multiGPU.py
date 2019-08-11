@@ -1,3 +1,4 @@
+import os
 import math
 import torch
 import torch.nn as nn
@@ -105,7 +106,7 @@ class Trainer(BaseTrain):
             avg_loss.append((epoch_loss / len(train_data_loader)).detach().cpu().numpy())
 
             if (epoch + 1) % self.config.save_epochs == 0:
-                self.model.save_model(epoch + 1)
+                self.save_model(self.model, epoch + 1)
 
             # caculate test loss
             with torch.no_grad():
@@ -132,7 +133,7 @@ class Trainer(BaseTrain):
         print("Training and test is finished.")
 
         # Save final trained parameters of model
-        self.model.save_model(epoch=None)
+        self.model.save_model(self.model, epoch=None)
 
     def test(self, test_data_loader):
         loss_test = 0
@@ -158,6 +159,16 @@ class Trainer(BaseTrain):
 
         return loss_test, loss_log_test
 
+    def save_model(self, network, epoch=None):
+        model_dir = os.path.join(self.config.save_dir, 'model_'+ self.config.exp_name)
+        if not os.path.exists(model_dir):
+            os.mkdir(model_dir)
+        if epoch is not None:
+            torch.save(network.state_dict(), model_dir + '/' + self.config.model_name + '_param_epoch_%d.pkl' % epoch)
+        else: # save final model
+            torch.save(network.state_dict(), model_dir + '/' + self.config.model_name + '_param.pkl')
+
+        print('Trained model is saved.')
 
 
 
