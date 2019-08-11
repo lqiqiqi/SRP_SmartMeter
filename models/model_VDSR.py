@@ -11,8 +11,8 @@ class Net(torch.nn.Module, BaseModel):
         base_filter = 64
         num_residuals = 18
 
-        # self.input_conv = ConvBlock(self.config.num_channels, base_filter, 3, 1, 1, norm=None, bias=False)
-        self.input_conv = nn.ConvTranspose1d(self.config.num_channels, base_filter, 10, self.config.scale_factor, 0, output_padding=0)
+        self.convtransposed = nn.ConvTranspose1d(self.config.num_channels, self.config.num_channels, 10, self.config.scale_factor, 0, output_padding=0)
+        self.input_conv = ConvBlock(self.config.num_channels, base_filter, 3, 1, 1, norm=None, bias=False)
 
         conv_blocks = []
         for _ in range(num_residuals):
@@ -23,8 +23,9 @@ class Net(torch.nn.Module, BaseModel):
 
 
     def forward(self, x):
-        out = self.input_conv(x)
+        out = self.convtransposed(x)
         residual = out
+        out = self.input_conv(out)
         out = self.residual_layers(out)
         out = self.output_conv(out)
         out = torch.add(out, residual)
