@@ -2,7 +2,7 @@
   "exp_name": "10_train",
   "model_name":"FSRCNN_s32",
   "data_dir":"../LQ_SRP_SmartMeter/data_split",
-  "num_threads":0,
+  "num_threads":4,
   "num_channels":1,
   "scale_factor":10,
   "num_epochs":100,
