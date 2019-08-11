@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/configs/0811_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs/0811_3.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainers/trainer_multiGPU.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer_multiGPU.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/configs/0811_3.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
@@ -111,13 +110,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer_multiGPU.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-80">
-              <caret line="108" column="53" selection-start-line="108" selection-start-column="53" selection-end-line="108" selection-end-column="53" />
+            <state relative-caret-position="-256">
+              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#512#5164#0" expanded="true" />
+                <element signature="e#5194#6171#0" expanded="true" />
                 <element signature="e#6450#6922#0" expanded="true" />
               </folding>
             </state>
@@ -234,8 +235,8 @@
         <option value="$PROJECT_DIR$/trainers/trianer_multiGPU.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/models/model_VDSR.py" />
-        <option value="$PROJECT_DIR$/trainers/trainer_multiGPU.py" />
         <option value="$PROJECT_DIR$/configs/0811_3.json" />
+        <option value="$PROJECT_DIR$/trainers/trainer_multiGPU.py" />
       </list>
     </option>
   </component>
@@ -750,21 +751,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_multiGPU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-80">
-          <caret line="108" column="53" selection-start-line="108" selection-start-column="53" selection-end-line="108" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#6450#6922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0811_3.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_multiGPU.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-256">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#512#5164#0" expanded="true" />
+            <element signature="e#5194#6171#0" expanded="true" />
+            <element signature="e#6450#6922#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

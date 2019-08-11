@@ -133,7 +133,7 @@ class Trainer(BaseTrain):
         print("Training and test is finished.")
 
         # Save final trained parameters of model
-        self.model.save_model(self.model, epoch=None)
+        self.save_model(self.model, epoch=None)
 
     def test(self, test_data_loader):
         loss_test = 0
