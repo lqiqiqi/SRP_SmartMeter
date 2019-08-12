@@ -265,6 +265,29 @@ avg_loss_log with log data:  1.036773920059204
 
 
 
+
+
+## 0812_1：FSRCNN_origin_target
+
+- 使用s32的FSRCNN进行训练
+
+- 使用原始数据作为target
+
+  结果很好，说明有必要将原始数据作为target
+
+  avg_loss:  43.25389 训练误差
+  avg_loss_log with original data:  54.60212707519531 在原始数据上测试的误差
+
+  在原始数据测试loss
+
+  ![0812_1_origin_test](../LQ_SRP_SmartMeter/pic/0812_1_origin_test.PNG)
+
+  
+
+  训练loss
+
+  ![0812_1_train](../LQ_SRP_SmartMeter/pic/0812_1_train.PNG)
+
 ## 至今最好结果
 
 avg_loss_log with original data:  87.02009582519531

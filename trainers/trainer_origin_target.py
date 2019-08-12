@@ -119,8 +119,7 @@ class Trainer(BaseTrain):
                 break
 
         # Plot avg. loss
-        utils.plot_loss(self.config, [avg_loss])
-        utils.plot_loss(self.config, [avg_loss_test], origin=True)
+        utils.plot_loss(self.config, [avg_loss, avg_loss_test])
 
         print('avg_loss: ', avg_loss[-1])
         print('avg_loss_log with original data: ', avg_loss_test[-1])
