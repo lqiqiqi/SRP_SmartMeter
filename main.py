@@ -7,7 +7,7 @@ from data_loader.data_generator import shuffle
 from utils.utils import get_args
 from utils.config import get_config_from_json
 # from utils.logger import Logger
-from models.model_xavier_init import Net
+from models.model_fsrcnn_pro import Net
 
 def main():
     # capture the config path from the run arguments
@@ -24,7 +24,7 @@ def main():
 
     # create an instance of the model you want
     # model = Net(config)
-    model = torch.nn.DataParallel(Net(config), device_ids=[0,1])
+    model = torch.nn.DataParallel(Net(config), device_ids=[0])
 
     # set the logger
     log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)

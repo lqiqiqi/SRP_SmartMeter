@@ -11,22 +11,25 @@ class Net(torch.nn.Module, BaseModel):
 
         d = 56 # out channels of first layer
         s = 12 # out channels of hidden layer
-        m = 4 # number of layer of hidden layer block
+        m = 8 # number of layer of hidden layer block
 
         # Feature extraction
         self.first_part = ConvBlock(self.config.num_channels, d, 5, 1, 0, activation='prelu', norm=None)
 
-        self.layers = []
+
         # Shrinking
-        self.layers.append(ConvBlock(d, s, 1, 1, 0, activation='prelu', norm=None))
+        self.second_part = ConvBlock(d, s, 1, 1, 0, activation='prelu', norm=None)
+
         # Non-linear Mapping
+        self.layers = []
         for _ in range(m):
             self.layers.append(ResnetBlock(s, 3, 1, 1, activation='prelu', norm='batch'))
         self.layers.append(nn.PReLU())
-        # Expanding
-        self.layers.append(ConvBlock(s, d, 1, 1, 0, activation='prelu', norm=None))
 
         self.mid_part = torch.nn.Sequential(*self.layers)
+
+        # Expanding
+        self.forth_part = ConvBlock(s, d, 1, 1, 0, activation='prelu', norm=None)
 
         # Deconvolution
         self.last_part = nn.ConvTranspose1d(d, self.config.num_channels, 50, self.config.scale_factor, 0, output_padding=0)
@@ -37,7 +40,11 @@ class Net(torch.nn.Module, BaseModel):
 
     def forward(self, x):
         out = self.first_part(x)
+        out = self.second_part(out)
+        residual = out
         out = self.mid_part(out)
+        out = torch.add(out, residual)
+        out = self.forth_part(out)
         out = self.last_part(out)
         return out
 
