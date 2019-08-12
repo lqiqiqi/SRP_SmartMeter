@@ -42,7 +42,7 @@ def myconfig():
     s = 32  # out channels of hidden layer
     m = 4  # number of layer of hidden layer block
 
-@ex.automain
+@ex.main
 def main():
     # capture the config path from the run arguments
     # then process the json configuration file
@@ -84,5 +84,5 @@ def main():
     #     # tester.test_interpolate()
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    ex.run_commandline()
