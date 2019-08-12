@@ -288,6 +288,42 @@ avg_loss_log with log data:  1.036773920059204
 
   ![0812_1_train](../LQ_SRP_SmartMeter/pic/0812_1_train.PNG)
 
+## 0812_3: FSRCNN_origin_target_s12
+
+- 相比于上个s改为12
+
+avg_loss:  45.181908
+avg_loss_log with original data:  58.62482452392578
+
+![0812_3_origin_test](../LQ_SRP_SmartMeter/pic/0812_3_origin_test.PNG)
+
+![0812_3_train](../LQ_SRP_SmartMeter/pic/0812_3_train.PNG)
+
+## 0812_4: FSRCNN_origin_target_s64
+
+- s64
+
+  avg_loss:  42.188435
+  avg_loss_log with original data:  52.23588180541992
+
+  ![0812_4_train_test](../LQ_SRP_SmartMeter/pic/0812_4_train_test.PNG)
+
+  
+
+
+
+## 0812_5: FSRCNN_s12_m8
+
+- 中间resnet添加最头和最尾的连接
+
+terminal2
+
+
+
+
+
+0812_6：FSRCNN_s12_m16
+
 ## 至今最好结果
 
 avg_loss_log with original data:  87.02009582519531
