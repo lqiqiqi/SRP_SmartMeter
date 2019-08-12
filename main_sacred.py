@@ -16,7 +16,7 @@ from models.model_xavier_init import Net
 
 
 ex = Experiment("sacred test")
-ex.observers.append(MongoObserver.create(url='localhost:27017', db_name='sacred'))
+ex.observers.append(MongoObserver.create())
 ex.captured_out_filter = apply_backspaces_and_linefeeds
 
 @ex.config
