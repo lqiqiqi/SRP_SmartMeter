@@ -30,6 +30,7 @@ def main():
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
     # logger = Logger(log_dir)
+    logger = None
 
     train_indices, test_indices = shuffle()
     # create your data generator
