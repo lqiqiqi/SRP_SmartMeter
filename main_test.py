@@ -6,7 +6,7 @@ from data_loader.data_generator import DataGenerator
 from data_loader.data_generator import shuffle
 from utils.utils import get_args
 from utils.config import get_config_from_json
-from utils.logger import Logger
+# from utils.logger import Logger
 from models.model_VDSR import Net
 
 def main():
@@ -29,7 +29,7 @@ def main():
     log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
-    logger = Logger(log_dir)
+    # logger = Logger(log_dir)
 
     train_indices, test_indices = shuffle()
     # create your data generator
