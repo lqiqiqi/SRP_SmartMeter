@@ -15,7 +15,7 @@ from utils.config import get_config_from_json
 from models.model_xavier_init import Net
 
 
-ex = Experiment("")
+ex = Experiment("sacred test")
 ex.observers.append(MongoObserver.create(url='localhost:27017', db_name='sacred'))
 ex.captured_out_filter = apply_backspaces_and_linefeeds
 
@@ -43,7 +43,7 @@ def myconfig():
     m = 4  # number of layer of hidden layer block
 
 @ex.main
-def main():
+def my_main():
     # capture the config path from the run arguments
     # then process the json configuration file
     # try:
