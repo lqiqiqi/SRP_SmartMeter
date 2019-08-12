@@ -248,6 +248,32 @@ avg_loss_log with original data:  87.22552490234375
 
 - 使用lr指数下降，35epoch了loss还在0.97 0.98  0.99左右波动。果断停止，但是还是有checkpoint的。
 
+  avg_loss with original data:  tensor(108.2328, device='cuda:0')
+  avg_loss_log with log data:  tensor(1.0807, device='cuda:0')
+
+- 改为steplr下降，到epoch30下降0.01，
+
+avg_loss:  1.0410684
+avg_loss_log with original data:  108.1648178100586
+avg_loss_log with log data:  1.036773920059204
+
+
+
+![0811_4_origin_test](../LQ_SRP_SmartMeter/pic/0811_4_origin_test.PNG)
+
+![0811_4_train_test](../LQ_SRP_SmartMeter/pic/0811_4_train_test.PNG)
+
+
+
+## 至今最好结果
+
+avg_loss_log with original data:  87.02009582519531
+avg_loss_log with log data:  0.48817479610443115
+
+0810_3:FSRCNN_s30
+
+目标21
+
 
 # 注意事项
 

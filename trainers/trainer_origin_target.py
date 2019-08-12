@@ -17,7 +17,7 @@ class Trainer(BaseTrain):
 
     def train_test(self):
 
-        #load model if model exists weigh initialization
+        # load model if model exists weigh initialization
         if self.config.load_model is True:
             self.load_model(self.model)
             # self.load_spec_model(self.model)
@@ -71,24 +71,24 @@ class Trainer(BaseTrain):
 
         es = EarlyStopping(patience=8)
 
-        self.model.train() # It just sets the training mode.model.eval() to set testing mode
+        self.model.train()  # It just sets the training mode.model.eval() to set testing mode
         for epoch in range(self.config.num_epochs):
             scheduler.step()
             epoch_loss = 0
-            for iter, (input, target, _) in enumerate(train_data_loader):
+            for iter, (input, target, groundtruth) in enumerate(train_data_loader):
                 # input data (low resolution image)
                 if self.config.gpu_mode:
                     x_ = Variable(input.cuda())
-                    y_ = Variable(target.cuda())
+                    y_ = Variable(groundtruth.cuda())
                 else:
                     x_ = Variable(input)
-                    y_ = Variable(target)
+                    y_ = Variable(groundtruth)
 
                 # update network
                 self.optimizer.zero_grad()
                 model_out = self.model(x_)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_))
-                loss.backward() # 结果得到是tensor
+                loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
 
                 # log
@@ -107,13 +107,11 @@ class Trainer(BaseTrain):
 
             # caculate test loss
             with torch.no_grad():
-                loss_test, loss_log_test = self.test(test_data_loader)
+                loss_test = self.test(test_data_loader)
 
             epoch_loss_test = loss_test / len(test_data_loader)
-            epoch_loss_log_test = loss_log_test / len(test_data_loader)
 
             avg_loss_test.append(float(epoch_loss_test))
-            avg_loss_log_test.append(float(epoch_loss_log_test))
 
             if es.step(float(epoch_loss_test)):
                 self.save_model(self.model, epoch=None)
@@ -121,12 +119,11 @@ class Trainer(BaseTrain):
                 break
 
         # Plot avg. loss
-        utils.plot_loss(self.config, [avg_loss, avg_loss_log_test])
+        utils.plot_loss(self.config, [avg_loss])
         utils.plot_loss(self.config, [avg_loss_test], origin=True)
 
         print('avg_loss: ', avg_loss[-1])
         print('avg_loss_log with original data: ', avg_loss_test[-1])
-        print('avg_loss_log with log data: ', avg_loss_log_test[-1])
         print("Training and test is finished.")
 
         # Save final trained parameters of model
@@ -134,7 +131,7 @@ class Trainer(BaseTrain):
 
     def test(self, test_data_loader):
         loss_test = 0
-        loss_log_test = 0
+
         for input_test, target_test, groundtruth in test_data_loader:
             # input data (low resolution)
             if self.config.gpu_mode:
@@ -149,28 +146,25 @@ class Trainer(BaseTrain):
             # prediction
             model_out_test = self.model(x_test)
 
-            relog = torch.mul(torch.add(torch.exp(torch.mul(model_out_test, math.log(100))), -1), 1 / 100)
+            loss_test += torch.sqrt(self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
-            loss_test += torch.sqrt(self.MSE_loss(relog, y_test))  # RMSE for re-log result and original meter data
-            loss_log_test += torch.sqrt(self.MSE_loss(model_out_test, y_log_test))  # RMSE for log result # 结果得到是np.float
-
-        return loss_test, loss_log_test
+        return loss_test
 
     def save_model(self, network, epoch=None):
-        model_dir = os.path.join(self.config.save_dir, 'model_'+ self.config.exp_name)
+        model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
         if not os.path.exists(model_dir):
             os.mkdir(model_dir)
         if epoch is not None:
             torch.save(network.state_dict(), model_dir + '/' + self.config.model_name + '_param_epoch_%d.pkl' % epoch)
-        else: # save final model
+        else:  # save final model
             torch.save(network.state_dict(), model_dir + '/' + self.config.model_name + '_param.pkl')
 
         print('Trained model is saved.')
 
     def load_model(self, network):
-        model_dir = os.path.join(self.config.save_dir, 'model_'+ self.config.exp_name)
+        model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param.pkl' # get final model
+        model_name = model_dir + '/' + self.config.model_name + '_param.pkl'  # get final model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             from collections import OrderedDict
@@ -188,9 +182,9 @@ class Trainer(BaseTrain):
             return False
 
     def load_spec_model(self, network):
-        model_dir = os.path.join(self.config.save_dir, 'model_'+ self.config.exp_name)
+        model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_60.pkl' # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_60.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             from collections import OrderedDict

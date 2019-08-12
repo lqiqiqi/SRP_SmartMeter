@@ -1,13 +1,13 @@
 import os
 import torch
-from trainers.trainer_multiGPU import Trainer
+from trainers.trainer_origin_target import Trainer
 # from trainers.trainer import Tester
 from data_loader.data_generator import DataGenerator
 from data_loader.data_generator import shuffle
 from utils.utils import get_args
 from utils.config import get_config_from_json
 # from utils.logger import Logger
-from models.model_VDSR import Net
+from models.model_xavier_init import Net
 
 def main():
     # capture the config path from the run arguments
