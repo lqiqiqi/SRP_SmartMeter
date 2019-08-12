@@ -243,6 +243,11 @@ avg_loss_log with original data:  87.22552490234375
   ![0811_2_origin_test](../LQ_SRP_SmartMeter/pic/0811_2_origin_test.PNG)
   
   ![0811_2_train_test](../LQ_SRP_SmartMeter/pic/0811_2_train_test.PNG)
+  
+## 0811_4：VDSR
+
+- 使用lr指数下降，35epoch了loss还在0.97 0.98  0.99左右波动。果断停止，但是还是有checkpoint的。
+
 
 # 注意事项
 

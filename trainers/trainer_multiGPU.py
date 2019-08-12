@@ -19,7 +19,8 @@ class Trainer(BaseTrain):
 
         #load model if model exists weigh initialization
         if self.config.load_model is True:
-            self.model.load_model()
+            # self.load_model(self.model)
+            self.load_spec_model(self.model)
         else:
             try:
                 self.model.weight_init()
@@ -119,7 +120,7 @@ class Trainer(BaseTrain):
             avg_loss_log_test.append(float(epoch_loss_log_test))
 
             if es.step(float(epoch_loss_test)):
-                self.model.save_model(epoch=None)
+                self.save_model(epoch=None)
                 print('Early stop at %2d epoch' % (epoch + 1))
                 break
 
@@ -169,6 +170,46 @@ class Trainer(BaseTrain):
             torch.save(network.state_dict(), model_dir + '/' + self.config.model_name + '_param.pkl')
 
         print('Trained model is saved.')
+
+    def load_model(self, network):
+        model_dir = os.path.join(self.config.save_dir, 'model_'+ self.config.exp_name)
+
+        model_name = model_dir + '/' + self.config.model_name + '_param.pkl' # get final model
+        if os.path.exists(model_name):
+            state_dict = torch.load(model_name)
+            from collections import OrderedDict
+            new_state_dict = OrderedDict()
+            for k, v in state_dict.items():
+                namekey = k[7:]  # remove `module.`
+                new_state_dict[namekey] = v
+            network.load_state_dict(new_state_dict)
+            print('Trained generator model is loaded.')
+            return True
+        else:
+            print('No model exists to load.')
+            network.weight_init()
+            print('weight is initilized')
+            return False
+
+    def load_spec_model(self, network):
+        model_dir = os.path.join(self.config.save_dir, 'model_'+ self.config.exp_name)
+
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_60.pkl' # get specific model
+        if os.path.exists(model_name):
+            state_dict = torch.load(model_name)
+            from collections import OrderedDict
+            new_state_dict = OrderedDict()
+            for k, v in state_dict.items():
+                namekey = k[7:]  # remove `module.`
+                new_state_dict[namekey] = v
+            network.load_state_dict(new_state_dict)
+            print('Trained generator model is loaded.')
+            return True
+        else:
+            print('No model exists to load.')
+            network.weight_init()
+            print('weight is initilized')
+            return False
 
 
 
