@@ -42,7 +42,8 @@ class Trainer(BaseTrain):
 
         # optimizer
         self.momentum = 0.9
-        self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
+        # self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
+        self.optimizer = optim.Adagrad(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
         scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
@@ -113,10 +114,10 @@ class Trainer(BaseTrain):
 
             avg_loss_test.append(float(epoch_loss_test))
 
-            # if es.step(float(epoch_loss_test)):
-            #     self.save_model(self.model, epoch=None)
-            #     print('Early stop at %2d epoch' % (epoch + 1))
-            #     break
+            if es.step(float(epoch_loss_test)):
+                self.save_model(self.model, epoch=None)
+                print('Early stop at %2d epoch' % (epoch + 1))
+                break
 
         # Plot avg. loss
         utils.plot_loss(self.config, [avg_loss, avg_loss_test])

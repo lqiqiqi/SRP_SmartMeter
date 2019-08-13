@@ -345,16 +345,17 @@ avg_loss_log with original data:  84.36612701416016
 
 - 是上面实验去掉early stopping的再尝试
 
+  terminal 1
+
   
 
-## 至今最好结果
+## 0813_3: FSRCNN_s12_m4_fullyconnect
 
-avg_loss_log with original data:  87.02009582519531
-avg_loss_log with log data:  0.48817479610443115
+- 最后输出层为fullyconnect和一个卷积
 
-0810_3:FSRCNN_s30
+  
 
-目标21
+terminal 2
 
 
 # 注意事项
