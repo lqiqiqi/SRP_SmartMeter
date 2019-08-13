@@ -316,17 +316,32 @@ avg_loss_log with original data:  58.62482452392578
 
 - 中间resnet添加最头和最尾的连接
 
+avg_loss:  42.57594
+avg_loss_log with original data:  61.368896484375
+
 terminal2
 
-
-
-
+![0812_5_train_test](../LQ_SRP_SmartMeter/pic/0812_5_train_test.PNG)
 
 ## 0812_6：FSRCNN_s12_m16
 
-
+avg_loss:  41.85094
+avg_loss_log with original data:  57.37986373901367
 
 terminal1
+
+![0812_6_train_test](../LQ_SRP_SmartMeter/pic/0812_6_train_test.PNG)
+
+## 0813_1: FSRCNN_s64_m4_noshrink
+
+terminal1
+
+avg_loss:  96.1805
+avg_loss_log with original data:  84.36612701416016
+
+![0813_1_train_test](../LQ_SRP_SmartMeter/pic/0813_1_train_test.PNG)
+
+## 0813_2: 
 
 ## 至今最好结果
 
