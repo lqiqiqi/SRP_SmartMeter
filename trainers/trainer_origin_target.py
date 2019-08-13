@@ -40,11 +40,6 @@ class Trainer(BaseTrain):
                     #     if m.bias is not None:
                     #         m.bias.data.zero_()
 
-        # optimizer
-        self.momentum = 0.9
-        # self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
-        self.optimizer = optim.Adagrad(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
-
         scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
@@ -54,6 +49,11 @@ class Trainer(BaseTrain):
             self.MSE_loss = nn.MSELoss().cuda()
         else:
             self.MSE_loss = nn.MSELoss()
+
+        # optimizer
+        self.momentum = 0.9
+        # self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
+        self.optimizer = optim.Adagrad(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
         print('---------- Networks architecture -------------')
         utils.print_network(self.model)
