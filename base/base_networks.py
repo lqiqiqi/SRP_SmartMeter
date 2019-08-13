@@ -78,3 +78,11 @@ class ResnetBlock(torch.nn.Module):
 
         out = torch.add(out, residual)
         return out
+
+
+class Flatten(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+
+    def forward(self, x):
+        return x.view(64, 1, -1)

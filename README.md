@@ -341,7 +341,11 @@ avg_loss_log with original data:  84.36612701416016
 
 ![0813_1_train_test](../LQ_SRP_SmartMeter/pic/0813_1_train_test.PNG)
 
-## 0813_2: 
+## 0813_2: FSRCNN_s64_m4_noshrink
+
+- 是上面实验去掉early stopping的再尝试
+
+  
 
 ## 至今最好结果
 
