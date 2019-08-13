@@ -361,7 +361,15 @@ avg_loss_log with original data:  108.30909729003906
 
 ![0813_3_train_test](../LQ_SRP_SmartMeter/pic/0813_3_train_test.PNG)
 
-terminal 2
+## 0813_4: FSRCNN_s12_m4_adagrad
+
+- 改为adagrad下降
+
+  avg_loss:  124.466286
+  avg_loss_log with original data:  108.00846099853516
+
+  ![0813_4_train_test](../LQ_SRP_SmartMeter/pic/0813_4_train_test.PNG)
+
 
 
 # 注意事项

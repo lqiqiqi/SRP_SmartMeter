@@ -50,10 +50,9 @@ class Trainer(BaseTrain):
 
         # optimizer
         self.momentum = 0.9
-        # self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
-        self.optimizer = optim.Adagrad(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
+        self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
-        # scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         print('---------- Networks architecture -------------')
@@ -75,7 +74,7 @@ class Trainer(BaseTrain):
 
         self.model.train()  # It just sets the training mode.model.eval() to set testing mode
         for epoch in range(self.config.num_epochs):
-            # scheduler.step()
+            scheduler.step()
             epoch_loss = 0
             for iter, (input, target, groundtruth) in enumerate(train_data_loader):
                 # input data (low resolution image)
