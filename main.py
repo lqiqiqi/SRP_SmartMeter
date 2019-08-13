@@ -35,7 +35,7 @@ def main():
 
     train_indices, test_indices = shuffle()
     # create your data generator
-    data_train = DataGenerator(config, 'train').load_dataset()
+    data_train = DataGenerator(config, 'debug').load_dataset()
     # create your data generator
     data_test = DataGenerator(config, 'test').load_dataset()
 

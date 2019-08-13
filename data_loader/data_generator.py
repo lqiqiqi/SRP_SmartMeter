@@ -43,7 +43,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
             _, indices = shuffle()
         elif dataset == 'debug':
             _, indices = shuffle()
-            indices = indices[:20]
+            indices = indices[:200]
         self.filenames = [self.filenames_[i] for i in indices]
 
     def __getitem__(self, index):

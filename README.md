@@ -347,13 +347,19 @@ avg_loss_log with original data:  84.36612701416016
 
   terminal 1
 
+  avg_loss:  100.654465
+  avg_loss_log with original data:  86.87391662597656
+
   
 
 ## 0813_3: FSRCNN_s12_m4_fullyconnect
 
 - 最后输出层为fullyconnect和一个卷积
 
-  
+avg_loss:  124.76149
+avg_loss_log with original data:  108.30909729003906
+
+![0813_3_train_test](../LQ_SRP_SmartMeter/pic/0813_3_train_test.PNG)
 
 terminal 2
 
