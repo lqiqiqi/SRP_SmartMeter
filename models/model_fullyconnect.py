@@ -24,7 +24,7 @@ class Net(torch.nn.Module, BaseModel):
             self.layers.append(ResnetBlock(s, 3, 1, 1, activation='prelu', norm='batch'))
         self.layers.append(nn.PReLU())
         # Expanding
-        self.layers.append(ConvBlock(s, d, 1, 1, 0, activation='prelu', norm=None))
+        self.layers.append(ConvBlock(s, 10, 1, 1, 0, activation='prelu', norm=None))
 
         self.mid_part = torch.nn.Sequential(*self.layers)
 
