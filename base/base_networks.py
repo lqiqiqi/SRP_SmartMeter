@@ -85,4 +85,4 @@ class Flatten(torch.nn.Module):
         super().__init__()
 
     def forward(self, x):
-        return x.view(64, 1, -1)
+        return x.view(-1, 1, 30000)
