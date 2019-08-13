@@ -40,8 +40,6 @@ class Trainer(BaseTrain):
                     #     if m.bias is not None:
                     #         m.bias.data.zero_()
 
-        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
-        # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         # loss function
         if self.config.gpu_mode:
@@ -54,6 +52,9 @@ class Trainer(BaseTrain):
         self.momentum = 0.9
         # self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
         self.optimizer = optim.Adagrad(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
+
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
+        # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         print('---------- Networks architecture -------------')
         utils.print_network(self.model)
