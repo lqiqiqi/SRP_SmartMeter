@@ -7,7 +7,7 @@ from data_loader.data_generator import shuffle
 from utils.utils import get_args
 from utils.config import get_config_from_json
 # from utils.logger import Logger
-from models.model_fsrcnn_pro import Net
+from models.model_fullyconnect import Net
 
 def main():
     # capture the config path from the run arguments
