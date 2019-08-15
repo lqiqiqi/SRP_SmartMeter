@@ -385,6 +385,20 @@ avg_loss_log with original data:  54.720462799072266
 
 用整个数据集
 
+avg_loss:  48.98278
+avg_loss_log with original data:  48.281036376953125
+
+![0813_7_train_test](../LQ_SRP_SmartMeter/pic/0813_7_train_test.PNG)
+
+avg_loss:  48.318565
+avg_loss_log with original data:  47.672977447509766
+
+继续这样跑200个epoch
+
+![0813_8_train_test](../LQ_SRP_SmartMeter/pic/0813_8_train_test.PNG)
+
+
+
 
 
 # 注意事项
