@@ -69,7 +69,7 @@ if __name__ == '__main__':
         "scale_factor": 10,
         "num_epochs": 5,
         "save_epochs": 30,
-        "batch_size": 1,
+        "batch_size": 200,
         "test_batch_size": 1,
         "save_dir": "../saving_model",
         "lr": 0.00001,
