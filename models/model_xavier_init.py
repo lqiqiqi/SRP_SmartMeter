@@ -11,20 +11,20 @@ class Net(torch.nn.Module, BaseModel):
 
         d = 56 # out channels of first layer
         s = 32 # out channels of hidden layer
-        m = 16 # number of layer of hidden layer block
+        self.config.m = 16 # number of layer of hidden layer block
 
         # Feature extraction
         self.first_part = ConvBlock(self.config.num_channels, d, 5, 1, 0, activation='prelu', norm=None)
 
         self.layers = []
         # Shrinking
-        self.layers.append(ConvBlock(d, s, 1, 1, 0, activation='prelu', norm=None))
+        self.layers.append(ConvBlock(d, self.config.s, 1, 1, 0, activation='prelu', norm=None))
         # Non-linear Mapping
         for _ in range(m):
-            self.layers.append(ResnetBlock(s, 3, 1, 1, activation='prelu', norm='batch'))
+            self.layers.append(ResnetBlock(self.config.s, 3, 1, 1, activation='prelu', norm='batch'))
         self.layers.append(nn.PReLU())
         # Expanding
-        self.layers.append(ConvBlock(s, d, 1, 1, 0, activation='prelu', norm=None))
+        self.layers.append(ConvBlock(self.config.s, d, 1, 1, 0, activation='prelu', norm=None))
 
         self.mid_part = torch.nn.Sequential(*self.layers)
 

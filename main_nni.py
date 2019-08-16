@@ -74,7 +74,8 @@ if __name__ == '__main__':
         "save_dir": "../saving_model",
         "lr": 0.00001,
         "gpu_mode": True,
-        "load_model": False
+        "load_model": False,
+        "m": 4
         }
 
     config = Config()
