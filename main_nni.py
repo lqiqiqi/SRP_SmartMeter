@@ -82,6 +82,7 @@ if __name__ == '__main__':
             setattr(config, i, params[i])
             print(i, params[i])
 
-    params = nni.get_next_parameter()
+    # params = nni.get_next_parameter()
+    print('get next params')
 
     main(config)
