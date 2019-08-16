@@ -399,7 +399,12 @@ avg_loss_log with original data:  47.672977447509766
 
 
 
+## 0815_1:FSRCNN_s32_m16_batchsize1
 
+![0815_1_train_test](../LQ_SRP_SmartMeter/pic/0815_1_train_test.PNG)
+
+avg_loss:  41.340076
+avg_loss_log with original data:  40.87129592895508
 
 # 注意事项
 

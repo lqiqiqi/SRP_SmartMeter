@@ -1,5 +1,6 @@
 import os
 import math
+import nni
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -114,10 +115,15 @@ class Trainer(BaseTrain):
 
             avg_loss_test.append(float(epoch_loss_test))
 
+            nni.report_intermediate_result(
+                {"default": epoch_loss / len(train_data_loader), "epoch_loss_test": epoch_loss_test})
+
             # if es.step(float(epoch_loss_test)):
             #     self.save_model(self.model, epoch=None)
             #     print('Early stop at %2d epoch' % (epoch + 1))
             #     break
+
+        nni.report_final_result({"default": epoch_loss / len(train_data_loader), "epoch_loss_test": epoch_loss_test})
 
         # Plot avg. loss
         utils.plot_loss(self.config, [avg_loss, avg_loss_test])
