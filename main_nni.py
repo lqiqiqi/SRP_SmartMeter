@@ -11,7 +11,7 @@ from utils.config import get_config_from_json
 from models.model_xavier_init import Net
 
 
-def main(config):
+def run_trail(config):
     # capture the config path from the run arguments
     # then process the json configuration file
     # try:
@@ -82,7 +82,7 @@ if __name__ == '__main__':
             setattr(config, i, params[i])
             print(i, params[i])
 
-    # params = nni.get_next_parameter()
+    params = nni.get_next_parameter()
     print('get next params')
 
-    main(config)
+    run_trail(config)
