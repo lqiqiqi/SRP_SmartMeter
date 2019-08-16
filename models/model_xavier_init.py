@@ -18,13 +18,13 @@ class Net(torch.nn.Module, BaseModel):
 
         self.layers = []
         # Shrinking
-        self.layers.append(ConvBlock(d, self.config.s, 1, 1, 0, activation='prelu', norm=None))
+        self.layers.append(ConvBlock(d, s, 1, 1, 0, activation='prelu', norm=None))
         # Non-linear Mapping
-        for _ in range(m):
-            self.layers.append(ResnetBlock(self.config.s, 3, 1, 1, activation='prelu', norm='batch'))
+        for _ in range(self.config.m):
+            self.layers.append(ResnetBlock(s, 3, 1, 1, activation='prelu', norm='batch'))
         self.layers.append(nn.PReLU())
         # Expanding
-        self.layers.append(ConvBlock(self.config.s, d, 1, 1, 0, activation='prelu', norm=None))
+        self.layers.append(ConvBlock(s, d, 1, 1, 0, activation='prelu', norm=None))
 
         self.mid_part = torch.nn.Sequential(*self.layers)
 
