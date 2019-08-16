@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/search_space.json" beforeDir="false" afterPath="$PROJECT_DIR$/search_space.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_nni.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_nni.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +58,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="525" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="7729" />
+          <entry key="py" value="7731" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="38" />
         </counts>
@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="525" />
-          <entry key="Python" value="7925" />
+          <entry key="Python" value="7927" />
           <entry key="YAML" value="38" />
         </counts>
       </usages-collector>
@@ -74,7 +74,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search_space.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
@@ -83,16 +83,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_nni.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="71" column="38" lean-forward="true" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+            <state relative-caret-position="495">
+              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
               <folding>
                 <element signature="e#1#10#0" expanded="true" />
                 <element signature="e#394#1690#0" expanded="true" />
                 <element signature="e#1871#1875#0" expanded="true" />
-                <marker date="1565957206745" expanded="true" signature="1822:1881" ph="..." />
+                <marker date="1565963020458" expanded="true" signature="1822:1873" ph="..." />
               </folding>
             </state>
           </provider>
@@ -267,10 +267,10 @@
         <option value="$PROJECT_DIR$/models/model_xavier_init.py" />
         <option value="$PROJECT_DIR$/configs/0815_1.json" />
         <option value="$PROJECT_DIR$/trainers/trainer_origin_target.py" />
-        <option value="$PROJECT_DIR$/main_nni.py" />
         <option value="$PROJECT_DIR$/configs/search_space.json" />
         <option value="$PROJECT_DIR$/config.yml" />
         <option value="$PROJECT_DIR$/search_space.json" />
+        <option value="$PROJECT_DIR$/main_nni.py" />
       </list>
     </option>
   </component>
@@ -400,7 +400,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19818456" />
@@ -785,19 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_nni.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="71" column="38" lean-forward="true" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-            <element signature="e#394#1690#0" expanded="true" />
-            <element signature="e#1871#1875#0" expanded="true" />
-            <marker date="1565957206745" expanded="true" signature="1822:1881" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -809,6 +796,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_nni.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+            <element signature="e#394#1690#0" expanded="true" />
+            <element signature="e#1871#1875#0" expanded="true" />
+            <marker date="1565963020458" expanded="true" signature="1822:1873" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,6 +1,7 @@
 import os
 import torch
 import nni
+import logging
 from trainers.trainer_origin_target import Trainer
 # from trainers.trainer import Tester
 from data_loader.data_generator import DataGenerator
@@ -9,6 +10,9 @@ from utils.utils import get_args
 from utils.config import get_config_from_json
 # from utils.logger import Logger
 from models.model_xavier_init import Net
+
+
+_logger = logging.getLogger("nni_param_logger")
 
 def main(config):
     # capture the config path from the run arguments
@@ -55,7 +59,7 @@ if __name__ == '__main__':
     # config, _ = get_config_from_json(args.config)
 
     class Config():
-        def __init__(self, params):
+        def __init__(self):
             pass
 
     params = {
@@ -75,10 +79,12 @@ if __name__ == '__main__':
         "load_model": False
         }
 
-    config = Config(params)
+    config = Config()
     for i in params:
         if not hasattr(config, i):
             setattr(config, i, params[i])
 
     params = nni.get_next_parameter()
+    _logger.debug(params)
+
     main(config)
