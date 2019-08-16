@@ -123,7 +123,7 @@ class Trainer(BaseTrain):
             #     print('Early stop at %2d epoch' % (epoch + 1))
             #     break
 
-        nni.report_final_result({"default": epoch_loss / len(train_data_loader), "epoch_loss_test": epoch_loss_test})
+        nni.report_final_result({"default": float(avg_loss[-1]), "epoch_loss_test": float(avg_loss_test[-1])})
 
         # Plot avg. loss
         utils.plot_loss(self.config, [avg_loss, avg_loss_test])
