@@ -58,7 +58,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="525" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="7731" />
+          <entry key="py" value="7784" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="38" />
         </counts>
@@ -66,7 +66,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="525" />
-          <entry key="Python" value="7927" />
+          <entry key="Python" value="7980" />
           <entry key="YAML" value="38" />
         </counts>
       </usages-collector>
@@ -86,13 +86,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_nni.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+            <state relative-caret-position="341">
+              <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
               <folding>
                 <element signature="e#1#10#0" expanded="true" />
                 <element signature="e#394#1690#0" expanded="true" />
                 <element signature="e#1871#1875#0" expanded="true" />
-                <marker date="1565963020458" expanded="true" signature="1822:1873" ph="..." />
+                <marker date="1565963618687" expanded="true" signature="1823:1874" ph="..." />
               </folding>
             </state>
           </provider>
@@ -400,7 +400,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19818456" />
@@ -801,13 +801,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main_nni.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
+        <state relative-caret-position="341">
+          <caret line="82" column="29" selection-start-line="82" selection-start-column="29" selection-end-line="82" selection-end-column="29" />
           <folding>
             <element signature="e#1#10#0" expanded="true" />
             <element signature="e#394#1690#0" expanded="true" />
             <element signature="e#1871#1875#0" expanded="true" />
-            <marker date="1565963020458" expanded="true" signature="1822:1873" ph="..." />
+            <marker date="1565963618687" expanded="true" signature="1823:1874" ph="..." />
           </folding>
         </state>
       </provider>
