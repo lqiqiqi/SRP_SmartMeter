@@ -15,4 +15,4 @@ tuner:
 trial:
   command: python main_nni.py
   codeDir: .
-  gpuNum: 2
+  gpuNum: 0
