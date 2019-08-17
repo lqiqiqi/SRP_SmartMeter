@@ -67,15 +67,15 @@ if __name__ == '__main__':
         "num_threads": 8,
         "num_channels": 1,
         "scale_factor": 10,
-        "num_epochs": 5,
+        "num_epochs": 100,
         "save_epochs": 30,
-        "batch_size": 200,
+        "batch_size": 1,
         "test_batch_size": 1,
         "save_dir": "../saving_model",
         "lr": 0.00001,
         "gpu_mode": True,
         "load_model": False,
-        "m": 4
+        "m": 8
         }
 
     config = Config()

@@ -1,8 +1,8 @@
 authorName: default
 experimentName: test_nni
 trialConcurrency: 1
-maxExecDuration: 1h
-maxTrialNum: 10
+maxExecDuration: 100h
+maxTrialNum: 20
 trainingServicePlatform: local
 # 搜索空间文件
 searchSpacePath: search_space.json

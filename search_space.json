@@ -1,4 +1,4 @@
 {
-    "batch_size": {"_type":"choice", "_value": [4, 8, 12]},
-    "m":{"_type":"choice", "_value": [4, 8, 16]}
+    "batch_size": {"_type":"choice", "_value": [1, 4, 32, 64]},
+    "m":{"_type":"choice", "_value": [8, 20]}
 }
