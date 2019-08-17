@@ -96,9 +96,9 @@ class EResidualBlock(torch.nn.Module):
 
         self.body = torch.nn.Sequential(
             torch.nn.Conv1d(in_channels, out_channels, 3, 1, 1),
-            torch.nn.PReLU(inplace=True),
+            torch.nn.ReLU(inplace=True),
             torch.nn.Conv1d(out_channels, out_channels, 3, 1, 1),
-            torch.nn.PReLU(inplace=True),
+            torch.nn.ReLU(inplace=True),
             torch.nn.Conv1d(out_channels, out_channels, 1, 1, 0),
         )
 
