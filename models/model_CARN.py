@@ -10,10 +10,10 @@ class Block(nn.Module):
                  group=1):
         super(Block, self).__init__()
 
-        self.b1 = ops.EResidualBlock(64, 64, group=group)
-        self.c1 = ops.BasicBlock(64 * 2, 64, 1, 1, 0)
-        self.c2 = ops.BasicBlock(64 * 3, 64, 1, 1, 0)
-        self.c3 = ops.BasicBlock(64 * 4, 64, 1, 1, 0)
+        self.b1 = EResidualBlock(64, 64)
+        self.c1 = ConvBlock(64 * 2, 64, 1, 1, 0, activation='prelu', norm=None)
+        self.c2 = ConvBlock(64 * 3, 64, 1, 1, 0, activation='prelu', norm=None)
+        self.c3 = ConvBlock(64 * 4, 64, 1, 1, 0, activation='prelu', norm=None)
 
     def forward(self, x):
         c0 = o0 = x
@@ -40,9 +40,9 @@ class Net(torch.nn.Module, BaseModel):
 
         self.entry = nn.Conv1d(1, 64, 3, 1, 1)
 
-        self.b1 = Block(64, 64, group=group)
-        self.b2 = Block(64, 64, group=group)
-        self.b3 = Block(64, 64, group=group)
+        self.b1 = Block(64, 64)
+        self.b2 = Block(64, 64)
+        self.b3 = Block(64, 64)
         self.c1 = ConvBlock(64 * 2, 64, 1, 1, 0, activation='prelu', norm=None)
         self.c2 = ConvBlock(64 * 3, 64, 1, 1, 0, activation='prelu', norm=None)
         self.c3 = ConvBlock(64 * 4, 64, 1, 1, 0, activation='prelu', norm=None)
