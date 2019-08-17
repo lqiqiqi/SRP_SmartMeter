@@ -49,7 +49,7 @@ class Net(torch.nn.Module, BaseModel):
 
         self.upsample = nn.ConvTranspose1d(64, 64, 10, self.config.scale_factor, 0, output_padding=0)
 
-        self.exit = nn.Conv2d(64, 1, 3, 1, 1)
+        self.exit = ConvBlock(64, 1, 3, 1, 1, activation=None, norm=None)
 
     def forward(self, x):
 
