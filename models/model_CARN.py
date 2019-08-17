@@ -52,7 +52,7 @@ class Net(torch.nn.Module, BaseModel):
         self.exit = nn.Conv2d(64, 1, 3, 1, 1)
 
     def forward(self, x):
-        x = self.sub_mean(x)
+
         x = self.entry(x)
         c0 = o0 = x
 
