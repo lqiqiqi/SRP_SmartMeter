@@ -38,10 +38,6 @@ class Net(torch.nn.Module, BaseModel):
         super(Net, self).__init__() # super只能init第一个父类
         BaseModel.__init__(self, config)
 
-        scale = kwargs.get("scale")
-        multi_scale = kwargs.get("multi_scale")
-        group = kwargs.get("group", 1)
-
         self.entry = nn.Conv1d(1, 64, 3, 1, 1)
 
         self.b1 = Block(64, 64, group=group)
@@ -51,9 +47,6 @@ class Net(torch.nn.Module, BaseModel):
         self.c2 = ConvBlock(64 * 3, 64, 1, 1, 0, activation='prelu', norm=None)
         self.c3 = ConvBlock(64 * 4, 64, 1, 1, 0, activation='prelu', norm=None)
 
-        self.upsample = ops.UpsampleBlock(64, scale=scale,
-                                          multi_scale=multi_scale,
-                                          group=group)
         self.upsample = nn.ConvTranspose1d(64, 64, 10, self.config.scale_factor, 0, output_padding=0)
 
         self.exit = nn.Conv2d(64, 1, 3, 1, 1)
