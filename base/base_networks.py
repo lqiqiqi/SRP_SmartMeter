@@ -88,7 +88,7 @@ class Flatten(torch.nn.Module):
         return x.view(-1, 1, 30000)
 
 
-class EResidualBlock(nn.Module):
+class EResidualBlock(torch.nn.Module):
     def __init__(self,
                  in_channels, out_channels
                  ):
