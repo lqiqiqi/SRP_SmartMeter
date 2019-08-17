@@ -102,7 +102,7 @@ class EResidualBlock(torch.nn.Module):
             torch.nn.Conv1d(out_channels, out_channels, 1, 1, 0),
         )
 
-        self.init_weights(self.modules)
+        self.init_weights()
 
     def forward(self, x):
         out = self.body(x)
