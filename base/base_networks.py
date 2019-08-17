@@ -86,3 +86,34 @@ class Flatten(torch.nn.Module):
 
     def forward(self, x):
         return x.view(-1, 1, 30000)
+
+
+class EResidualBlock(nn.Module):
+    def __init__(self,
+                 in_channels, out_channels
+                 ):
+        super(EResidualBlock, self).__init__()
+
+        self.body = torch.nn.Sequential(
+            torch.nn.Conv1d(in_channels, out_channels, 3, 1, 1),
+            torch.nn.PReLU(inplace=True),
+            torch.nn.Conv1d(out_channels, out_channels, 3, 1, 1),
+            torch.nn.PReLU(inplace=True),
+            torch.nn.Conv1d(out_channels, out_channels, 1, 1, 0),
+        )
+
+        self.init_weights(self.modules)
+
+    def forward(self, x):
+        out = self.body(x)
+        out = torch.nn.functional.relu(out + x)
+        return out
+
+    def init_weights(self):
+        for m in self.modules():
+            # utils.weights_init_normal(m, mean=mean, std=std)
+            if isinstance(m, torch.nn.Conv1d):
+                # m.weight.data.normal_(mean, std)
+                m.weight.data = torch.nn.init.xavier_normal_(m.weight.data)
+                if m.bias is not None:
+                    m.bias.data.zero_()

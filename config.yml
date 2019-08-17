@@ -13,6 +13,6 @@ tuner:
     optimize_mode: minimize
 # 运行的命令，以及 Trial 代码的路径
 trial:
-  command: python main_nni.py
+  command: python main_nni.py -c ./configs/default_config.json
   codeDir: .
   gpuNum: 1

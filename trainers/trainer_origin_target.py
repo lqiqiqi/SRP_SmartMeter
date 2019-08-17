@@ -116,7 +116,7 @@ class Trainer(BaseTrain):
             avg_loss_test.append(float(epoch_loss_test))
 
             nni.report_intermediate_result(
-                {"default": epoch_loss_test, "epoch_loss": epoch_loss / len(train_data_loader)})
+                {"default": float(epoch_loss_test), "epoch_loss": float(epoch_loss / len(train_data_loader))})
 
             # if es.step(float(epoch_loss_test)):
             #     self.save_model(self.model, epoch=None)

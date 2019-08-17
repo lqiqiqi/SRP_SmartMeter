@@ -42,22 +42,21 @@ class Net(torch.nn.Module, BaseModel):
         multi_scale = kwargs.get("multi_scale")
         group = kwargs.get("group", 1)
 
-        self.sub_mean = ops.MeanShift((0.4488, 0.4371, 0.4040), sub=True)
-        self.add_mean = ops.MeanShift((0.4488, 0.4371, 0.4040), sub=False)
-
-        self.entry = nn.Conv2d(3, 64, 3, 1, 1)
+        self.entry = nn.Conv1d(1, 64, 3, 1, 1)
 
         self.b1 = Block(64, 64, group=group)
         self.b2 = Block(64, 64, group=group)
         self.b3 = Block(64, 64, group=group)
-        self.c1 = ops.BasicBlock(64 * 2, 64, 1, 1, 0)
-        self.c2 = ops.BasicBlock(64 * 3, 64, 1, 1, 0)
-        self.c3 = ops.BasicBlock(64 * 4, 64, 1, 1, 0)
+        self.c1 = ConvBlock(64 * 2, 64, 1, 1, 0, activation='prelu', norm=None)
+        self.c2 = ConvBlock(64 * 3, 64, 1, 1, 0, activation='prelu', norm=None)
+        self.c3 = ConvBlock(64 * 4, 64, 1, 1, 0, activation='prelu', norm=None)
 
         self.upsample = ops.UpsampleBlock(64, scale=scale,
                                           multi_scale=multi_scale,
                                           group=group)
-        self.exit = nn.Conv2d(64, 3, 3, 1, 1)
+        self.upsample = nn.ConvTranspose1d(64, 64, 10, self.config.scale_factor, 0, output_padding=0)
+
+        self.exit = nn.Conv2d(64, 1, 3, 1, 1)
 
     def forward(self, x):
         x = self.sub_mean(x)
@@ -76,10 +75,9 @@ class Net(torch.nn.Module, BaseModel):
         c3 = torch.cat([c2, b3], dim=1)
         o3 = self.c3(c3)
 
-        out = self.upsample(o3, scale=scale)
+        out = self.upsample(o3)
 
         out = self.exit(out)
-        out = self.add_mean(out)
 
         return out
 

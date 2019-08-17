@@ -11,6 +11,10 @@ from utils.config import get_config_from_json
 from models.model_xavier_init import Net
 
 
+class Config():
+    def __init__(self):
+        pass
+
 def run_trail(config):
     # capture the config path from the run arguments
     # then process the json configuration file
@@ -53,38 +57,18 @@ def run_trail(config):
 
 
 if __name__ == '__main__':
-    # args = get_args()
-    # config, _ = get_config_from_json(args.config)
+    tuner_params = nni.get_next_parameter()
 
-    class Config():
-        def __init__(self):
-            pass
+    args = get_args()
+    params, _ = get_config_from_json(args.config)
 
-    params = {
-        "exp_name": "28_train",
-        "model_name": "nni_test",
-        "data_dir": "../LQ_SRP_SmartMeter/data_split",
-        "num_threads": 8,
-        "num_channels": 1,
-        "scale_factor": 10,
-        "num_epochs": 100,
-        "save_epochs": 30,
-        "batch_size": 1,
-        "test_batch_size": 1,
-        "save_dir": "../saving_model",
-        "lr": 0.00001,
-        "gpu_mode": True,
-        "load_model": False,
-        "m": 8
-        }
+    params = vars(params) # convert to a dict
+    params.update(tuner_params) # use dict's update method
 
     config = Config()
     for i in params:
         if not hasattr(config, i):
             setattr(config, i, params[i])
             print(i, params[i])
-
-    params = nni.get_next_parameter()
-    print('get next params')
 
     run_trail(config)
