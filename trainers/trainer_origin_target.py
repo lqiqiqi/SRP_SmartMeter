@@ -177,7 +177,7 @@ class Trainer(BaseTrain):
             return True
         else:
             print('No model exists to load.')
-            self.model.weight_init()
+            self.weight_init()
             print('weight is initilized')
             return False
 
