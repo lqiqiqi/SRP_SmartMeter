@@ -21,7 +21,7 @@ class Trainer(BaseTrain):
 
         # load model if model exists weigh initialization
         if self.config.load_model is True:
-            self.load_model(self.model)
+            self.load_model()
             # self.load_spec_model(self.model)
         else:
             try:
@@ -106,7 +106,7 @@ class Trainer(BaseTrain):
             avg_loss.append((epoch_loss / len(train_data_loader)).detach().cpu().numpy())
 
             if (epoch + 1) % self.config.save_epochs == 0:
-                self.save_model(self.model, epoch + 1)
+                self.save_model(epoch + 1)
 
             # caculate test loss
             with torch.no_grad():
@@ -120,7 +120,7 @@ class Trainer(BaseTrain):
                 # {"default": float(epoch_loss_test), "epoch_loss": float(epoch_loss / len(train_data_loader))})
 
             # if es.step(float(epoch_loss_test)):
-            #     self.save_model(self.model, epoch=None)
+            #     self.save_model(epoch=None)
             #     print('Early stop at %2d epoch' % (epoch + 1))
             #     break
 
@@ -138,7 +138,7 @@ class Trainer(BaseTrain):
         print("Training and test is finished.")
 
         # Save final trained parameters of model
-        self.save_model(self.model, epoch=None)
+        self.save_model(epoch=None)
 
     def test(self, test_data_loader, last=False):
         loss_test = 0
@@ -165,18 +165,18 @@ class Trainer(BaseTrain):
 
         return loss_test, dtw_test
 
-    def save_model(self, network, epoch=None):
+    def save_model(self, epoch=None):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
         if not os.path.exists(model_dir):
             os.mkdir(model_dir)
         if epoch is not None:
-            torch.save(network.state_dict(), model_dir + '/' + self.config.model_name + '_param_epoch_%d.pkl' % epoch)
+            torch.save(self.model.state_dict(), model_dir + '/' + self.config.model_name + '_param_epoch_%d.pkl' % epoch)
         else:  # save final model
-            torch.save(network.state_dict(), model_dir + '/' + self.config.model_name + '_param.pkl')
+            torch.save(self.model.state_dict(), model_dir + '/' + self.config.model_name + '_param.pkl')
 
         print('Trained model is saved.')
 
-    def load_model(self, network):
+    def load_model(self):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
         model_name = model_dir + '/' + self.config.model_name + '_param.pkl'  # get final model
@@ -188,12 +188,12 @@ class Trainer(BaseTrain):
             #     namekey = k[7:]  # remove `module.`
             #     new_state_dict[namekey] = v
             # network.load_state_dict(new_state_dict)
-            network.load_state_dict(state_dict)
+            self.model.load_state_dict(state_dict)
             print('Trained generator model is loaded.')
             return True
         else:
             print('No model exists to load.')
-            network.weight_init()
+            self.model.weight_init()
             print('weight is initilized')
             return False
 
