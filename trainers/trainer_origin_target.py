@@ -24,23 +24,7 @@ class Trainer(BaseTrain):
             self.load_model()
             # self.load_spec_model(self.model)
         else:
-            try:
-                self.model.weight_init()
-            except:
-                for m in self.model.modules():
-                    classname = m.__class__.__name__
-                    if classname.find('ConvTranspose1d') != -1:
-                        m.weight.data = nn.init.xavier_normal_(m.weight.data)
-                        if m.bias is not None:
-                            m.bias.data.zero_()
-                    elif classname.find('Conv1d') != -1:
-                        m.weight.data = nn.init.xavier_normal_(m.weight.data)
-                        if m.bias is not None:
-                            m.bias.data.zero_()
-                    # elif classname.find('Norm') != -1:
-                    #     m.weight.data.normal_(1.0, 0.02)
-                    #     if m.bias is not None:
-                    #         m.bias.data.zero_()
+            self.weight_init()
 
 
         # loss function
@@ -216,6 +200,23 @@ class Trainer(BaseTrain):
             network.weight_init()
             print('weight is initilized')
             return False
+
+    def weight_init(self):
+        for m in self.model.modules():
+            classname = m.__class__.__name__
+            if classname.find('ConvTranspose1d') != -1:
+                m.weight.data = nn.init.xavier_normal_(m.weight.data)
+                if m.bias is not None:
+                    m.bias.data.zero_()
+            elif classname.find('Conv1d') != -1:
+                m.weight.data = nn.init.xavier_normal_(m.weight.data)
+                if m.bias is not None:
+                    m.bias.data.zero_()
+            elif classname.find('Norm') != -1:
+                m.weight.data.normal_(1.0, 0.02)
+                if m.bias is not None:
+                    m.bias.data.zero_()
+
 
 
 
