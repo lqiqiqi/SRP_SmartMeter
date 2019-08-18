@@ -12,5 +12,6 @@
   "save_dir": "../saving_model",
   "lr": 0.00001,
   "gpu_mode": true,
-  "load_model": true
+  "load_model": true,
+  "m": 4
 }
