@@ -406,6 +406,13 @@ avg_loss_log with original data:  47.672977447509766
 avg_loss:  41.340076
 avg_loss_log with original data:  40.87129592895508
 
+## 0815_1:FSRCNN_s32_m8_batchsize1
+
+![FSRCNN_s32_m8_batchsize1_train_test](../LQ_SRP_SmartMeter/pic/FSRCNN_s32_m8_batchsize1_train_test.PNG)
+
+avg_loss:  41.70587
+avg_loss_log with original data:  41.09297
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
