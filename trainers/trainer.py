@@ -135,7 +135,6 @@ class Tester(BaseTrain):
 
             dtw_test += dtw(model_out_test, y_test)
 
-
         avg_loss = loss_test / len(test_data_loader)
         avg_dtw_test = dtw_test / len(test_data_loader)
 
@@ -221,7 +220,6 @@ class Tester(BaseTrain):
                 namekey = k[7:]  # remove `module.`
                 new_state_dict[namekey] = v
             network.load_state_dict(new_state_dict)
-            network.load_state_dict(state_dict)
             print('Trained generator model is loaded.')
             return True
         else:
