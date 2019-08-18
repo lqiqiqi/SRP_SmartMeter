@@ -96,8 +96,8 @@ class Tester(BaseTrain):
     def test(self):
 
         # load model
-        # self.load_model(self.model)
-        self.load_spec_model()
+        self.load_model()
+        # self.load_spec_model()
 
         # Test
         print('Test is started.')
