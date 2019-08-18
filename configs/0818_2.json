@@ -1,0 +1,17 @@
+{
+  "exp_name": "31_train",
+  "model_name": "test_save_and_load",
+  "data_dir": "../LQ_SRP_SmartMeter/data_split",
+  "num_threads": 8,
+  "num_channels": 1,
+  "scale_factor": 10,
+  "num_epochs": 5,
+  "save_epochs": 30,
+  "batch_size": 1,
+  "test_batch_size": 1,
+  "save_dir": "../saving_model",
+  "lr": 0.00001,
+  "gpu_mode": true,
+  "load_model": true,
+  "m": 4
+}

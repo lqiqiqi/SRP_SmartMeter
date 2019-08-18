@@ -27,15 +27,15 @@ def main():
     model = torch.nn.DataParallel(Net(config), device_ids=[0, 1])
 
     # set the logger
-    log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
+    # log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)
+    # if not os.path.exists(log_dir):
+    #     os.makedirs(log_dir)
     # logger = Logger(log_dir)
     logger = None
 
     train_indices, test_indices = shuffle()
     # create your data generator
-    data_train = DataGenerator(config, 'test').load_dataset()
+    data_train = DataGenerator(config, 'debug').load_dataset()
     # create your data generator
     data_test = DataGenerator(config, 'debug').load_dataset()
 
