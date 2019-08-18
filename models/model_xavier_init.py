@@ -11,7 +11,7 @@ class Net(torch.nn.Module, BaseModel):
 
         d = 56 # out channels of first layer
         s = 32 # out channels of hidden layer
-        self.config.m = 16 # number of layer of hidden layer block
+        # self.config.m = 16 # number of layer of hidden layer block
 
         # Feature extraction
         self.first_part = ConvBlock(self.config.num_channels, d, 5, 1, 0, activation='prelu', norm=None)

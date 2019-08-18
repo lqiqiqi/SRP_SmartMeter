@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainers/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +60,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="581" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="8378" />
+          <entry key="py" value="8390" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="74" />
         </counts>
@@ -69,7 +68,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="581" />
-          <entry key="Python" value="8574" />
+          <entry key="Python" value="8586" />
           <entry key="YAML" value="74" />
         </counts>
       </usages-collector>
@@ -128,28 +127,28 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="198">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#370#1821#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="-539">
+              <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#310#368#0" expanded="true" />
+                <element signature="e#400#2886#0" expanded="true" />
                 <element signature="e#2992#3066#0" expanded="true" />
-                <element signature="e#3091#4537#0" expanded="true" />
                 <element signature="e#7333#8180#0" expanded="true" />
               </folding>
             </state>
@@ -295,8 +294,8 @@
         <option value="$PROJECT_DIR$/configs/0818_1.json" />
         <option value="$PROJECT_DIR$/trainers/trainer_origin_target.py" />
         <option value="$PROJECT_DIR$/configs/0815_1.json" />
-        <option value="$PROJECT_DIR$/main_test.py" />
         <option value="$PROJECT_DIR$/trainers/trainer.py" />
+        <option value="$PROJECT_DIR$/main_test.py" />
       </list>
     </option>
   </component>
@@ -849,26 +848,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_test.py">
+    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="-539">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#310#368#0" expanded="true" />
+            <element signature="e#400#2886#0" expanded="true" />
+            <element signature="e#2992#3066#0" expanded="true" />
+            <element signature="e#7333#8180#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+    <entry file="file://$PROJECT_DIR$/main_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        <state relative-caret-position="198">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#310#368#0" expanded="true" />
-            <element signature="e#2992#3066#0" expanded="true" />
-            <element signature="e#3091#4537#0" expanded="true" />
-            <element signature="e#7333#8180#0" expanded="true" />
+            <element signature="e#370#1821#0" expanded="true" />
           </folding>
         </state>
       </provider>
