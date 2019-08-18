@@ -131,7 +131,7 @@ class Tester(BaseTrain):
             model_out_test = self.model(x_test)
 
             loss_test += torch.sqrt(
-                self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
+                self.MSE_loss(model_out_test.squeeze(0), y_test.squeeze(0)))  # RMSE for re-log result and original meter data
 
             dtw_test += dtw(model_out_test, y_test)
 
