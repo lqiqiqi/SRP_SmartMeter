@@ -32,7 +32,6 @@ def main():
     # logger = Logger(log_dir)
     logger = None
 
-    train_indices, test_indices = shuffle()
     # create your data generator
     # data_train = DataGenerator(config, 'debug').load_dataset()
     # create your data generator

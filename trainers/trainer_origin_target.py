@@ -8,6 +8,7 @@ from torch.optim import lr_scheduler
 from torch.autograd import Variable
 from base.base_train import BaseTrain
 from trainers.sDTW import SoftDTWLoss
+from tslearn.metrics import dtw
 from utils import utils
 from utils.earlystopping import EarlyStopping
 
@@ -109,7 +110,7 @@ class Trainer(BaseTrain):
 
             # caculate test loss
             with torch.no_grad():
-                loss_test = self.test(test_data_loader)
+                loss_test, _ = self.test(test_data_loader)
 
             epoch_loss_test = loss_test / len(test_data_loader)
 
@@ -125,18 +126,23 @@ class Trainer(BaseTrain):
 
         # nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
 
+        with torch.no_grad():
+            _, dtw_test = self.test(test_data_loader, True)
+
         # Plot avg. loss
         utils.plot_loss(self.config, [avg_loss, avg_loss_test])
 
         print('avg_loss: ', avg_loss[-1])
         print('avg_loss_log with original data: ', avg_loss_test[-1])
+        print('dtw with original data: ', dtw_test)
         print("Training and test is finished.")
 
         # Save final trained parameters of model
         self.save_model(self.model, epoch=None)
 
-    def test(self, test_data_loader):
+    def test(self, test_data_loader, last=False):
         loss_test = 0
+        dtw_test = 0
 
         for input_test, target_test, groundtruth in test_data_loader:
             # input data (low resolution)
@@ -154,7 +160,10 @@ class Trainer(BaseTrain):
 
             loss_test += torch.sqrt(self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
-        return loss_test
+            if last is not False:
+                dtw_test += dtw(model_out_test, y_test)
+
+        return loss_test, dtw_test
 
     def save_model(self, network, epoch=None):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)

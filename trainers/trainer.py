@@ -4,8 +4,8 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
+from tslearn.metrics import dtw
 from base.base_train import BaseTrain
-from trainers.sDTW import SoftDTWLoss
 from utils import utils
 
 
@@ -96,8 +96,8 @@ class Tester(BaseTrain):
     def test(self):
 
         # load model
-        # self.model.load_model()
-        self.load_spec_model(self.model)
+        self.model.load_model()
+        # self.load_spec_model(self.model)
 
         # Test
         print('Test is started.')
@@ -107,54 +107,40 @@ class Tester(BaseTrain):
 
         self.model.eval()
 
-        # self.DTW_loss = SoftDTWLoss()
-        #
-        # loss_dtw = 0
-        # for input, target, groundtruth in test_data_loader:
-        #
-        #     x_ = Variable(input)
-        #     y_ = Variable(target)
-        #
-        #     # prediction
-        #     model_out = self.model(x_)
-        #     loss_dtw += self.DTW_loss(model_out, y_)
-        #
-        # avg_dtw = loss_dtw / len(test_data_loader)
-        #
-        # print('avg_dtw: ', avg_dtw)
-
         if self.config.gpu_mode:
             self.model.cuda()
             self.MSE_loss = nn.MSELoss().cuda()
         else:
             self.MSE_loss = nn.MSELoss()
 
-        loss = 0
-        loss_log = 0
-        for input, target, groundtruth in test_data_loader:
+        loss_test = 0
+        dtw_test = 0
+
+        for input_test, target_test, groundtruth in test_data_loader:
             # input data (low resolution)
             if self.config.gpu_mode:
-                x_ = Variable(input.cuda())
-                y_ = Variable(groundtruth.cuda())
-                y_log = Variable(target.cuda())
+                x_test = Variable(input_test.cuda())
+                y_test = Variable(groundtruth.cuda())
+                y_log_test = Variable(target_test.cuda())
             else:
-                x_ = Variable(input)
-                y_ = Variable(groundtruth)
-                y_log = Variable(target)
+                x_test = Variable(input_test)
+                y_test = Variable(groundtruth)
+                y_log_test = Variable(target_test)
 
             # prediction
-            model_out = self.model(x_)
-            relog = torch.mul(torch.add(torch.exp(torch.mul(model_out, math.log(100))), -1), 1/100)
+            model_out_test = self.model(x_test)
 
-            loss += torch.sqrt(self.MSE_loss(relog, y_)) # RMSE for re-log result and original meter data
-            loss_log += torch.sqrt(self.MSE_loss(model_out, y_log)) # RMSE for log result
+            loss_test += torch.sqrt(
+                self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
+
+            dtw_test += dtw(model_out_test, y_test)
 
 
-        avg_loss = loss / len(test_data_loader)
-        avg_loss_log = loss_log / len(test_data_loader)
+        avg_loss = loss_test / len(test_data_loader)
+        avg_dtw_test = dtw_test / len(test_data_loader)
 
         print('avg_loss with original data: ', avg_loss)
-        print('avg_loss_log with log data: ', avg_loss_log)
+        print('avg_dtw_test with log data: ', avg_dtw_test)
         print('Test is finished')
 
     def load_spec_model(self, network):
