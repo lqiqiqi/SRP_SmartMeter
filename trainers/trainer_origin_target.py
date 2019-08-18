@@ -112,13 +112,14 @@ class Trainer(BaseTrain):
 
         with torch.no_grad():
             _, dtw_test = self.test(test_data_loader, True)
+            avg_dtw_test = dtw_test / len(test_data_loader)
 
         # Plot avg. loss
         utils.plot_loss(self.config, [avg_loss, avg_loss_test])
 
         print('avg_loss: ', avg_loss[-1])
         print('avg_loss_log with original data: ', avg_loss_test[-1])
-        print('dtw with original data: ', dtw_test)
+        print('dtw with original data: ', avg_dtw_test)
         print("Training and test is finished.")
 
         # Save final trained parameters of model

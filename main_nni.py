@@ -1,6 +1,7 @@
 import os
 import torch
 import nni
+import argparse
 from trainers.trainer_origin_target import Trainer
 # from trainers.trainer import Tester
 from data_loader.data_generator import DataGenerator
@@ -14,6 +15,28 @@ from models.model_xavier_init import Net
 class Config():
     def __init__(self):
         pass
+
+def get_params():
+    ''' Get parameters from command line '''
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--exp_name", type=str, default="31_train")
+    parser.add_argument("--model_name", type=str, default="m16 test batchsize")
+    parser.add_argument("--data_dir",type=str, default="../LQ_SRP_SmartMeter/data_split")
+    parser.add_argument("--num_threads", type=int, default=8)
+    parser.add_argument("--num_channels", type=int, default=1)
+    parser.add_argument("--scale_factor", type=int, default=10)
+    parser.add_argument("--num_epochs",type=int, default=100)
+    parser.add_argument("--save_epochs",type=int, default=30)
+    parser.add_argument("--batch_size",type=int, default=4)
+    parser.add_argument("--test_batch_size", type=int, default=1)
+    parser.add_argument("--save_dir", type=str, default= "../saving_model")
+    parser.add_argument("--lr", type=float, default= 0.00001)
+    parser.add_argument("--gpu_mode",type=bool, default=True)
+    parser.add_argument("--load_model", type=bool, default=False)
+    parser.add_argument("--m", type=int, default=16)
+
+    args, _ = parser.parse_known_args()
+    return args
 
 def run_trail(config):
     # capture the config path from the run arguments
@@ -58,11 +81,7 @@ def run_trail(config):
 
 if __name__ == '__main__':
     tuner_params = nni.get_next_parameter()
-
-    args = get_args()
-    params, _ = get_config_from_json(args.config)
-
-    params = vars(params) # convert to a dict
+    params = vars(get_params()) # convert to a dict
     params.update(tuner_params) # use dict's update method
 
     config = Config()
