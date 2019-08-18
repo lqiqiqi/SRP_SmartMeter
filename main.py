@@ -37,7 +37,7 @@ def main():
     # create your data generator
     data_train = DataGenerator(config, 'debug').load_dataset()
     # create your data generator
-    data_test = DataGenerator(config, 'debug').load_dataset()
+    data_test = DataGenerator(config, 'test').load_dataset()
 
     # create trainer and pass all the previous components to it
     trainer = Trainer(model, config, data_train, logger, data_test)
