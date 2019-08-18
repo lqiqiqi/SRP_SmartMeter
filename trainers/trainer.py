@@ -139,13 +139,13 @@ class Tester(BaseTrain):
         avg_dtw_test = dtw_test / len(test_data_loader)
 
         print('avg_loss with original data: ', avg_loss)
-        print('avg_dtw_test with log data: ', avg_dtw_test)
+        print('avg_dtw_test with original data: ', avg_dtw_test)
         print('Test is finished')
 
     def load_spec_model(self, network):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_180.pkl'  # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_90.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             from collections import OrderedDict
