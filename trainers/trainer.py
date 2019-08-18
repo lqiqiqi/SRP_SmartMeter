@@ -105,7 +105,7 @@ class Tester(BaseTrain):
         # load dataset
         test_data_loader = self.data_test
 
-        self.model.eval()
+        # self.model.eval()
 
         if self.config.gpu_mode:
             self.model.cuda()
