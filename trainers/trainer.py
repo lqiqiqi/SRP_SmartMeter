@@ -96,8 +96,8 @@ class Tester(BaseTrain):
     def test(self):
 
         # load model
-        self.load_model(self.model)
-        # self.load_spec_model(self.model)
+        # self.load_model(self.model)
+        self.load_spec_model(self.model)
 
         # Test
         print('Test is started.')
@@ -145,7 +145,7 @@ class Tester(BaseTrain):
     def load_spec_model(self, network):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_60.pkl'  # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_180.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             from collections import OrderedDict
