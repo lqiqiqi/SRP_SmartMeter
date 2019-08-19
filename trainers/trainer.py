@@ -137,10 +137,10 @@ class Tester(BaseTrain):
             for i in range(len(y_test)):
                 if i+99 < len(y_test):
                     dtw_one_sample += dtw(model_out_test.squeeze(0)[-1][i:i+99], y_test.squeeze(0)[-1][i:i+99])
+                    print(dtw_one_sample)
                 else:
                     break
 
-            print(dtw_one_sample / (len(y_test) - 100 + 1))
             dtw_test += dtw_one_sample / (len(y_test) - 100 + 1)
 
         avg_loss = loss_test / len(test_data_loader)
