@@ -137,7 +137,7 @@ class Tester(BaseTrain):
             for i in range(len(y_test.squeeze(0)[-1])):
                 if i+99 < len(y_test.squeeze(0)[-1]):
                     dtw_one_sample += dtw(model_out_test.squeeze(0)[-1][i:i+99], y_test.squeeze(0)[-1][i:i+99])
-                    print(dtw_one_sample)
+                    # print(dtw_one_sample)
                 else:
                     break
 
