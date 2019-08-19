@@ -133,7 +133,14 @@ class Tester(BaseTrain):
             loss_test += torch.sqrt(
                 self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
-            dtw_test += dtw(model_out_test.squeeze(0), y_test.squeeze(0))
+            dtw_one_sample = 0
+            for i in range(len(y_test)):
+                if i+99 < len(y_test):
+                    dtw_one_sample += dtw(model_out_test.squeeze(0)[-1][i:i+99], y_test.squeeze(0)[-1][i:i+99])
+                else:
+                    break
+
+            dtw_test += dtw_one_sample / (len(y_test) - 100 + 1)
 
         avg_loss = loss_test / len(test_data_loader)
         avg_dtw_test = dtw_test / len(test_data_loader)
