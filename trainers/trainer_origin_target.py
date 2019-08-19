@@ -38,7 +38,7 @@ class Trainer(BaseTrain):
         self.momentum = 0.9
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
-        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=70, gamma=0.1)
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         print('---------- Networks architecture -------------')
@@ -100,15 +100,15 @@ class Trainer(BaseTrain):
 
             avg_loss_test.append(float(epoch_loss_test))
 
-            # nni.report_intermediate_result(
-                # {"default": float(epoch_loss_test), "epoch_loss": float(epoch_loss / len(train_data_loader))})
+            nni.report_intermediate_result(
+                {"default": float(epoch_loss_test), "epoch_loss": float(epoch_loss / len(train_data_loader))})
 
             # if es.step(float(epoch_loss_test)):
             #     self.save_model(epoch=None)
             #     print('Early stop at %2d epoch' % (epoch + 1))
             #     break
 
-        # nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
+        nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
 
         with torch.no_grad():
             _, dtw_test = self.test(test_data_loader, True)
