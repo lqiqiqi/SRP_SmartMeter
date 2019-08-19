@@ -13,5 +13,5 @@
   "lr": 0.1,
   "gpu_mode": true,
   "load_model": false,
-  "m": 4
+  "m": 16
 }

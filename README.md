@@ -413,6 +413,12 @@ avg_loss_log with original data:  40.87129592895508
 avg_loss:  41.70587
 avg_loss_log with original data:  41.09297
 
+## 0819_1: lr_0.1_30step
+
+
+
+
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
