@@ -140,6 +140,7 @@ class Tester(BaseTrain):
                 else:
                     break
 
+            print(dtw_one_sample / (len(y_test) - 100 + 1))
             dtw_test += dtw_one_sample / (len(y_test) - 100 + 1)
 
         avg_loss = loss_test / len(test_data_loader)
