@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configs/0819_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs/0819_1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainers/trainer_origin_target.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer_origin_target.py" afterDir="false" />
-    </list>
+    <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +59,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="674" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="8961" />
+          <entry key="py" value="8983" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="74" />
         </counts>
@@ -71,7 +67,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="674" />
-          <entry key="Python" value="9157" />
+          <entry key="Python" value="9179" />
           <entry key="YAML" value="74" />
         </counts>
       </usages-collector>
@@ -112,8 +108,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2679">
-              <caret line="192" column="43" lean-forward="true" selection-start-line="192" selection-start-column="43" selection-end-line="192" selection-end-column="43" />
+            <state relative-caret-position="259">
+              <caret line="196" column="49" selection-start-line="196" selection-start-column="49" selection-end-line="196" selection-end-column="49" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#565#4428#0" expanded="true" />
@@ -133,15 +129,6 @@
                 <marker date="1566183922697" expanded="true" signature="378:379" ph="..." />
                 <marker date="1566183922697" expanded="true" signature="378:383" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configs/0818_1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -828,6 +815,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <marker date="1566183922697" expanded="true" signature="378:379" ph="..." />
+            <marker date="1566183922697" expanded="true" signature="378:383" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0818_1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -842,22 +841,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <marker date="1566183922697" expanded="true" signature="378:379" ph="..." />
-            <marker date="1566183922697" expanded="true" signature="378:383" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2679">
-          <caret line="192" column="43" lean-forward="true" selection-start-line="192" selection-start-column="43" selection-end-line="192" selection-end-column="43" />
+        <state relative-caret-position="259">
+          <caret line="196" column="49" selection-start-line="196" selection-start-column="49" selection-end-line="196" selection-end-column="49" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#565#4428#0" expanded="true" />
