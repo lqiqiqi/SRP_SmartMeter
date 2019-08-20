@@ -21,8 +21,8 @@ class Trainer(BaseTrain):
 
         # load model if model exists weigh initialization
         if self.config.load_model is True:
-            self.load_model()
-            # self.load_spec_model(self.model)
+            # self.load_model()
+            self.load_spec_model()
         else:
             self.weight_init()
 
@@ -182,10 +182,10 @@ class Trainer(BaseTrain):
             print('weight is initilized')
             return False
 
-    def load_spec_model(self, network):
+    def load_spec_model(self):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_60.pkl'  # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_90.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             from collections import OrderedDict
@@ -193,12 +193,12 @@ class Trainer(BaseTrain):
             for k, v in state_dict.items():
                 namekey = k[7:]  # remove `module.`
                 new_state_dict[namekey] = v
-            network.load_state_dict(new_state_dict)
+            self.model.load_state_dict(new_state_dict)
             print('Trained generator model is loaded.')
             return True
         else:
             print('No model exists to load.')
-            network.weight_init()
+            self.weight_init()
             print('weight is initilized')
             return False
 
