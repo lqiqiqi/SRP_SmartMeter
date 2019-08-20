@@ -15,7 +15,7 @@ class Net(torch.nn.Module, BaseModel):
         self.upsample = nn.Upsample(scale_factor=self.config.scale_factor, mode='nearest')
 
         # Feature extraction
-        self.first_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 0, activation='prelu', norm=None)
+        self.first_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 2, activation='prelu', norm=None)
 
         self.layers = []
         # Shrinking
@@ -30,7 +30,9 @@ class Net(torch.nn.Module, BaseModel):
         self.mid_part = torch.nn.Sequential(*self.layers)
 
         # Deconvolution
-        self.last_part = nn.ConvTranspose1d(self.config.d, self.config.num_channels, 5, 1, 0, output_padding=0)
+        # self.last_part = nn.ConvTranspose1d(self.config.d, self.config.num_channels, 5, 1, 0, output_padding=0)
+        self.last_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 2, activation='prelu', norm=None)
+
         # self.last_part = torch.nn.Sequential(
         #     Upsample2xBlock(d, d, upsample='rnc', activation=None, norm=None),
         #     Upsample2xBlock(d, num_channels, upsample='rnc', activation=None, norm=None)
