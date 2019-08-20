@@ -417,7 +417,9 @@ avg_loss_log with original data:  41.09297
 
 
 
+## 0819_2: lr_0.01_30step
 
+![0819_2_train_test](../LQ_SRP_SmartMeter/pic/0819_2_train_test.PNG)
 
 # 注意事项
 

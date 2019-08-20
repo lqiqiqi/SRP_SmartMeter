@@ -34,6 +34,8 @@ def get_params():
     parser.add_argument("--gpu_mode",type=bool, default=True)
     parser.add_argument("--load_model", type=bool, default=False)
     parser.add_argument("--m", type=int, default=16)
+    parser.add_argument("--s", type=int, default=32)
+    parser.add_argument("--d", type=int, default=56)
 
     args, _ = parser.parse_known_args()
     return args

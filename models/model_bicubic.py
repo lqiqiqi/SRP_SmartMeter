@@ -9,12 +9,13 @@ class Net(torch.nn.Module, BaseModel):
         super(Net, self).__init__() # super只能init第一个父类
         BaseModel.__init__(self, config)
 
-        # d = 56 # out channels of first layer
-        # s = 32 # out channels of hidden layer
+        # d = 56 # out channels of first layer       # s = 32 # out channels of hidden layer
         # self.config.m = 16 # number of layer of hidden layer block
 
+        self.upsample = nn.Upsample(scale_factor=self.config.scale_factor, mode='bilinear')
+
         # Feature extraction
-        self.first_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 2, activation='prelu', norm=None)
+        self.first_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 0, activation='prelu', norm=None)
 
         self.layers = []
         # Shrinking
@@ -29,14 +30,15 @@ class Net(torch.nn.Module, BaseModel):
         self.mid_part = torch.nn.Sequential(*self.layers)
 
         # Deconvolution
-        self.last_part = nn.ConvTranspose1d(self.config.d, self.config.num_channels, 50, self.config.scale_factor, 0, output_padding=0)
+        self.last_part = nn.ConvTranspose1d(self.config.d, self.config.num_channels, 5, 1, 0, output_padding=0)
         # self.last_part = torch.nn.Sequential(
         #     Upsample2xBlock(d, d, upsample='rnc', activation=None, norm=None),
         #     Upsample2xBlock(d, num_channels, upsample='rnc', activation=None, norm=None)
         # )
 
     def forward(self, x):
-        out = self.first_part(x)
+        out = self.upsample(x)
+        out = self.first_part(out)
         out = self.mid_part(out)
         out = self.last_part(out)
         return out
