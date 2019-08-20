@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/model_bicubic.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/model_bilinear.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_bilinear.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +43,7 @@
           <entry key="main_sacred" value="1" />
           <entry key="model_CARN" value="1" />
           <entry key="model_VDSR" value="1" />
-          <entry key="py" value="107" />
+          <entry key="py" value="108" />
           <entry key="sDTW" value="1" />
           <entry key="trianer_multiGPU" value="1" />
           <entry key="yml" value="3" />
@@ -53,7 +52,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="84" />
-          <entry key="Python" value="112" />
+          <entry key="Python" value="113" />
           <entry key="YAML" value="3" />
         </counts>
       </usages-collector>
@@ -101,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
@@ -110,6 +109,18 @@
                 <element signature="e#383#1757#0" expanded="true" />
                 <marker date="1566283513831" expanded="true" signature="375:376" ph="..." />
                 <marker date="1566283513831" expanded="true" signature="375:380" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="14" column="88" selection-start-line="14" selection-start-column="88" selection-end-line="14" selection-end-column="88" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -213,7 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/base/base_model.py" />
         <option value="$PROJECT_DIR$/base/base_train.py" />
         <option value="$PROJECT_DIR$/configs/0810_3.json" />
         <option value="$PROJECT_DIR$/utils/earlystopping.py" />
@@ -264,6 +274,7 @@
         <option value="$PROJECT_DIR$/configs/0820_1.json" />
         <option value="$PROJECT_DIR$/models/model_bicubic.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/models/model_bilinear.py" />
       </list>
     </option>
   </component>
@@ -273,7 +284,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="683" />
@@ -478,14 +489,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/models/model_bilinear.py</url>
+          <line>38</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main_sacred.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0812_1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -859,6 +874,16 @@
             <element signature="e#383#1757#0" expanded="true" />
             <marker date="1566283513831" expanded="true" signature="375:376" ph="..." />
             <marker date="1566283513831" expanded="true" signature="375:380" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="88" selection-start-line="14" selection-start-column="88" selection-end-line="14" selection-end-column="88" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
