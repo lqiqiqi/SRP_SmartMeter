@@ -12,7 +12,7 @@ class Net(torch.nn.Module, BaseModel):
         # d = 56 # out channels of first layer       # s = 32 # out channels of hidden layer
         # self.config.m = 16 # number of layer of hidden layer block
 
-        self.upsample = nn.Upsample(scale_factor=self.config.scale_factor, mode='bilinear')
+        self.upsample = nn.Upsample(scale_factor=self.config.scale_factor, mode='bicubic')
 
         # Feature extraction
         self.first_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 0, activation='prelu', norm=None)
