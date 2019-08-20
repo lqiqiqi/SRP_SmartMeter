@@ -24,7 +24,7 @@ def main():
 
     # create an instance of the model you want
     # model = Net(config)
-    model = torch.nn.DataParallel(Net(config), device_ids=[1, 0])
+    model = torch.nn.DataParallel(Net(config), device_ids=[0, 1])
 
     # set the logger
     # log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)
