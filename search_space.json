@@ -1,3 +1,5 @@
 {
-    "batch_size": {"_type":"choice", "_value": [4, 32, 64]}
+    "m": {"_type":"uniform", "_value": [3, 20]},
+    "s": {"_type":"uniform", "_value": [8, 40]},
+    "d": {"_type":"choice", "_value": [40, 56, 64, 128, 256]}
 }

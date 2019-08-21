@@ -427,6 +427,10 @@ avg_loss_log with original data:  41.09297
 
 ![0820_1_train_test](../LQ_SRP_SmartMeter/pic/0820_1_train_test.PNG)
 
+## 0820_2: upsample_lastconv最后一层conv
+
+![0820_2_train_test](../LQ_SRP_SmartMeter/pic/0820_2_train_test.PNG)
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
