@@ -1,5 +1,5 @@
 {
     "m": {"_type":"uniform", "_value": [3, 20]},
-    "s": {"_type":"uniform", "_value": [8, 40]},
-    "d": {"_type":"choice", "_value": [40, 56, 64, 128, 256]}
+    "s": {"_type":"uniform", "_value": [8, 128]},
+    "d": {"_type":"loguniform", "_value": [8, 256]}
 }
