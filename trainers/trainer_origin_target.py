@@ -83,6 +83,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 300:600]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 3000:6000]))
                 loss.backward()  # 结果得到是tensor
@@ -90,6 +91,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 600:900]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 6000:9000]))
                 loss.backward()  # 结果得到是tensor
@@ -97,6 +99,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 900:1200]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 9000:12000]))
                 loss.backward()  # 结果得到是tensor
@@ -104,6 +107,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 1200:1500]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 12000:15000]))
                 loss.backward()  # 结果得到是tensor
@@ -111,6 +115,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 1500:1800]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 15000:18000]))
                 loss.backward()  # 结果得到是tensor
@@ -118,6 +123,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 1800:2100]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 18000:21000]))
                 loss.backward()  # 结果得到是tensor
@@ -125,6 +131,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 2100:2400]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 21000:24000]))
                 loss.backward()  # 结果得到是tensor
@@ -132,6 +139,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 2400:2700]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 24000:27000]))
                 loss.backward()  # 结果得到是tensor
@@ -139,6 +147,7 @@ class Trainer(BaseTrain):
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 2700:]
+                self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 27000:]))
                 loss.backward()  # 结果得到是tensor
