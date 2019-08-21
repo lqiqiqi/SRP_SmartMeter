@@ -427,6 +427,10 @@ avg_loss_log with original data:  41.09297
 
 ![0820_1_train_test](../LQ_SRP_SmartMeter/pic/0820_1_train_test.PNG)
 
+![0820_1_train2_test](../LQ_SRP_SmartMeter/pic/0820_1_train2_test.PNG)
+
+继续以0.0001训练，50次后下降0.1
+
 ## 0820_2: upsample_lastconv最后一层conv
 
 ![0820_2_train_test](../LQ_SRP_SmartMeter/pic/0820_2_train_test.PNG)
