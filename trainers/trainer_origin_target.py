@@ -77,70 +77,70 @@ class Trainer(BaseTrain):
                 # update network
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, :300]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, :3000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
                 x_1 = x_[:, :, 300:600]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 300:600]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 3000:6000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 600:900]
+                x_1 = x_[:, :, 6000:9000]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 600:900]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 6000:9000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 900:1200]
+                x_1 = x_[:, :, 9000:12000]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 900:1200]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 9000:12000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 1200:1500]
+                x_1 = x_[:, :, 12000:15000]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 1200:1500]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 12000:15000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 1500:1800]
+                x_1 = x_[:, :, 15000:18000]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 1500:1800]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 15000:18000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 1800:2100]
+                x_1 = x_[:, :, 18000:21000]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 1800:2100]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 18000:21000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 2100:2400]
+                x_1 = x_[:, :, 21000:24000]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 2100:2400]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 21000:24000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 2400:2700]
+                x_1 = x_[:, :, 24000:27000]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 2400:2700]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 24000:27000]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 2700:]
+                x_1 = x_[:, :, 27000:]
                 model_out = self.model(x_1)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 2700:]))
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 27000:]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
 
