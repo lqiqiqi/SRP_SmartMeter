@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/configs/0821_2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainers/trainer_origin_target.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer_origin_target.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/0821_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs/0821_2.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +59,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="27" />
-          <entry key="json" value="894" />
+          <entry key="json" value="896" />
           <entry key="model_VDSR" value="122" />
           <entry key="py" value="9642" />
           <entry key="sDTW" value="47" />
@@ -70,7 +68,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="894" />
+          <entry key="JSON" value="896" />
           <entry key="Python" value="9838" />
           <entry key="YAML" value="74" />
         </counts>
@@ -106,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/configs/0821_2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+            <state relative-caret-position="330">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -239,8 +237,8 @@
         <option value="$PROJECT_DIR$/models/model_bilinear.py" />
         <option value="$PROJECT_DIR$/search_space.json" />
         <option value="$PROJECT_DIR$/configs/0820_1.json" />
-        <option value="$PROJECT_DIR$/configs/0821_2.json" />
         <option value="$PROJECT_DIR$/trainers/trainer_origin_target.py" />
+        <option value="$PROJECT_DIR$/configs/0821_2.json" />
       </list>
     </option>
   </component>
@@ -250,7 +248,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="683" />
@@ -831,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/configs/0821_2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        <state relative-caret-position="330">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
