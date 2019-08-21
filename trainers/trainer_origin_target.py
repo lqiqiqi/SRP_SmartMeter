@@ -244,7 +244,7 @@ class Trainer(BaseTrain):
 
     def out_append(self, x, out):
         temp = self.model(x)
-        out = np.append(out, temp, axis=2)
+        out = torch.cat((out, temp), dim=2)
         return out
 
 
