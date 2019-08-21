@@ -15,7 +15,8 @@ class Net(torch.nn.Module, BaseModel):
         self.upsample = nn.Upsample(scale_factor=self.config.scale_factor, mode='nearest')
 
         # Feature extraction
-        self.first_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 2, activation='prelu', norm=None)
+        # if the last is conv, padding is 2
+        self.first_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 0, activation='prelu', norm=None)
 
         self.layers = []
         # Shrinking
