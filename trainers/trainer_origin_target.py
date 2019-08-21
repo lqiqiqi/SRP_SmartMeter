@@ -83,6 +83,7 @@ class Trainer(BaseTrain):
                 x_8 = x_[:, :, 2100:2400]
                 x_9 = x_[:, :, 2400:2700]
                 x_10 = x_[:, :, 2700:]
+                del x_
 
                 # update network
                 self.optimizer.zero_grad()
