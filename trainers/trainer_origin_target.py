@@ -2,6 +2,7 @@ import os
 import math
 import nni
 import torch
+import numpy as np
 import torch.nn as nn
 import torch.optim as optim
 from torch.optim import lr_scheduler
@@ -38,7 +39,7 @@ class Trainer(BaseTrain):
         self.momentum = 0.9
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
-        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=100, gamma=0.1)
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         print('---------- Networks architecture -------------')
@@ -71,11 +72,31 @@ class Trainer(BaseTrain):
                     x_ = Variable(input)
                     y_ = Variable(groundtruth)
 
-                print(x_.shape)
-                
+                # x_.shape is (batchsize, 1, 3000)
+                x_1 = x_[:, :, :300]
+                x_2 = x_[:, :, 300:600]
+                x_3 = x_[:, :, 600:900]
+                x_4 = x_[:, :, 900:1200]
+                x_5 = x_[:, :, 1200:1500]
+                x_6 = x_[:, :, 1500:1800]
+                x_7 = x_[:, :, 1800:2100]
+                x_8 = x_[:, :, 2100:2400]
+                x_9 = x_[:, :, 2400:2700]
+                x_10 = x_[:, :, 2700:]
+
                 # update network
                 self.optimizer.zero_grad()
-                model_out = self.model(x_)
+                model_out = self.model(x_1)
+                model_out = self.out_append(x_2, model_out)
+                model_out = self.out_append(x_3, model_out)
+                model_out = self.out_append(x_4, model_out)
+                model_out = self.out_append(x_5, model_out)
+                model_out = self.out_append(x_6, model_out)
+                model_out = self.out_append(x_7, model_out)
+                model_out = self.out_append(x_8, model_out)
+                model_out = self.out_append(x_9, model_out)
+                model_out = self.out_append(x_10, model_out)
+
                 loss = torch.sqrt(self.MSE_loss(model_out, y_))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
@@ -220,6 +241,11 @@ class Trainer(BaseTrain):
                 m.weight.data.normal_(1.0, 0.02)
                 if m.bias is not None:
                     m.bias.data.zero_()
+
+    def out_append(self, x, out):
+        temp = self.model(x)
+        out = np.append(out, temp, axis=2)
+        return out
 
 
 
