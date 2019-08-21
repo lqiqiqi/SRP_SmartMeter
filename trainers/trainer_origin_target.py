@@ -74,39 +74,28 @@ class Trainer(BaseTrain):
 
                 # x_.shape is (batchsize, 1, 3000)
                 x_1 = x_[:, :, :300]
-                x_2 = x_[:, :, 300:600]
-                x_3 = x_[:, :, 600:900]
-                x_4 = x_[:, :, 900:1200]
-                x_5 = x_[:, :, 1200:1500]
-                x_6 = x_[:, :, 1500:1800]
-                x_7 = x_[:, :, 1800:2100]
-                x_8 = x_[:, :, 2100:2400]
-                x_9 = x_[:, :, 2400:2700]
-                x_10 = x_[:, :, 2700:]
-                del x_
 
                 # update network
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
-                del x_1
-                model_out = self.out_append(x_2, model_out)
-                del x_2
-                model_out = self.out_append(x_3, model_out)
-                del x_3
-                model_out = self.out_append(x_4, model_out)
-                del x_4
-                model_out = self.out_append(x_5, model_out)
-                del x_5
-                model_out = self.out_append(x_6, model_out)
-                del x_6
-                model_out = self.out_append(x_7, model_out)
-                del x_7
-                model_out = self.out_append(x_8, model_out)
-                del x_8
-                model_out = self.out_append(x_9, model_out)
-                del x_9
-                model_out = self.out_append(x_10, model_out)
-                del x_10
+                x_1 = x_[:, :, 300:600]
+                model_out = self.out_append(x_1, model_out)
+                x_1 = x_[:, :, 600:900]
+                model_out = self.out_append(x_1, model_out)
+                x_1 = x_[:, :, 900:1200]
+                model_out = self.out_append(x_1, model_out)
+                x_1 = x_[:, :, 1200:1500]
+                model_out = self.out_append(x_1, model_out)
+                x_1 = x_[:, :, 1500:1800]
+                model_out = self.out_append(x_1, model_out)
+                x_1 = x_[:, :, 1800:2100]
+                model_out = self.out_append(x_1, model_out)
+                x_1 = x_[:, :, 2100:2400]
+                model_out = self.out_append(x_1, model_out)
+                x_1 = x_[:, :, 2400:2700]
+                model_out = self.out_append(x_1, model_out)
+                x_1 = x_[:, :, 2700:]
+                model_out = self.out_append(x_1, model_out)
 
                 loss = torch.sqrt(self.MSE_loss(model_out, y_))
                 loss.backward()  # 结果得到是tensor
