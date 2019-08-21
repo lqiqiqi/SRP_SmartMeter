@@ -87,15 +87,25 @@ class Trainer(BaseTrain):
                 # update network
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
+                del x_1
                 model_out = self.out_append(x_2, model_out)
+                del x_2
                 model_out = self.out_append(x_3, model_out)
+                del x_3
                 model_out = self.out_append(x_4, model_out)
+                del x_4
                 model_out = self.out_append(x_5, model_out)
+                del x_5
                 model_out = self.out_append(x_6, model_out)
+                del x_6
                 model_out = self.out_append(x_7, model_out)
+                del x_7
                 model_out = self.out_append(x_8, model_out)
+                del x_8
                 model_out = self.out_append(x_9, model_out)
+                del x_9
                 model_out = self.out_append(x_10, model_out)
+                del x_10
 
                 loss = torch.sqrt(self.MSE_loss(model_out, y_))
                 loss.backward()  # 结果得到是tensor
@@ -124,7 +134,7 @@ class Trainer(BaseTrain):
             avg_loss_test.append(float(epoch_loss_test))
 
             # nni.report_intermediate_result(
-            #     {"default": float(epoch_loss_test), "epoch_loss": float(epoch_loss / len(train_data_loader))})
+            #     {"default": float(epoch_loss_test), "epoch_loss": float(avg_loss[-1])})
 
             # if es.step(float(epoch_loss_test)):
             #     self.save_model(epoch=None)
