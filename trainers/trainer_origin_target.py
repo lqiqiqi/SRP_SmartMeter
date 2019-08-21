@@ -74,30 +74,73 @@ class Trainer(BaseTrain):
 
                 # x_.shape is (batchsize, 1, 3000)
                 x_1 = x_[:, :, :300]
-
                 # update network
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
-                x_1 = x_[:, :, 300:600]
-                model_out = self.out_append(x_1, model_out)
-                x_1 = x_[:, :, 600:900]
-                model_out = self.out_append(x_1, model_out)
-                x_1 = x_[:, :, 900:1200]
-                model_out = self.out_append(x_1, model_out)
-                x_1 = x_[:, :, 1200:1500]
-                model_out = self.out_append(x_1, model_out)
-                x_1 = x_[:, :, 1500:1800]
-                model_out = self.out_append(x_1, model_out)
-                x_1 = x_[:, :, 1800:2100]
-                model_out = self.out_append(x_1, model_out)
-                x_1 = x_[:, :, 2100:2400]
-                model_out = self.out_append(x_1, model_out)
-                x_1 = x_[:, :, 2400:2700]
-                model_out = self.out_append(x_1, model_out)
-                x_1 = x_[:, :, 2700:]
-                model_out = self.out_append(x_1, model_out)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, :300]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
 
-                loss = torch.sqrt(self.MSE_loss(model_out, y_))
+                x_1 = x_[:, :, 300:600]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 300:600]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
+
+                x_1 = x_[:, :, 600:900]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 600:900]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
+
+                x_1 = x_[:, :, 900:1200]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 900:1200]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
+
+                x_1 = x_[:, :, 1200:1500]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 1200:1500]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
+
+                x_1 = x_[:, :, 1500:1800]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 1500:1800]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
+
+                x_1 = x_[:, :, 1800:2100]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 1800:2100]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
+
+                x_1 = x_[:, :, 2100:2400]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 2100:2400]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
+
+                x_1 = x_[:, :, 2400:2700]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 2400:2700]))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
+
+                x_1 = x_[:, :, 2700:]
+                model_out = self.model(x_1)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 2700:]))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
 
