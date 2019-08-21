@@ -71,6 +71,8 @@ class Trainer(BaseTrain):
                     x_ = Variable(input)
                     y_ = Variable(groundtruth)
 
+                print(x_.shape)
+                
                 # update network
                 self.optimizer.zero_grad()
                 model_out = self.model(x_)
