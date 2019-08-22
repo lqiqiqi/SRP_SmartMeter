@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models/model_bilinear.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_bilinear.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_nni.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_nni.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search_space.json" beforeDir="false" afterPath="$PROJECT_DIR$/search_space.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
@@ -131,22 +133,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_nni.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1331">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="121">
+              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#468#1698#0" expanded="true" />
                 <element signature="e#1727#3072#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/search_space.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+            <state relative-caret-position="110">
+              <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -245,12 +246,12 @@
         <option value="$PROJECT_DIR$/configs/0821_1.json" />
         <option value="$PROJECT_DIR$/configs/0820_1.json" />
         <option value="$PROJECT_DIR$/configs/0821_2.json" />
-        <option value="$PROJECT_DIR$/main_nni.py" />
         <option value="$PROJECT_DIR$/config.yml" />
-        <option value="$PROJECT_DIR$/search_space.json" />
         <option value="$PROJECT_DIR$/base/base_networks.py" />
         <option value="$PROJECT_DIR$/trainers/trainer_origin_target.py" />
         <option value="$PROJECT_DIR$/models/model_bilinear.py" />
+        <option value="$PROJECT_DIR$/search_space.json" />
+        <option value="$PROJECT_DIR$/main_nni.py" />
       </list>
     </option>
   </component>
@@ -260,7 +261,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="683" />
@@ -773,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search_space.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="26" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/base/base_networks.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
@@ -791,28 +785,6 @@
             <element signature="e#2861#2888#0" expanded="true" />
             <marker date="1566452184343" expanded="true" signature="2863:2868" ph="..." />
             <marker date="1566452184343" expanded="true" signature="2917:2922" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_nni.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1331">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#468#1698#0" expanded="true" />
-            <element signature="e#1727#3072#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -832,6 +804,34 @@
             <element signature="e#0#12#0" expanded="true" />
             <element signature="e#1791#1934#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="58" lean-forward="true" selection-start-line="58" selection-end-line="58" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_nni.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#1727#3072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_space.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
         </state>
       </provider>
     </entry>

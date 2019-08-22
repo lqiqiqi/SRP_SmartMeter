@@ -37,7 +37,6 @@ def get_params():
     parser.add_argument("--s", type=int, default=32)
     parser.add_argument("--d", type=int, default=56)
     parser.add_argument("--k", type=int, default=5)
-    parser.add_argument("--k2", type=int, default=3)
 
     args, _ = parser.parse_known_args()
     return args
