@@ -31,7 +31,7 @@ class Net(torch.nn.Module, BaseModel):
         self.mid_part = torch.nn.Sequential(*self.layers)
 
         # Deconvolution
-        self.last_part = nn.ConvTranspose1d(self.config.d, self.config.num_channels, self.config.k, 1, 0, output_padding=0)
+        self.last_part = nn.ConvTranspose1d(int(self.config.d), int(self.config.num_channels), int(self.config.k), 1, 0, output_padding=0)
         # self.last_part = ConvBlock(self.config.d, self.config.num_channels, 5, 1, 2, activation=None, norm=None)
 
         # self.last_part = torch.nn.Sequential(
