@@ -22,7 +22,7 @@ class Net(torch.nn.Module, BaseModel):
         # Shrinking
         self.layers.append(ConvBlock(self.config.d, self.config.s, 1, 1, 0, activation='prelu', norm=None))
         # Non-linear Mapping
-        for _ in range(self.config.m):
+        for _ in range(int(self.config.m)):
             self.layers.append(ResnetBlock(self.config.s, self.config.k2, 1, 1, activation='prelu', norm='batch'))
         self.layers.append(nn.PReLU())
         # Expanding
