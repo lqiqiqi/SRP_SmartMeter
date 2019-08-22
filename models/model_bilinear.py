@@ -16,14 +16,14 @@ class Net(torch.nn.Module, BaseModel):
 
         # Feature extraction
         # if the last is conv, padding is 2
-        self.first_part = ConvBlock(self.config.num_channels, self.config.d, 5, 1, 0, activation='prelu', norm=None)
+        self.first_part = ConvBlock(self.config.num_channels, self.config.d, self.config.k, 1, 0, activation='prelu', norm=None)
 
         self.layers = []
         # Shrinking
         self.layers.append(ConvBlock(self.config.d, self.config.s, 1, 1, 0, activation='prelu', norm=None))
         # Non-linear Mapping
         for _ in range(self.config.m):
-            self.layers.append(ResnetBlock(self.config.s, 3, 1, 1, activation='prelu', norm='batch'))
+            self.layers.append(ResnetBlock(self.config.s, self.config.k2, 1, 1, activation='prelu', norm='batch'))
         self.layers.append(nn.PReLU())
         # Expanding
         self.layers.append(ConvBlock(self.config.s, self.config.d, 1, 1, 0, activation='prelu', norm=None))
@@ -31,7 +31,7 @@ class Net(torch.nn.Module, BaseModel):
         self.mid_part = torch.nn.Sequential(*self.layers)
 
         # Deconvolution
-        self.last_part = nn.ConvTranspose1d(self.config.d, self.config.num_channels, 5, 1, 0, output_padding=0)
+        self.last_part = nn.ConvTranspose1d(self.config.d, self.config.num_channels, self.config.k, 1, 0, output_padding=0)
         # self.last_part = ConvBlock(self.config.d, self.config.num_channels, 5, 1, 2, activation=None, norm=None)
 
         # self.last_part = torch.nn.Sequential(

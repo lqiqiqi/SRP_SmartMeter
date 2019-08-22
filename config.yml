@@ -1,7 +1,7 @@
 authorName: default
 experimentName: test_nni
 trialConcurrency: 1
-maxExecDuration: 100h
+maxExecDuration: 250h
 maxTrialNum: 20
 trainingServicePlatform: local
 # 搜索空间文件

@@ -19,7 +19,7 @@ class Config():
 def get_params():
     ''' Get parameters from command line '''
     parser = argparse.ArgumentParser()
-    parser.add_argument("--exp_name", type=str, default="36_train")
+    parser.add_argument("--exp_name", type=str, default="38_train")
     parser.add_argument("--model_name", type=str, default="nni search")
     parser.add_argument("--data_dir",type=str, default="../LQ_SRP_SmartMeter/data_split")
     parser.add_argument("--num_threads", type=int, default=8)
@@ -36,6 +36,8 @@ def get_params():
     parser.add_argument("--m", type=int, default=16)
     parser.add_argument("--s", type=int, default=32)
     parser.add_argument("--d", type=int, default=56)
+    parser.add_argument("--k", type=int, default=5)
+    parser.add_argument("--k2", type=int, default=3)
 
     args, _ = parser.parse_known_args()
     return args

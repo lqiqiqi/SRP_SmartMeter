@@ -1,5 +1,8 @@
 {
     "m": {"_type":"uniform", "_value": [3, 20]},
-    "s": {"_type":"uniform", "_value": [8, 128]},
-    "d": {"_type":"loguniform", "_value": [8, 256]}
+    "s": {"_type":"uniform", "_value": [4, 128]},
+    "d": {"_type":"loguniform", "_value": [5, 256]},
+    "lr": {"_type":"choice", "_value": [0.0001, 0.00001, 0.001]},
+    "k": {"_type":"loguniform", "_value": [3, 9]},
+    "k2": {"_type":"loguniform", "_value": [3, 9]}
 }
