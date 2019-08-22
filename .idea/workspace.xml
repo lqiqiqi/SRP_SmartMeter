@@ -61,7 +61,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1029" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="9988" />
+          <entry key="py" value="9989" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -69,7 +69,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1029" />
-          <entry key="Python" value="10184" />
+          <entry key="Python" value="10185" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -101,10 +101,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="33" column="113" selection-start-line="33" selection-start-column="113" selection-end-line="33" selection-end-column="113" />
+            <state relative-caret-position="238">
+              <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
+                <element signature="e#1791#1934#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -113,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/base/base_networks.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="924">
+            <state relative-caret-position="275">
               <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
               <folding>
                 <element signature="e#186#1015#0" expanded="true" />
@@ -130,7 +131,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_nni.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1133">
+            <state relative-caret-position="-1331">
               <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -779,6 +780,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/base/base_networks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+          <folding>
+            <element signature="e#186#1015#0" expanded="true" />
+            <element signature="e#1026#1247#0" expanded="true" />
+            <element signature="e#2349#2740#0" expanded="true" />
+            <element signature="e#2861#2888#0" expanded="true" />
+            <marker date="1566452184343" expanded="true" signature="2863:2868" ph="..." />
+            <marker date="1566452184343" expanded="true" signature="2917:2922" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_nni.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1331">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#468#1698#0" expanded="true" />
+            <element signature="e#1727#3072#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="99">
@@ -796,39 +824,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_nni.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1133">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#468#1698#0" expanded="true" />
-            <element signature="e#1727#3072#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/base_networks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="48" column="62" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
-          <folding>
-            <element signature="e#186#1015#0" expanded="true" />
-            <element signature="e#1026#1247#0" expanded="true" />
-            <element signature="e#2349#2740#0" expanded="true" />
-            <element signature="e#2861#2888#0" expanded="true" />
-            <marker date="1566452184343" expanded="true" signature="2863:2868" ph="..." />
-            <marker date="1566452184343" expanded="true" signature="2917:2922" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="33" column="113" selection-start-line="33" selection-start-column="113" selection-end-line="33" selection-end-column="113" />
+        <state relative-caret-position="238">
+          <caret line="25" column="65" selection-start-line="25" selection-start-column="65" selection-end-line="25" selection-end-column="65" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#1791#1934#0" expanded="true" />
           </folding>
         </state>
       </provider>
