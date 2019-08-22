@@ -442,4 +442,6 @@ avg_loss_log with original data:  41.09297
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
+2. nnictl create --config config.yml
+3. export PATH=$PATH:/home/jason/anaconda3/bin
 
