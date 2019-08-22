@@ -4,13 +4,13 @@ import torch
 class ConvBlock(torch.nn.Module):
     def __init__(self, input_size, output_size, kernel_size=4, stride=2, padding=1, bias=True, activation='relu', norm='batch'):
         super(ConvBlock, self).__init__()
-        self.conv = torch.nn.Conv1d(input_size, output_size, kernel_size, stride, padding, bias=bias)
+        self.conv = torch.nn.Conv1d(int(input_size), int(output_size), int(kernel_size), stride, padding, bias=bias)
 
         self.norm = norm
         if self.norm =='batch':
-            self.bn = torch.nn.BatchNorm1d(output_size)
+            self.bn = torch.nn.BatchNorm1d(int(output_size))
         elif self.norm == 'instance':
-            self.bn = torch.nn.InstanceNorm1d(output_size)
+            self.bn = torch.nn.InstanceNorm1d(int(output_size))
 
         self.activation = activation
         if self.activation == 'relu':
@@ -39,14 +39,14 @@ class ConvBlock(torch.nn.Module):
 class ResnetBlock(torch.nn.Module):
     def __init__(self, num_filter, kernel_size=3, stride=1, padding=1, bias=True, activation='relu', norm='batch'):
         super(ResnetBlock, self).__init__()
-        self.conv1 = torch.nn.Conv1d(num_filter, num_filter, kernel_size, stride, padding, bias=bias)
-        self.conv2 = torch.nn.Conv1d(num_filter, num_filter, kernel_size, stride, padding, bias=bias)
+        self.conv1 = torch.nn.Conv1d(int(num_filter), int(num_filter), int(kernel_size), stride, padding, bias=bias)
+        self.conv2 = torch.nn.Conv1d(int(num_filter), int(num_filter), int(kernel_size), stride, padding, bias=bias)
 
         self.norm = norm
         if self.norm == 'batch':
-            self.bn = torch.nn.BatchNorm1d(num_filter)
+            self.bn = torch.nn.BatchNorm1d(int(num_filter))
         elif norm == 'instance':
-            self.bn = torch.nn.InstanceNorm1d(num_filter)
+            self.bn = torch.nn.InstanceNorm1d(int(num_filter))
 
         self.activation = activation
         if self.activation == 'relu':
