@@ -55,7 +55,7 @@ class Trainer(BaseTrain):
         avg_loss = []
         avg_loss_test = []
         avg_loss_log_test = []
-        step = 0
+        # step = 0
 
         es = EarlyStopping(patience=30)
 
@@ -159,7 +159,7 @@ class Trainer(BaseTrain):
 
                 # tensorboard logging
                 # self.logger.scalar_summary('loss', loss, step + 1)
-                step += 1
+                # step += 1
 
             # avg. loss per epoch
             avg_loss.append((epoch_loss / 10*len(train_data_loader)).detach().cpu().numpy())
