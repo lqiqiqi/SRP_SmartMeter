@@ -113,7 +113,7 @@ class SRPShuffle(nn.Module):
         return view_permu.view((B, out_C, out_L)) # 1， 1， 100
 
     def __repr__(self):
-        return self.__class__.__name__ + '(sequence_upscale_factor=' + str(self.upscale_factor) + ')'
+        return self.__class__.__name__ + '(sequence_upscale_factor=' + str(self.config.scale_factor) + ')'
 
 
 class SRPUpsampleBlock(nn.Module):
