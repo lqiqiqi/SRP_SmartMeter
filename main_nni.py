@@ -22,7 +22,7 @@ def get_params():
     parser.add_argument("--exp_name", type=str, default="38_train")
     parser.add_argument("--model_name", type=str, default="nni search")
     parser.add_argument("--data_dir",type=str, default="../LQ_SRP_SmartMeter/data_split")
-    parser.add_argument("--num_threads", type=int, default=8)
+    parser.add_argument("--num_threads", type=int, default=4)
     parser.add_argument("--num_channels", type=int, default=1)
     parser.add_argument("--scale_factor", type=int, default=10)
     parser.add_argument("--num_epochs",type=int, default=100)

@@ -13,6 +13,7 @@ def get_config_from_json(json_file):
     with open(json_file, 'r') as config_file:
         config_dict = json.load(config_file)
 
+    print(config_dict)
     # convert the dictionary to a namespace using bunch lib
     config = Bunch(config_dict)
 

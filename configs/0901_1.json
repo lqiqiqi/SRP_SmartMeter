@@ -1,0 +1,19 @@
+{
+  "exp_name": "39_train",
+  "model_name": "improve with liu",
+  "data_dir": "../LQ_SRP_SmartMeter/data_split",
+  "num_threads": 8,
+  "num_channels": 1,
+  "scale_factor": 10,
+  "num_epochs": 100,
+  "save_epochs": 30,
+  "batch_size": 8,
+  "test_batch_size": 1,
+  "save_dir": "../saving_model",
+  "lr": 0.001,
+  "gpu_mode": true,
+  "load_model": true,
+  "m": 13,
+  "d":56,
+  "s":8
+}

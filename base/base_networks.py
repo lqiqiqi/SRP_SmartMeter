@@ -44,9 +44,9 @@ class ResnetBlock(torch.nn.Module):
 
         self.norm = norm
         if self.norm == 'batch':
-            self.bn = torch.nn.BatchNorm1d(int(num_filter))
+            self.bn = torch.nn.BatchNorm1d(int(num_filter), affine=True)
         elif norm == 'instance':
-            self.bn = torch.nn.InstanceNorm1d(int(num_filter))
+            self.bn = torch.nn.InstanceNorm1d(int(num_filter), affine=True)
 
         self.activation = activation
         if self.activation == 'relu':

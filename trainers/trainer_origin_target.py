@@ -175,15 +175,15 @@ class Trainer(BaseTrain):
 
             avg_loss_test.append(float(epoch_loss_test))
 
-            nni.report_intermediate_result(
-                {"default": float(epoch_loss_test), "epoch_loss": float(avg_loss[-1])})
+            # nni.report_intermediate_result(
+            #     {"default": float(epoch_loss_test), "epoch_loss": float(avg_loss[-1])})
 
             if es.step(float(epoch_loss_test)):
                 self.save_model(epoch=None)
                 print('Early stop at %2d epoch' % (epoch + 1))
                 break
 
-        nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
+        # nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
 
         with torch.no_grad():
             _, dtw_test = self.test(test_data_loader, True)
