@@ -97,9 +97,10 @@ class Net(torch.nn.Module, BaseModel):
                     m.bias.data.zero_()
 
 
-class SRPShuffle(nn.Module):
+class SRPShuffle(nn.Module, BaseModel):
     def __init__(self, config):
         super(SRPShuffle, self).__init__()
+        BaseModel.__init__(self, config)
 
     def forward(self, input):
         B, C, L = input.size()  # 假设1，10，10

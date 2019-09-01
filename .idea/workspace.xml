@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="" />
+    <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/models/model_bilinear.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_bilinear.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +44,7 @@
           <entry key="main_sacred" value="1" />
           <entry key="model_CARN" value="1" />
           <entry key="model_VDSR" value="1" />
-          <entry key="py" value="122" />
+          <entry key="py" value="123" />
           <entry key="sDTW" value="1" />
           <entry key="trianer_multiGPU" value="1" />
           <entry key="yml" value="4" />
@@ -51,7 +53,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="94" />
-          <entry key="Python" value="127" />
+          <entry key="Python" value="128" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
@@ -60,7 +62,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1116" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="10237" />
+          <entry key="py" value="10244" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -68,7 +70,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1116" />
-          <entry key="Python" value="10433" />
+          <entry key="Python" value="10440" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -137,8 +139,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="115" column="87" selection-start-line="115" selection-start-column="87" selection-end-line="115" selection-end-column="87" />
+            <state relative-caret-position="330">
+              <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
                 <element signature="e#187#1799#0" expanded="true" />
@@ -147,10 +149,27 @@
                 <element signature="e#1323#1951#0" />
                 <element signature="e#2009#2223#0" />
                 <element signature="e#1835#2040#0" expanded="true" />
-                <element signature="e#4626#4687#0" expanded="true" />
+                <element signature="e#4683#4758#0" expanded="true" />
                 <element signature="e#4728#5215#0" expanded="true" />
+                <element signature="e#5198#5291#0" expanded="true" />
                 <element signature="e#5457#5569#0" expanded="true" />
                 <element signature="e#5605#5638#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/base/base_model.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#82#102#0" expanded="true" />
+                <element signature="e#150#622#0" expanded="true" />
+                <element signature="e#1207#1727#0" expanded="true" />
+                <marker date="1565437641916" expanded="true" signature="73:82" ph="..." />
               </folding>
             </state>
           </provider>
@@ -488,20 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/base/base_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#82#102#0" expanded="true" />
-            <element signature="e#150#622#0" expanded="true" />
-            <element signature="e#1207#1727#0" expanded="true" />
-            <marker date="1565437641916" expanded="true" signature="73:82" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0812_3.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -829,10 +834,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/base/base_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#82#102#0" expanded="true" />
+            <element signature="e#150#622#0" expanded="true" />
+            <element signature="e#1207#1727#0" expanded="true" />
+            <marker date="1565437641916" expanded="true" signature="73:82" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="115" column="87" selection-start-line="115" selection-start-column="87" selection-end-line="115" selection-end-column="87" />
+        <state relative-caret-position="330">
+          <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
             <element signature="e#187#1799#0" expanded="true" />
@@ -841,8 +860,9 @@
             <element signature="e#1323#1951#0" />
             <element signature="e#2009#2223#0" />
             <element signature="e#1835#2040#0" expanded="true" />
-            <element signature="e#4626#4687#0" expanded="true" />
+            <element signature="e#4683#4758#0" expanded="true" />
             <element signature="e#4728#5215#0" expanded="true" />
+            <element signature="e#5198#5291#0" expanded="true" />
             <element signature="e#5457#5569#0" expanded="true" />
             <element signature="e#5605#5638#0" expanded="true" />
           </folding>
