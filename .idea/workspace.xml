@@ -62,7 +62,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1116" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="10284" />
+          <entry key="py" value="10288" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -70,7 +70,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1116" />
-          <entry key="Python" value="10480" />
+          <entry key="Python" value="10484" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -139,8 +139,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+            <state relative-caret-position="255">
+              <caret line="57" column="121" selection-start-line="57" selection-start-column="121" selection-end-line="57" selection-end-column="121" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#227#438#0" expanded="true" />
@@ -148,8 +148,8 @@
                 <element signature="e#894#1374#0" expanded="true" />
                 <element signature="e#2193#2219#0" expanded="true" />
                 <element signature="e#2496#3443#0" expanded="true" />
-                <marker date="1567331641593" expanded="true" signature="1409:1410" ph="..." />
-                <marker date="1567331641593" expanded="true" signature="2345:2411" ph="..." />
+                <marker date="1567331726886" expanded="true" signature="1409:1410" ph="..." />
+                <marker date="1567331726886" expanded="true" signature="2297:2363" ph="..." />
               </folding>
             </state>
           </provider>
@@ -864,8 +864,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        <state relative-caret-position="255">
+          <caret line="57" column="121" selection-start-line="57" selection-start-column="121" selection-end-line="57" selection-end-column="121" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#227#438#0" expanded="true" />
@@ -873,8 +873,8 @@
             <element signature="e#894#1374#0" expanded="true" />
             <element signature="e#2193#2219#0" expanded="true" />
             <element signature="e#2496#3443#0" expanded="true" />
-            <marker date="1567331641593" expanded="true" signature="1409:1410" ph="..." />
-            <marker date="1567331641593" expanded="true" signature="2345:2411" ph="..." />
+            <marker date="1567331726886" expanded="true" signature="1409:1410" ph="..." />
+            <marker date="1567331726886" expanded="true" signature="2297:2363" ph="..." />
           </folding>
         </state>
       </provider>
