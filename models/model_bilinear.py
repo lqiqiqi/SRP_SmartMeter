@@ -97,24 +97,24 @@ class Net(torch.nn.Module, BaseModel):
                     m.bias.data.zero_()
 
 
-class SRPShuffle(nn.Module, BaseModel):
-    def __init__(self, config):
+class SRPShuffle(nn.Module):
+    def __init__(self, scale):
         super(SRPShuffle, self).__init__()
-        BaseModel.__init__(self, config)
+        self.scale = scale
 
     def forward(self, input):
-        B, C, L = input.size()  # 假设1，10，10
-        if C % self.config.scale != 0:
+        B, C, L = input.size() # 假设1，10，10
+        if C % self.scale != 0:
             raise Exception('Check input channels')
-        out_L = self.config.scale_factor * L  # out_L = 100
-        out_C = C // self.config.scale_factor  # out_C = 1
+        out_L = self.scale * L # out_L = 100
+        out_C = C // self.scale # out_C = 1
 
-        input_view = input.contiguous().view((B, out_C, self.config.scale_factor, L)) # 1， 1， 10， 10
+        input_view = input.contiguous().view((B, out_C, self.scale, L)) # 1， 1， 10， 10
         view_permu = input_view.permute(0, 1, 3, 2).contiguous() # 1， 1， 10， 10
         return view_permu.view((B, out_C, out_L)) # 1， 1， 100
 
     def __repr__(self):
-        return self.__class__.__name__ + '(sequence_upscale_factor=' + str(self.config.scale_factor) + ')'
+        return self.__class__.__name__ + '(sequence_upscale_factor=' + str(self.scale) + ')'
 
 
 class SRPUpsampleBlock(nn.Module):
