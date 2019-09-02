@@ -178,7 +178,7 @@ class Trainer(BaseTrain):
             # nni.report_intermediate_result(
             #     {"default": float(epoch_loss_test), "epoch_loss": float(avg_loss[-1])})
 
-            if es.step(float(epoch_loss_test)):
+            if es.step(avg_loss[-1]):
                 self.save_model(epoch=None)
                 print('Early stop at %2d epoch' % (epoch + 1))
                 break

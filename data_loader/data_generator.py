@@ -18,7 +18,7 @@ def load_data(filepath):
 
 def shuffle():
     validation_split = 0.125
-    random_seed = 42
+    random_seed = 40 # 本来是42
     dataset_size = 16000
 
     indices = list(range(dataset_size))
@@ -55,6 +55,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
         # interpolate需要三维输入，先升为三维后，再squeeze降维
         # lowdata = torch.nn.functional.interpolate(highdata.unsqueeze(0), scale_factor=1 / self.config.scale_factor).squeeze(0)
 
+        # take 函数结果变为一维
         lowdata = torch.take(highdata, torch.arange(0, highdata.size()[1], self.config.scale_factor).long()).unsqueeze(0)
         lowdata_log = torch.div(torch.log(torch.mul(lowdata, 1000) + 1), math.log(100))
 
