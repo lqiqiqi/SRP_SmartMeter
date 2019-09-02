@@ -439,6 +439,10 @@ avg_loss_log with original data:  41.09297
 
 ![0821_2_train_test](../LQ_SRP_SmartMeter/pic/0821_2_train_test.PNG)
 
+# 0901_1
+
+![0901_1_train_test](../LQ_SRP_SmartMeter/pic/0901_1_train_test.PNG)
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
