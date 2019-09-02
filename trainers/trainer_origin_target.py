@@ -9,7 +9,7 @@ from torch.optim import lr_scheduler
 from torch.autograd import Variable
 from base.base_train import BaseTrain
 from trainers.sDTW import SoftDTWLoss
-from tslearn.metrics import dtw
+# from tslearn.metrics import dtw
 from utils import utils
 from utils.earlystopping import EarlyStopping
 
