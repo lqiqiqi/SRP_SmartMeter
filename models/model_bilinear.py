@@ -56,7 +56,7 @@ class Net(torch.nn.Module, BaseModel):
         self.layers.append(ConvBlock(self.config.d, self.config.s, 1, 1, 0, activation='lrelu', norm=None))
         # Non-linear Mapping
         for _ in range(int(self.config.m)):
-            self.layers.append(ResnetBlock(self.config.s, 3, 1, 1, activation='lrelu', norm='instance'))
+            self.layers.append(ResnetBlock(self.config.s, 5, 1, 2, activation='lrelu', norm='instance'))
         self.layers.append(nn.PReLU())
         # Expanding
         self.layers.append(ConvBlock(self.config.s, self.config.d, 1, 1, 0, activation='lrelu', norm=None))
