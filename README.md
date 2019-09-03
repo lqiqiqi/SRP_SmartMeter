@@ -449,6 +449,10 @@ avg_loss:  33.74135
 avg_loss_log with original data:  27.338672637939453
 dtw with original data:  4735.195941130432
 
+检查后发现代码没有问题，因为nni的测试结果大部分是train loss小于test loss的。
+
+这个出现此问题，可能是train batch size和test batch size的不同。train是8， test是1。如果train和test用一样的话，应就会小
+
 
 
 # temp
