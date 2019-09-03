@@ -115,6 +115,7 @@ class Tester(BaseTrain):
 
         loss_test = 0
         dtw_test = 0
+        flag = 0
 
         for input_test, target_test, groundtruth in test_data_loader:
             # input data (low resolution)
@@ -135,11 +136,13 @@ class Tester(BaseTrain):
 
             dtw_one_sample = 0
             # print(y_test.size())
+            print(flag)
+            flag += 1
             for i in range(len(y_test.squeeze(0).squeeze(0))):
                 if i+99 < len(y_test.squeeze(0).squeeze(0)):
                     temp_dtw = dtw(model_out_test.squeeze(0).squeeze(0)[i:i+99], y_test.squeeze(0).squeeze(0)[i:i+99])
                     dtw_one_sample += temp_dtw
-                    print(temp_dtw)
+                    # print(temp_dtw)
                     # print(model_out_test.squeeze(0)[i:i+99], y_test.squeeze(0)[i:i+99])
                     # print(dtw_one_sample)
                 else:
