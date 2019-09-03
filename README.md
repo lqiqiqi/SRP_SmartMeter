@@ -453,21 +453,17 @@ dtw with original data:  4735.195941130432
 
 这个出现此问题，可能是train batch size和test batch size的不同。train是8， test是1。如果train和test用一样的话，应就会小
 
-
-
-# temp
-
-terminal4 最后开的 res5_endupsamp
-
-terminal1 endupsamp
-
-terminal2 improve with liu startupsamp 继续训练
-
 ## 0902_2: res5_endupsamp
 
 ![0902_2_train_test](../LQ_SRP_SmartMeter/pic/0902_2_train_test.PNG)
 
 说明endupsample这个网络结构有问题
+
+## temp
+
+terminal4 0903_1: scale100
+
+terminal2 0903_3: batch32
 
 # 注意事项
 
