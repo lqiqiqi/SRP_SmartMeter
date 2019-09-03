@@ -138,6 +138,7 @@ class Tester(BaseTrain):
             # print(y_test.size())
             print(flag)
             flag += 1
+
             for i in range(len(y_test.squeeze(0).squeeze(0))):
                 if i+99 < len(y_test.squeeze(0).squeeze(0)):
                     temp_dtw = dtw(model_out_test.squeeze(0).squeeze(0)[i:i+99], y_test.squeeze(0).squeeze(0)[i:i+99])
@@ -148,7 +149,8 @@ class Tester(BaseTrain):
                 else:
                     break
 
-            dtw_test += dtw_one_sample / (len(y_test) - 100 + 1)
+            dtw_test += dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
+            print(dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1))
 
         avg_loss = loss_test / len(test_data_loader)
         avg_dtw_test = dtw_test / len(test_data_loader)
