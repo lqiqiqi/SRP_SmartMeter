@@ -443,6 +443,12 @@ avg_loss_log with original data:  41.09297
 
 ![0901_1_train_test](../LQ_SRP_SmartMeter/pic/0901_1_train_test.PNG)
 
+![0901_1_2_train_test](../LQ_SRP_SmartMeter/pic/0901_1_2_train_test.PNG)
+
+avg_loss:  33.74135
+avg_loss_log with original data:  27.338672637939453
+dtw with original data:  4735.195941130432
+
 
 
 # temp
