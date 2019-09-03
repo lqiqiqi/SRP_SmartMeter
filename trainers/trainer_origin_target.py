@@ -74,7 +74,7 @@ class Trainer(BaseTrain):
 
                 # scale是10的话，x_.shape is (batchsize, 1, 300)
                 # scale是100的话，x_.shape is (batchsize, 1, 30)
-                slice = 30000 / (self.config.scale_factor * 10)
+                slice = int(30000 / (self.config.scale_factor * 10))
                 x_1 = x_[:, :, :slice]
                 # update network
                 self.optimizer.zero_grad()
