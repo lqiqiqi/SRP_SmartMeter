@@ -72,8 +72,10 @@ class Trainer(BaseTrain):
                     x_ = Variable(input)
                     y_ = Variable(groundtruth)
 
-                # x_.shape is (batchsize, 1, 300)
-                x_1 = x_[:, :, :300]
+                # scale是10的话，x_.shape is (batchsize, 1, 300)
+                # scale是100的话，x_.shape is (batchsize, 1, 30)
+                slice = 30000 / (self.config.scale_factor * 10)
+                x_1 = x_[:, :, :slice]
                 # update network
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
@@ -82,7 +84,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 300:600]
+                x_1 = x_[:, :, slice:slice*2]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 3000:6000]))
@@ -90,7 +92,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 600:900]
+                x_1 = x_[:, :, slice*2:slice*3]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 6000:9000]))
@@ -98,7 +100,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 900:1200]
+                x_1 = x_[:, :, slice*3:slice*4]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 9000:12000]))
@@ -106,7 +108,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 1200:1500]
+                x_1 = x_[:, :, slice*4:slice*5]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 12000:15000]))
@@ -114,7 +116,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 1500:1800]
+                x_1 = x_[:, :, slice*5:slice*6]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 15000:18000]))
@@ -122,7 +124,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 1800:2100]
+                x_1 = x_[:, :, slice*6:slice*7]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 18000:21000]))
@@ -130,7 +132,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 2100:2400]
+                x_1 = x_[:, :, slice*7:slice*8]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 21000:24000]))
@@ -138,7 +140,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 2400:2700]
+                x_1 = x_[:, :, slice*8:slice*9]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 24000:27000]))
@@ -146,7 +148,7 @@ class Trainer(BaseTrain):
                 self.optimizer.step()
                 epoch_loss += loss
 
-                x_1 = x_[:, :, 2700:]
+                x_1 = x_[:, :, slice*9:]
                 self.optimizer.zero_grad()
                 model_out = self.model(x_1)
                 loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 27000:]))
