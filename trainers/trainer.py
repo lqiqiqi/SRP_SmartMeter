@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
-from tslearn.metrics import dtw
+from tslearn.metrics import soft_dtw
 from base.base_train import BaseTrain
 from utils import utils
 
@@ -141,7 +141,7 @@ class Tester(BaseTrain):
 
             for i in range(len(y_test.squeeze(0).squeeze(0))):
                 if i+99 < len(y_test.squeeze(0).squeeze(0)):
-                    temp_dtw = dtw(model_out_test.squeeze(0).squeeze(0)[i:i+99], y_test.squeeze(0).squeeze(0)[i:i+99])
+                    temp_dtw = soft_dtw(model_out_test.squeeze(0).squeeze(0)[i:i+99], y_test.squeeze(0).squeeze(0)[i:i+99])
                     dtw_one_sample += temp_dtw
                     dtw_one_sample = dtw_one_sample / 2
                     # print(temp_dtw)
