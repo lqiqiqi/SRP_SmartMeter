@@ -453,6 +453,12 @@ terminal1 endupsamp
 
 terminal2 improve with liu startupsamp 继续训练
 
+## 0902_2: res5_endupsamp
+
+![0902_2_train_test](../LQ_SRP_SmartMeter/pic/0902_2_train_test.PNG)
+
+说明endupsample这个网络结构有问题
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
