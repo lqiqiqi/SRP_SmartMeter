@@ -461,11 +461,11 @@ dtw with original data:  4735.195941130432
 
 ## temp
 
-terminal4 0903_1: scale100
+terminal4 0903_1: scale100 step50
 
-terminal2 0903_3: batch32_step30
+terminal2 0903_3: batch32_step30 0.000001 step50
 
-terminal1 0903_4: batch32_step100
+terminal1 0903_4: batch32_step100 0.00001 step100
 
 # 注意事项
 
