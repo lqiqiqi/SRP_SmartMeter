@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="" />
+    <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/configs/0903_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs/0903_4.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +62,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="27" />
-          <entry key="json" value="1227" />
+          <entry key="json" value="1228" />
           <entry key="model_VDSR" value="122" />
           <entry key="py" value="10750" />
           <entry key="sDTW" value="47" />
@@ -69,7 +71,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="1227" />
+          <entry key="JSON" value="1228" />
           <entry key="Python" value="10946" />
           <entry key="YAML" value="82" />
         </counts>
@@ -119,11 +121,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
+            <state relative-caret-position="257">
+              <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#588#7687#0" expanded="true" />
                 <element signature="e#7747#8607#0" expanded="true" />
+                <element signature="e#10065#10927#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -277,8 +281,8 @@
         <option value="$PROJECT_DIR$/trainers/trainer.py" />
         <option value="$PROJECT_DIR$/configs/0903_2.json" />
         <option value="$PROJECT_DIR$/configs/0903_3.json" />
-        <option value="$PROJECT_DIR$/trainers/trainer_origin_target.py" />
         <option value="$PROJECT_DIR$/configs/0903_1.json" />
+        <option value="$PROJECT_DIR$/trainers/trainer_origin_target.py" />
         <option value="$PROJECT_DIR$/configs/0903_4.json" />
       </list>
     </option>
@@ -835,17 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#7747#8607#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -853,6 +846,19 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#98#323#0" expanded="true" />
             <element signature="e#592#1589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="260" lean-forward="true" selection-start-line="260" selection-end-line="260" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#588#7687#0" expanded="true" />
+            <element signature="e#7747#8607#0" expanded="true" />
+            <element signature="e#10065#10927#0" expanded="true" />
           </folding>
         </state>
       </provider>
