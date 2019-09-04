@@ -22,8 +22,8 @@ class Trainer(BaseTrain):
 
         # load model if model exists weigh initialization
         if self.config.load_model is True:
-            # self.load_model()
-            self.load_spec_model()
+            self.load_model()
+            # self.load_spec_model()
         else:
             self.weight_init()
 
