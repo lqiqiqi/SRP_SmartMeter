@@ -9,7 +9,7 @@ from torch.optim import lr_scheduler
 from torch.autograd import Variable
 from base.base_train import BaseTrain
 from trainers.sDTW import SoftDTWLoss
-# from tslearn.metrics import dtw
+from tslearn.metrics import dtw
 from utils import utils
 from utils.earlystopping import EarlyStopping
 
@@ -187,12 +187,12 @@ class Trainer(BaseTrain):
 
         # nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
 
+        # Plot avg. loss
+        utils.plot_loss(self.config, [avg_loss, avg_loss_test])
+
         with torch.no_grad():
             _, dtw_test = self.test(test_data_loader, True)
             avg_dtw_test = dtw_test / len(test_data_loader)
-
-        # Plot avg. loss
-        utils.plot_loss(self.config, [avg_loss, avg_loss_test])
 
         print('avg_loss: ', avg_loss[-1])
         print('avg_loss_log with original data: ', avg_loss_test[-1])

@@ -463,7 +463,9 @@ dtw with original data:  4735.195941130432
 
 terminal4 0903_1: scale100
 
-terminal2 0903_3: batch32
+terminal2 0903_3: batch32_step30
+
+terminal1 0903_4: batch32_step100
 
 # 注意事项
 
