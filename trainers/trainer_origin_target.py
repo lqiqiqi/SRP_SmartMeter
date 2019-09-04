@@ -39,7 +39,7 @@ class Trainer(BaseTrain):
         self.momentum = 0.9
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
-        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=100, gamma=0.1)
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=50, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         print('---------- Networks architecture -------------')
