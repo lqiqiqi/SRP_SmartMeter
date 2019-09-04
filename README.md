@@ -439,7 +439,7 @@ avg_loss_log with original data:  41.09297
 
 ![0821_2_train_test](../LQ_SRP_SmartMeter/pic/0821_2_train_test.PNG)
 
-# 0901_1
+# 0901_1 不是endupsamp
 
 ![0901_1_train_test](../LQ_SRP_SmartMeter/pic/0901_1_train_test.PNG)
 
@@ -466,6 +466,18 @@ terminal4 0903_1: scale100 step50
 terminal2 0903_3: batch32_step30 0.000001 step50
 
 terminal1 0903_4: batch32_step100 0.00001 step100
+
+terminal5 0904_1:batch8 step30 scale100 
+
+##  0903_4: batch32_step100 0.00001 step100
+
+![0903_4_train_test](../LQ_SRP_SmartMeter/pic/0903_4_train_test.PNG)
+
+## 0904_1:batch8 step30 scale100 endupsamp
+
+![0904_1_train_test](../LQ_SRP_SmartMeter/pic/0904_1_train_test.PNG)
+
+说明结构有问题，可能是卷积upsample的问题
 
 # 注意事项
 

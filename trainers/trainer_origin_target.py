@@ -223,7 +223,7 @@ class Trainer(BaseTrain):
             loss_test += torch.sqrt(self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
             if last is not False:
-                dtw_test += dtw(model_out_test.squeeze(0), y_test.squeeze(0))
+                dtw_test += dtw(model_out_test.squeeze(0).squeeze(0), y_test.squeeze(0).squeeze(0))
 
         return loss_test, dtw_test
 
