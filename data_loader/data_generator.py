@@ -31,7 +31,7 @@ def shuffle():
     return train_indices, val_indices
 
 def sequence_random_crop(sequence: object, sequence_len: object) -> object:
-    print(len(sequence), sequence_len)
+    # print(len(sequence), sequence_len)
     start = np.random.randint(0, len(sequence) - sequence_len)
     return sequence_crop(sequence, sequence_len, start)
 
@@ -60,7 +60,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
     def __getitem__(self, index):
         # highdata_raw二维，经过dataloader输出为三维，与conv层match
         raw0 = load_data(self.filenames[index])
-        raw = sequence_random_crop(raw0, self.config.scale_factor * 400)
+        raw = sequence_random_crop(raw0, 5000)
 
         highdata_raw = np.expand_dims(raw, 0)
         highdata = torch.from_numpy(highdata_raw).type('torch.FloatTensor')
