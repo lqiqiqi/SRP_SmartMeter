@@ -31,11 +31,11 @@ def shuffle():
     return train_indices, val_indices
 
 def sequence_random_crop(sequence: object, sequence_len: object) -> object:
-    start = np.random.randint(0, sequence.size()[0] - sequence_len)
+    start = np.random.randint(0, sequence.size - sequence_len)
     return sequence_crop(sequence, sequence_len, start)
 
 def sequence_crop(sequence, sequence_len, start):
-    if sequence.size()[0] >= start + sequence_len:
+    if sequence.size >= start + sequence_len:
         cropped = sequence[start: start + sequence_len]
     else:
         raise Exception('Wrong Size.')
