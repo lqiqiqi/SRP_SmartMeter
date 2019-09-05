@@ -30,6 +30,16 @@ def shuffle():
 
     return train_indices, val_indices
 
+def sequence_random_crop(sequence: object, sequence_len: object) -> object:
+    start = np.random.randint(0, sequence.size()[0] - sequence_len)
+    return sequence_crop(sequence, sequence_len, start)
+
+def sequence_crop(sequence, sequence_len, start):
+    if sequence.size()[0] >= start + sequence_len:
+        cropped = sequence[start: start + sequence_len]
+    else:
+        raise Exception('Wrong Size.')
+    return cropped
 
 class TxtDataset(Dataset):  # 这是一个Dataset子类
     def __init__(self, config, dataset):
@@ -48,7 +58,10 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
 
     def __getitem__(self, index):
         # highdata_raw二维，经过dataloader输出为三维，与conv层match
-        highdata_raw = np.expand_dims(load_data(self.filenames[index]), 0)
+        raw0 = load_data(self.filenames[index])
+        raw = sequence_random_crop(raw0, self.config.scale_factor * 400)
+
+        highdata_raw = np.expand_dims(raw, 0)
         highdata = torch.from_numpy(highdata_raw).type('torch.FloatTensor')
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
 
@@ -92,7 +105,7 @@ class DataGenerator:
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
                               batch_size=self.config.test_batch_size,
-                              shuffle=False)
+                              shuffle=True)
 
         elif self.dataset == 'debug':
             print('Loading debug datasets...')
@@ -101,5 +114,5 @@ class DataGenerator:
 
             return DataLoader(dataset=txt, num_workers=self.config.num_threads,
                               batch_size=self.config.batch_size,
-                              shuffle=False)
+                              shuffle=True)
 

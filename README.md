@@ -499,6 +499,18 @@ terminal5: 0904_2 scale100
 
 
 
+## 0905_1: scale100 no upsampleconv
+
+![0905_1_train_test](../LQ_SRP_SmartMeter/pic/0905_1_train_test.PNG)
+
+avg_loss_log with original data:  103.1827850341
+
+## 0905_2: scale10 no upsampleconv
+
+![0905_2_train_test](../LQ_SRP_SmartMeter/pic/0905_2_train_test.PNG)
+
+avg_loss_log with original data:  38.28818893432617
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
