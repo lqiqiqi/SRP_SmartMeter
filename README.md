@@ -511,6 +511,14 @@ avg_loss_log with original data:  103.1827850341
 
 avg_loss_log with original data:  38.28818893432617
 
+
+
+## temp
+
+terminal1 10
+
+terminal4 100
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
