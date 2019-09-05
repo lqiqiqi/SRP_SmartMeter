@@ -479,6 +479,26 @@ terminal5 0904_1:batch8 step30 scale100
 
 说明结构有问题，可能是卷积upsample的问题
 
+
+
+## temp
+
+terminal1:  0904_3 scale10
+
+terminal5: 0904_2 scale100
+
+## 0904_3 scale10
+
+![0904_3_train_test](../LQ_SRP_SmartMeter/pic/0904_3_train_test.PNG)
+
+## 0904_2 scale100
+
+![0904_2_train_test](../LQ_SRP_SmartMeter/pic/0904_2_train_test.PNG)
+
+综合上面两个upsample batchsize32的结果，认为应该是网络结构有问题。先不用卷积做upsample。
+
+
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
