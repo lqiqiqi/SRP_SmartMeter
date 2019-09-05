@@ -31,6 +31,7 @@ def shuffle():
     return train_indices, val_indices
 
 def sequence_random_crop(sequence: object, sequence_len: object) -> object:
+    print(len(sequence), sequence_len)
     start = np.random.randint(0, len(sequence) - sequence_len)
     return sequence_crop(sequence, sequence_len, start)
 
