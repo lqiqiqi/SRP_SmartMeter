@@ -1,6 +1,7 @@
 import os
 import torch
-from trainers.trainer_origin_target import Trainer
+# from trainers.trainer_origin_target import Trainer
+from trainers.trainer_sequencecrop import Trainer
 # from trainers.trainer import Tester
 from data_loader.data_generator import DataGenerator
 from data_loader.data_generator import shuffle
