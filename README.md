@@ -519,6 +519,8 @@ terminal1 10 0905_4
 
 terminal4 100 0905_5
 
+terminal5 10 0906_1
+
 
 
 

@@ -103,10 +103,10 @@ class Trainer(BaseTrain):
             # nni.report_intermediate_result(
             #     {"default": float(epoch_loss_test), "epoch_loss": float(avg_loss[-1])})
 
-            if es.step(avg_loss[-1]):
-                self.save_model(epoch=None)
-                print('Early stop at %2d epoch' % (epoch + 1))
-                break
+            # if es.step(avg_loss[-1]):
+            #     self.save_model(epoch=None)
+            #     print('Early stop at %2d epoch' % (epoch + 1))
+            #     break
 
             if epoch % 10 == 0 and epoch != 0:
                 utils.plot_loss(self.config, [avg_loss, avg_loss_test])
