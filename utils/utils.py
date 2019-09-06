@@ -35,8 +35,8 @@ def plot_loss(config, avg_losses, show=False, origin=False):
     if len(avg_losses) == 1:
         plt.plot(avg_losses[0], label='loss')
     else:
-        plt.plot(avg_losses[0], label='train_loss')
         plt.plot(avg_losses[1], label='test_loss')
+        plt.plot(avg_losses[0], label='train_loss')
     plt.legend()
 
 

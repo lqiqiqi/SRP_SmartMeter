@@ -515,9 +515,13 @@ avg_loss_log with original data:  38.28818893432617
 
 ## temp
 
-terminal1 10
+terminal1 10 0905_4
 
-terminal4 100
+terminal4 100 0905_5
+
+
+
+
 
 # 注意事项
 
