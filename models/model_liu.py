@@ -114,7 +114,7 @@ class Net(nn.Module, BaseModel):
         return nn.Sequential(*layers)
 
     def forward(self, x):
-        out = self.relu2(self.conv_input_2(self.relu1(self.conv_input_1(x.view((x.size()[0], 1, x.size()[1]))))))
+        out = self.relu2(self.conv_input_2(self.relu1(self.conv_input_1(x))))
         residual = out
         out = self.residual(out)
         out = self.bn_mid(self.conv_mid(out))
