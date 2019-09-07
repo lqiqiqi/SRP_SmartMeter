@@ -24,8 +24,8 @@ def main():
         raise Exception("No GPU found, please run without --gpu_mode=False")
 
     # create an instance of the model you want
-    model = Net(config)
-    # model = torch.nn.DataParallel(Net(config), device_ids=[0, 1])
+    # model = Net(config)
+    model = torch.nn.DataParallel(Net(config), device_ids=[0, 1])
 
     # set the logger
     # log_dir = os.path.join(config.save_dir, 'logs_'+config.exp_name)

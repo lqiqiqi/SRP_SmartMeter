@@ -69,15 +69,15 @@ class Trainer(BaseTrain):
                 # input data (low resolution image)
                 if self.config.gpu_mode:
                     x_ = Variable(input.cuda())
-                    y_ = Variable(groundtruth.cuda())
+                    y_ = Variable(target.cuda())
                 else:
                     x_ = Variable(input)
-                    y_ = Variable(groundtruth)
+                    y_ = Variable(target)
 
 
                 self.optimizer.zero_grad()
                 model_out = self.model(x_)
-                loss = torch.sqrt(self.L1(model_out, y_))
+                loss = torch.sqrt(self.L1_loss(model_out, y_))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
@@ -98,7 +98,7 @@ class Trainer(BaseTrain):
             with torch.no_grad():
                 loss_test, _ = self.test(test_data_loader)
 
-            epoch_loss_test = loss_test / len(test_data_loader)
+            epoch_loss_test = loss_test / (10*len(test_data_loader)) # 为了幅度和L1loss接近，在图中更好观察，再除以10
 
             avg_loss_test.append(float(epoch_loss_test))
 
@@ -148,7 +148,7 @@ class Trainer(BaseTrain):
             # prediction
             model_out_test = self.model(x_test)
 
-            loss_test += torch.sqrt(self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
+            loss_test += torch.sqrt(self.MSE_loss(model_out_test, y_log_test))  # RMSE for re-log result and original meter data
 
             if last is not False:
                 # dtw_test += dtw(model_out_test.squeeze(0).squeeze(0), y_test.squeeze(0).squeeze(0))
