@@ -31,11 +31,11 @@ class Trainer(BaseTrain):
         # loss function
         if self.config.gpu_mode:
             self.model.cuda()
-            # self.MSE_loss = nn.MSELoss().cuda()
-            self.MSE_loss = nn.L1Loss().cuda()
+            self.MSE_loss = nn.MSELoss().cuda()
+            self.L1_loss = nn.L1Loss().cuda()
         else:
-            # self.MSE_loss = nn.MSELoss()
-            self.MSE_loss = nn.L1Loss()
+            self.MSE_loss = nn.MSELoss()
+            self.L1_loss = nn.L1Loss()
 
         # optimizer
         self.momentum = 0.9
@@ -77,7 +77,7 @@ class Trainer(BaseTrain):
 
                 self.optimizer.zero_grad()
                 model_out = self.model(x_)
-                loss = torch.sqrt(self.MSE_loss(model_out, y_))
+                loss = torch.sqrt(self.L1(model_out, y_))
                 loss.backward()  # 结果得到是tensor
                 self.optimizer.step()
                 epoch_loss += loss
