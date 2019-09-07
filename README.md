@@ -515,11 +515,13 @@ avg_loss_log with original data:  38.28818893432617
 
 ## temp
 
-terminal1 10 0905_4
+terminal1 10 
 
 terminal4 100 0905_5
 
 terminal5 10 0906_1
+
+## 0905_4 scale10 batchsize32 noupsamp 1000epoch 
 
 
 
