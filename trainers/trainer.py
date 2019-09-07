@@ -105,7 +105,7 @@ class Tester(BaseTrain):
         # load dataset
         test_data_loader = self.data_test
 
-        # self.model.eval()
+        self.model.eval()
 
         if self.config.gpu_mode:
             self.model.cuda()
@@ -165,12 +165,13 @@ class Tester(BaseTrain):
         model_name = model_dir + '/' + self.config.model_name + '_param_epoch_90.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
-            from collections import OrderedDict
-            new_state_dict = OrderedDict()
-            for k, v in state_dict.items():
-                namekey = k[7:]  # remove `module.`
-                new_state_dict[namekey] = v
-            self.model.load_state_dict(new_state_dict)
+            # from collections import OrderedDict
+            # new_state_dict = OrderedDict()
+            # for k, v in state_dict.items():
+            #     namekey = k[7:]  # remove `module.`
+            #     new_state_dict[namekey] = v
+            # self.model.load_state_dict(new_state_dict)
+            self.model.load_state_dict(state_dict)
             print('Trained generator model is loaded.')
             return True
         else:
