@@ -98,7 +98,7 @@ class Trainer(BaseTrain):
             with torch.no_grad():
                 loss_test, _ = self.test(test_data_loader)
 
-            epoch_loss_test = loss_test / (10*len(test_data_loader)) # 为了幅度和L1loss接近，在图中更好观察，再除以10
+            epoch_loss_test = loss_test / len(test_data_loader)
 
             avg_loss_test.append(float(epoch_loss_test))
 
@@ -111,7 +111,7 @@ class Trainer(BaseTrain):
             #     break
 
             if epoch % 10 == 0 and epoch != 0:
-                utils.plot_loss(self.config, [avg_loss, avg_loss_test])
+                utils.plot_loss(self.config, [avg_loss, avg_loss_test]) 
 
         # nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
 
