@@ -31,9 +31,11 @@ class Trainer(BaseTrain):
         # loss function
         if self.config.gpu_mode:
             self.model.cuda()
-            self.MSE_loss = nn.MSELoss().cuda()
+            # self.MSE_loss = nn.MSELoss().cuda()
+            self.MES_loss = nn.L1Loss().cuda()
         else:
-            self.MSE_loss = nn.MSELoss()
+            # self.MSE_loss = nn.MSELoss()
+            self.MES_loss = nn.L1Loss()
 
         # optimizer
         self.momentum = 0.9
