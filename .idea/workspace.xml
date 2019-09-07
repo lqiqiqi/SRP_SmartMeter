@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/configs/0907_3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/0907_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainers/trainer_sequencecrop.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer_sequencecrop.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,7 +46,7 @@
         <counts>
           <entry key="0805_fsrcnn_resnet_xavier" value="1" />
           <entry key="0813_2" value="1" />
-          <entry key="json" value="133" />
+          <entry key="json" value="134" />
           <entry key="main_sacred" value="1" />
           <entry key="model_CARN" value="1" />
           <entry key="model_VDSR" value="1" />
@@ -57,7 +58,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="135" />
+          <entry key="JSON" value="136" />
           <entry key="Python" value="160" />
           <entry key="YAML" value="4" />
         </counts>
@@ -65,17 +66,17 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="27" />
-          <entry key="json" value="1316" />
+          <entry key="json" value="1320" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="11294" />
+          <entry key="py" value="11297" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="1316" />
-          <entry key="Python" value="11490" />
+          <entry key="JSON" value="1320" />
+          <entry key="Python" value="11493" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -116,22 +117,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-              <folding>
-                <element signature="e#374#1781#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer_sequencecrop.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="113" column="72" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
+            <state relative-caret-position="1155">
+              <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#474#549#0" expanded="true" />
@@ -164,37 +153,27 @@
         <entry file="file://$PROJECT_DIR$/configs/0907_3.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
-              <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+              <caret line="2" column="41" lean-forward="true" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
+        <entry file="file://$PROJECT_DIR$/configs/0907_4.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#227#438#0" expanded="true" />
-                <element signature="e#459#806#0" expanded="true" />
-                <element signature="e#888#1043#0" expanded="true" />
-                <element signature="e#2862#3026#0" expanded="true" />
-                <element signature="e#3065#4010#0" expanded="true" />
-                <marker date="1567687130397" expanded="true" signature="1874:1875" ph="..." />
-                <marker date="1567687130397" expanded="true" signature="2853:2919" ph="..." />
-              </folding>
+            <state relative-caret-position="418">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+            <state relative-caret-position="220">
+              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#432#1806#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -251,7 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/configs/search_space.json" />
         <option value="$PROJECT_DIR$/configs/default_config.json" />
         <option value="$PROJECT_DIR$/models/model_CARN.py" />
         <option value="$PROJECT_DIR$/configs/0817_1.json" />
@@ -299,9 +277,10 @@
         <option value="$PROJECT_DIR$/configs/0907_2.json" />
         <option value="$PROJECT_DIR$/trainers/trainer.py" />
         <option value="$PROJECT_DIR$/main_test.py" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/configs/0907_3.json" />
         <option value="$PROJECT_DIR$/trainers/trainer_sequencecrop.py" />
+        <option value="$PROJECT_DIR$/configs/0907_4.json" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -512,13 +491,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/configs/0817_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="23" lean-forward="true" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0815_1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -814,6 +786,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#474#549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_sequencecrop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#474#549#0" expanded="true" />
+            <element signature="e#4520#5433#0" expanded="true" />
+            <element signature="e#6003#6850#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding>
+            <element signature="e#374#1781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="16" />
+          <folding>
+            <element signature="e#3096#5433#0" expanded="true" />
+            <element signature="e#5474#6279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0907_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="19" lean-forward="true" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -831,24 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+    <entry file="file://$PROJECT_DIR$/configs/0907_3.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="e#3096#5433#0" expanded="true" />
-            <element signature="e#5474#6279#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="e#374#1781#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="44">
+          <caret line="2" column="41" lean-forward="true" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -869,50 +879,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
+    <entry file="file://$PROJECT_DIR$/configs/0907_4.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="517">
-          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#474#549#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="418">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        <state relative-caret-position="220">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0907_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="19" lean-forward="true" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0907_3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_sequencecrop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="113" column="72" selection-start-line="113" selection-start-column="72" selection-end-line="113" selection-end-column="72" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#474#549#0" expanded="true" />
-            <element signature="e#4520#5433#0" expanded="true" />
-            <element signature="e#6003#6850#0" expanded="true" />
+            <element signature="e#432#1806#0" expanded="true" />
           </folding>
         </state>
       </provider>

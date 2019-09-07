@@ -111,7 +111,7 @@ class Trainer(BaseTrain):
             #     break
 
             if epoch % 10 == 0 and epoch != 0:
-                utils.plot_loss(self.config, [avg_loss, avg_loss_test]) 
+                utils.plot_loss(self.config, [avg_loss, avg_loss_test])
 
         # nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
 
