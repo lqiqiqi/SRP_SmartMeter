@@ -131,8 +131,10 @@ class Tester(BaseTrain):
             # prediction
             model_out_test = self.model(x_test)
 
+            out_postlog = torch.div(torch.exp(model_out_test * math.log(10)) - 1.0, 1000.)
+
             loss_test += torch.sqrt(
-                self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
+                self.MSE_loss(out_postlog, y_test))  # RMSE for re-log result and original meter data
 
             dtw_one_sample = 0
             # print(y_test.size())
@@ -162,7 +164,7 @@ class Tester(BaseTrain):
     def load_spec_model(self):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_300.pkl'  # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_180.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             # from collections import OrderedDict
