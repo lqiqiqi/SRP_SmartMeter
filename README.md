@@ -523,9 +523,39 @@ terminal5 10 0906_1
 
 ## 0905_4 scale10 batchsize32 noupsamp 1000epoch 
 
+![0905_4_train_test](../LQ_SRP_SmartMeter/pic/0905_4_train_test.PNG)
+
+Early stop at 262 epoch
+avg_loss:  38.483135
+avg_loss_log with original data:  38.45597457885742
+
+## 0905_5 scale100 batchsize32 noupsamp 1000epoch 
+
+![0905_5_train_test](../LQ_SRP_SmartMeter/pic/0905_5_train_test.PNG)
 
 
 
+## 0906_1 scale10 batchsize32 upsamp 1000epoch 
+
+![0906_1_train_test](../LQ_SRP_SmartMeter/pic/0906_1_train_test.PNG)
+
+Early stop at 262 epoch
+avg_loss:  34.41165
+avg_loss_log with original data:  37.56041717529297
+
+## 0906_2 scale100 batchsize32 upsamp 1000epoch 
+
+![0906_2_train_test](../LQ_SRP_SmartMeter/pic/0906_2_train_test.PNG)
+
+## TEMP
+
+terminal4 liuNet
+
+terminal1 mynet L1
+
+terminal6 0907_3 prelog
+
+terminal1 0907_4 liuNet prelog
 
 # 注意事项
 

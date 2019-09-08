@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/configs/0907_4.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trainers/trainer_sequencecrop.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer_sequencecrop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trainers/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +49,7 @@
           <entry key="main_sacred" value="1" />
           <entry key="model_CARN" value="1" />
           <entry key="model_VDSR" value="1" />
-          <entry key="py" value="155" />
+          <entry key="py" value="156" />
           <entry key="sDTW" value="1" />
           <entry key="trianer_multiGPU" value="1" />
           <entry key="yml" value="4" />
@@ -59,7 +58,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JSON" value="136" />
-          <entry key="Python" value="160" />
+          <entry key="Python" value="161" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
@@ -68,7 +67,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1320" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="11297" />
+          <entry key="py" value="11299" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -76,7 +75,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1320" />
-          <entry key="Python" value="11493" />
+          <entry key="Python" value="11495" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -103,14 +102,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="16" />
+            <state relative-caret-position="198">
+              <caret line="164" column="80" selection-start-line="164" selection-start-column="80" selection-end-line="164" selection-end-column="80" />
               <folding>
                 <element signature="e#3096#5433#0" expanded="true" />
-                <element signature="e#5474#6279#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -127,6 +125,15 @@
                 <element signature="e#4520#5433#0" expanded="true" />
                 <element signature="e#6003#6850#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -163,18 +170,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="418">
               <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-              <folding>
-                <element signature="e#432#1806#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -275,12 +270,12 @@
         <option value="$PROJECT_DIR$/configs/0907_1.json" />
         <option value="$PROJECT_DIR$/models/model_liu.py" />
         <option value="$PROJECT_DIR$/configs/0907_2.json" />
-        <option value="$PROJECT_DIR$/trainers/trainer.py" />
         <option value="$PROJECT_DIR$/main_test.py" />
         <option value="$PROJECT_DIR$/configs/0907_3.json" />
         <option value="$PROJECT_DIR$/trainers/trainer_sequencecrop.py" />
         <option value="$PROJECT_DIR$/configs/0907_4.json" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/trainers/trainer.py" />
       </list>
     </option>
   </component>
@@ -797,40 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_sequencecrop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#474#549#0" expanded="true" />
-            <element signature="e#4520#5433#0" expanded="true" />
-            <element signature="e#6003#6850#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="e#374#1781#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="e#3096#5433#0" expanded="true" />
-            <element signature="e#5474#6279#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0907_2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -892,6 +853,36 @@
           <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
           <folding>
             <element signature="e#432#1806#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_sequencecrop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#474#549#0" expanded="true" />
+            <element signature="e#4520#5433#0" expanded="true" />
+            <element signature="e#6003#6850#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="164" column="80" selection-start-line="164" selection-start-column="80" selection-end-line="164" selection-end-column="80" />
+          <folding>
+            <element signature="e#3096#5433#0" expanded="true" />
           </folding>
         </state>
       </provider>
