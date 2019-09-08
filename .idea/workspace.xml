@@ -66,7 +66,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1320" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="11337" />
+          <entry key="py" value="11340" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -74,7 +74,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1320" />
-          <entry key="Python" value="11533" />
+          <entry key="Python" value="11536" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -104,8 +104,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="169" selection-start-line="169" selection-end-line="174" selection-end-column="54" />
+            <state relative-caret-position="99">
+              <caret line="166" column="81" selection-start-line="166" selection-start-column="81" selection-end-line="166" selection-end-column="81" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#3096#5378#0" expanded="true" />
@@ -841,13 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-110">
@@ -896,10 +889,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="169" selection-start-line="169" selection-end-line="174" selection-end-column="54" />
+        <state relative-caret-position="99">
+          <caret line="166" column="81" selection-start-line="166" selection-start-column="81" selection-end-line="166" selection-end-column="81" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#3096#5378#0" expanded="true" />
