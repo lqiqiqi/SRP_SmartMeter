@@ -75,7 +75,7 @@ class Trainer(BaseTrain):
                 # scale是10的话，x_.shape is (batchsize, 1, 300)
                 # scale是100的话，x_.shape is (batchsize, 1, 30)
 
-                chop_num = 10
+                chop_num = 1
                 slice = int(30000 / (self.config.scale_factor * chop_num)) # 改了最后的数字看要切成几份
                 slice2 = int(30000 / chop_num)
 
@@ -112,10 +112,10 @@ class Trainer(BaseTrain):
             # nni.report_intermediate_result(
             #     {"default": float(epoch_loss_test), "epoch_loss": float(avg_loss[-1])})
 
-            if es.step(avg_loss[-1]):
-                self.save_model(epoch=None)
-                print('Early stop at %2d epoch' % (epoch + 1))
-                break
+            # if es.step(avg_loss[-1]):
+            #     self.save_model(epoch=None)
+            #     print('Early stop at %2d epoch' % (epoch + 1))
+            #     break
 
             if epoch % 10 == 0 and epoch != 0:
                 utils.plot_loss(self.config, [avg_loss, avg_loss_test])

@@ -557,6 +557,8 @@ terminal6 0907_3 prelog
 
 terminal1 0907_4 liuNet prelog
 
+terminal7 0908_1 liu nocrop 用老的那个 切成10片
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
