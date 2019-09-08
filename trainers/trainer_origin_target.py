@@ -75,7 +75,7 @@ class Trainer(BaseTrain):
                 # scale是10的话，x_.shape is (batchsize, 1, 300)
                 # scale是100的话，x_.shape is (batchsize, 1, 30)
 
-                chop_num = 3
+                chop_num = 10
                 slice = int(30000 / (self.config.scale_factor * chop_num)) # 改了最后的数字看要切成几份
                 slice2 = int(30000 / chop_num)
 
@@ -88,78 +88,6 @@ class Trainer(BaseTrain):
                     loss.backward()  # 结果得到是tensor
                     self.optimizer.step()
                     epoch_loss += loss
-
-                # x_1 = x_[:, :, slice:slice*2]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, slice2:slice2*2]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
-                #
-                # x_1 = x_[:, :, slice*2:slice*3]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, slice2*2:slice2*3]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
-
-                # x_1 = x_[:, :, slice*3:slice*4]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, slice2*3:slice2*4]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
-                #
-                # x_1 = x_[:, :, slice*4:slice*5]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 12000:15000]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
-                #
-                # x_1 = x_[:, :, slice*5:slice*6]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 15000:18000]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
-                #
-                # x_1 = x_[:, :, slice*6:slice*7]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 18000:21000]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
-                #
-                # x_1 = x_[:, :, slice*7:slice*8]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 21000:24000]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
-                #
-                # x_1 = x_[:, :, slice*8:slice*9]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 24000:27000]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
-                #
-                # x_1 = x_[:, :, slice*9:]
-                # self.optimizer.zero_grad()
-                # model_out = self.model(x_1)
-                # loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, 27000:]))
-                # loss.backward()  # 结果得到是tensor
-                # self.optimizer.step()
-                # epoch_loss += loss
 
                 print("Epoch: [%2d] [%4d/%4d] loss: %.8f" % ((epoch + 1), (iter + 1), len(train_data_loader), loss))
 
@@ -189,7 +117,7 @@ class Trainer(BaseTrain):
                 print('Early stop at %2d epoch' % (epoch + 1))
                 break
 
-            if epoch % 50 == 0 and epoch != 0:
+            if epoch % 10 == 0 and epoch != 0:
                 utils.plot_loss(self.config, [avg_loss, avg_loss_test])
 
         # nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})

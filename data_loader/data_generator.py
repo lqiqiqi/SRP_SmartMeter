@@ -60,9 +60,9 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
     def __getitem__(self, index):
         # highdata_raw二维，经过dataloader输出为三维，与conv层match
         raw0 = load_data(self.filenames[index])
-        raw = sequence_random_crop(raw0, 30000)
+        # raw = sequence_random_crop(raw0, 30000)
 
-        highdata_raw = np.expand_dims(raw, 0)
+        highdata_raw = np.expand_dims(raw0, 0)
         highdata = torch.from_numpy(highdata_raw).type('torch.FloatTensor')
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
 
