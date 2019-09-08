@@ -134,7 +134,7 @@ class Tester(BaseTrain):
             # out_postlog = torch.div(torch.exp(model_out_test * math.log(100)) - 1.0, 1000.)
 
             loss_test += torch.sqrt(
-                self.MSE_loss(model_out_test, y_log_test))  # RMSE for re-log result and original meter data
+                self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
             dtw_one_sample = 0
             # print(y_test.size())
@@ -164,16 +164,16 @@ class Tester(BaseTrain):
     def load_spec_model(self):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_180.pkl'  # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_330.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
-            from collections import OrderedDict
-            new_state_dict = OrderedDict()
-            for k, v in state_dict.items():
-                namekey = k[7:]  # remove `module.`
-                new_state_dict[namekey] = v
-            self.model.load_state_dict(new_state_dict)
-            # self.model.load_state_dict(state_dict)
+            # from collections import OrderedDict
+            # new_state_dict = OrderedDict()
+            # for k, v in state_dict.items():
+            #     namekey = k[7:]  # remove `module.`
+            #     new_state_dict[namekey] = v
+            # self.model.load_state_dict(new_state_dict)
+            self.model.load_state_dict(state_dict)
             print('Trained generator model is loaded.')
             return True
         else:

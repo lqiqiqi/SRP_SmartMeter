@@ -549,7 +549,7 @@ avg_loss_log with original data:  37.56041717529297
 
 ## TEMP
 
-terminal4 liuNet
+terminal4 0907_1 liuNet
 
 terminal1 mynet L1
 

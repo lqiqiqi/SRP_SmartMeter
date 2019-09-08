@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_loader/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_loader/data_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainers/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,11 +47,11 @@
         <counts>
           <entry key="0805_fsrcnn_resnet_xavier" value="1" />
           <entry key="0813_2" value="1" />
-          <entry key="json" value="136" />
+          <entry key="json" value="137" />
           <entry key="main_sacred" value="1" />
           <entry key="model_CARN" value="1" />
           <entry key="model_VDSR" value="1" />
-          <entry key="py" value="159" />
+          <entry key="py" value="160" />
           <entry key="sDTW" value="1" />
           <entry key="trianer_multiGPU" value="1" />
           <entry key="yml" value="4" />
@@ -56,8 +59,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="138" />
-          <entry key="Python" value="164" />
+          <entry key="JSON" value="139" />
+          <entry key="Python" value="165" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
@@ -66,7 +69,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1320" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="11353" />
+          <entry key="py" value="11369" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -74,7 +77,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1320" />
-          <entry key="Python" value="11549" />
+          <entry key="Python" value="11565" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -101,15 +104,37 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trainers/trainer_sequencecrop.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1134">
+              <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#474#549#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="136" column="56" selection-start-line="136" selection-start-column="56" selection-end-line="136" selection-end-column="56" />
+            <state relative-caret-position="374">
+              <caret line="176" selection-start-line="176" selection-end-line="176" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#5474#6279#0" expanded="true" />
+                <element signature="e#3096#5378#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/configs/0907_1.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -117,8 +142,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+            <state relative-caret-position="-605">
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
               <folding>
                 <element signature="e#369#1776#0" expanded="true" />
               </folding>
@@ -129,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="66" column="86" selection-start-line="66" selection-start-column="86" selection-end-line="66" selection-end-column="86" />
+            <state relative-caret-position="231">
+              <caret line="73" column="85" selection-start-line="73" selection-start-column="85" selection-end-line="73" selection-end-column="85" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#227#438#0" expanded="true" />
@@ -138,8 +163,8 @@
                 <element signature="e#888#1043#0" expanded="true" />
                 <element signature="e#2862#3026#0" expanded="true" />
                 <element signature="e#3065#4010#0" expanded="true" />
-                <marker date="1567912562131" expanded="true" signature="1874:1875" ph="..." />
-                <marker date="1567912562131" expanded="true" signature="2851:2917" ph="..." />
+                <marker date="1567919672351" expanded="true" signature="1874:1875" ph="..." />
+                <marker date="1567919672351" expanded="true" signature="2853:2919" ph="..." />
               </folding>
             </state>
           </provider>
@@ -166,7 +191,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
+            <state relative-caret-position="-121">
               <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
                 <element signature="e#427#1801#0" expanded="true" />
@@ -325,7 +350,22 @@
             <path>
               <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
               <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
               <item name="configs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
+              <item name="trainers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -766,6 +806,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_multiGPU.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2256">
+          <caret line="118" column="52" lean-forward="true" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0907_3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="41" lean-forward="true" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
+            <element signature="e#427#1801#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0907_4.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_sequencecrop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#474#549#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="73" column="85" selection-start-line="73" selection-start-column="85" selection-end-line="73" selection-end-column="85" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#227#438#0" expanded="true" />
+            <element signature="e#459#806#0" expanded="true" />
+            <element signature="e#888#1043#0" expanded="true" />
+            <element signature="e#2862#3026#0" expanded="true" />
+            <element signature="e#3065#4010#0" expanded="true" />
+            <marker date="1567919672351" expanded="true" signature="1874:1875" ph="..." />
+            <marker date="1567919672351" expanded="true" signature="2853:2919" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -783,91 +882,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_multiGPU.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2256">
-          <caret line="118" column="52" lean-forward="true" selection-start-line="118" selection-start-column="52" selection-end-line="118" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0907_1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="18" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#427#1801#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_sequencecrop.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1089">
-          <caret line="113" column="71" selection-start-line="113" selection-start-column="71" selection-end-line="113" selection-end-column="71" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#474#549#0" expanded="true" />
-            <element signature="e#4520#5433#0" expanded="true" />
-            <element signature="e#6003#6850#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0907_3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="41" lean-forward="true" selection-end-line="19" selection-end-column="1" />
+        <state relative-caret-position="66">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        <state relative-caret-position="-605">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
           <folding>
             <element signature="e#369#1776#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0907_4.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="66" column="86" selection-start-line="66" selection-start-column="86" selection-end-line="66" selection-end-column="86" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#227#438#0" expanded="true" />
-            <element signature="e#459#806#0" expanded="true" />
-            <element signature="e#888#1043#0" expanded="true" />
-            <element signature="e#2862#3026#0" expanded="true" />
-            <element signature="e#3065#4010#0" expanded="true" />
-            <marker date="1567912562131" expanded="true" signature="1874:1875" ph="..." />
-            <marker date="1567912562131" expanded="true" signature="2851:2917" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="136" column="56" selection-start-line="136" selection-start-column="56" selection-end-line="136" selection-end-column="56" />
+        <state relative-caret-position="374">
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#5474#6279#0" expanded="true" />
+            <element signature="e#3096#5378#0" expanded="true" />
           </folding>
         </state>
       </provider>
