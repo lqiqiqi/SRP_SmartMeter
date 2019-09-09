@@ -15,7 +15,7 @@ class SRPResNet_Residual_Block(nn.Module):
         self.relu = nn.LeakyReLU(0.2)
         self.conv2 = nn.Conv1d(in_channels=ndf, out_channels=ndf, kernel_size=5, stride=1, padding=2, bias=False)
         # self.in2 = nn.InstanceNorm1d(ndf, affine=True, track_running_stats=True)
-        self.in1 = nn.InstanceNorm1d(ndf, affine=True)
+        self.in2 = nn.InstanceNorm1d(ndf, affine=True)
 
     def forward(self, x):
         identity_data = x
