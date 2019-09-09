@@ -145,9 +145,9 @@ class Tester(BaseTrain):
 
             # print(y_test.size()) torch.Size([32, 1, 30000])
             # print(model_out_test.size()) torch.Size([32, 1, 30000])
-            for sample in range(len(y_test.size()[0])):
-                for i in range(0, len(y_test.size()[-1]), 100):
-                    if i+99 < len(y_test.size()[-1]):
+            for sample in range(y_test.size()[0]):
+                for i in range(0, y_test.size()[-1], 100):
+                    if i+99 < y_test.size()[-1]:
                         temp_dtw = soft_dtw(model_out_test[sample][-1][i:i+99], y_test[sample][-1][i:i+99])
                         dtw_one_sample += temp_dtw
                     else:
