@@ -107,7 +107,6 @@ class Trainer(BaseTrain):
             with torch.no_grad():
                 loss_test, _ = self.test(test_data_loader)
 
-            # 除以测试sample个数 2000
             epoch_loss_test = loss_test / len(test_data_loader)
 
             avg_loss_test.append(float(epoch_loss_test))
@@ -201,7 +200,7 @@ class Trainer(BaseTrain):
     def load_spec_model(self):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_120.pkl'  # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_30.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             # from collections import OrderedDict

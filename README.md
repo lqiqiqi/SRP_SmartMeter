@@ -555,7 +555,7 @@ terminal1 mynet L1
 
 terminal6 0907_3 prelog log和log做MSE loss 还是L1，论文中是MSE
 
-terminal1 0907_4 liuNet prelog L1
+terminal1 0907_4 liuNet prelog L1 log和log做MSE loss 还是L1，论文中是MSE
 
 terminal7 0908_1 liu nocrop 用老的那个 切成10片
 
