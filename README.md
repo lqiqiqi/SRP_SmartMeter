@@ -559,7 +559,7 @@ terminal1 0907_4 liuNet prelog L1 log和log做MSE loss 还是L1，论文中是MS
 
 terminal7 0908_1 liu nocrop 用老的那个 切成10片
 
-terminal8 0908_2 liu nocrop nochop 直接把30s的数据喂进去
+terminal8 0908_2 liu nocrop nochop 直接把30s的数据喂进去 这个要是再不行就算了
 
 # 注意事项
 

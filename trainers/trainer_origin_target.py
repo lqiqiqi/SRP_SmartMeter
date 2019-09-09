@@ -39,7 +39,7 @@ class Trainer(BaseTrain):
         self.momentum = 0.9
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
-        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=200, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         print('---------- Networks architecture -------------')
@@ -200,7 +200,7 @@ class Trainer(BaseTrain):
     def load_spec_model(self):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_30.pkl'  # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_90.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             # from collections import OrderedDict
