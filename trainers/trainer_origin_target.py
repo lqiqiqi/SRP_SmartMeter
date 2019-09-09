@@ -31,7 +31,7 @@ class Trainer(BaseTrain):
         # loss function
         if self.config.gpu_mode:
             self.model.cuda()
-            self.MSE_loss = nn.MSELoss().cuda()
+            self.MSE_loss = nn.MSELoss().cuda() # 默认算出来是对每个sample的平均
         else:
             self.MSE_loss = nn.MSELoss()
 
@@ -97,8 +97,8 @@ class Trainer(BaseTrain):
                 # step += 1
 
             # avg. loss per epoch
-            # 如果除以len(train_data_loader)是平均每一个batch的loss
-            avg_loss.append((epoch_loss / 14000).detach().cpu().numpy())
+            # 如果除以len(train_data_loader)是平均每一个sample的loss
+            avg_loss.append((epoch_loss / len(train_data_loader)).detach().cpu().numpy())
 
             if (epoch + 1) % self.config.save_epochs == 0:
                 self.save_model(epoch + 1)
@@ -108,7 +108,7 @@ class Trainer(BaseTrain):
                 loss_test, _ = self.test(test_data_loader)
 
             # 除以测试sample个数 2000
-            epoch_loss_test = loss_test / 2000
+            epoch_loss_test = loss_test / len(test_data_loader)
 
             avg_loss_test.append(float(epoch_loss_test))
 
