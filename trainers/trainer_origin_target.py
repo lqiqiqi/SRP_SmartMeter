@@ -89,6 +89,7 @@ class Trainer(BaseTrain):
                     self.optimizer.step()
                     epoch_loss += loss
 
+                # 注意：len(train_data_loader) 是 # train samples/batchsize，有多少个train_data_loader即需要iter多少个batch
                 print("Epoch: [%2d] [%4d/%4d] loss: %.8f" % ((epoch + 1), (iter + 1), len(train_data_loader), loss))
 
                 # tensorboard logging
@@ -96,7 +97,8 @@ class Trainer(BaseTrain):
                 # step += 1
 
             # avg. loss per epoch
-            avg_loss.append((epoch_loss / len(train_data_loader)).detach().cpu().numpy())
+            # 如果除以len(train_data_loader)是平均每一个batch的loss
+            avg_loss.append((epoch_loss / 14000).detach().cpu().numpy())
 
             if (epoch + 1) % self.config.save_epochs == 0:
                 self.save_model(epoch + 1)
@@ -105,7 +107,8 @@ class Trainer(BaseTrain):
             with torch.no_grad():
                 loss_test, _ = self.test(test_data_loader)
 
-            epoch_loss_test = loss_test / len(test_data_loader)
+            # 除以测试sample个数 2000
+            epoch_loss_test = loss_test / 2000
 
             avg_loss_test.append(float(epoch_loss_test))
 

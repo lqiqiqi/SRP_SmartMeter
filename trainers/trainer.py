@@ -156,8 +156,8 @@ class Tester(BaseTrain):
             # dtw_test += dtw_one_sample
             # print(dtw_one_sample)
 
-        avg_loss = loss_test / len(test_data_loader)
-        avg_dtw_test = dtw_test / len(test_data_loader)
+        avg_loss = loss_test / 2000
+        avg_dtw_test = dtw_test / 2000
 
         print('avg_loss with original data: ', avg_loss)
         print('avg_dtw_test with original data: ', avg_dtw_test)
