@@ -22,8 +22,8 @@ class Trainer(BaseTrain):
 
         # load model if model exists weigh initialization
         if self.config.load_model is True:
-            self.load_model()
-            # self.load_spec_model()
+            # self.load_model()
+            self.load_spec_model()
         else:
             self.weight_init()
 
@@ -96,7 +96,7 @@ class Trainer(BaseTrain):
                 # step += 1
 
             # avg. loss per epoch
-            avg_loss.append((epoch_loss / (10*len(train_data_loader))).detach().cpu().numpy())
+            avg_loss.append((epoch_loss / len(train_data_loader)).detach().cpu().numpy())
 
             if (epoch + 1) % self.config.save_epochs == 0:
                 self.save_model(epoch + 1)

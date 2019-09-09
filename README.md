@@ -553,11 +553,13 @@ terminal4 0907_1 liuNet
 
 terminal1 mynet L1
 
-terminal6 0907_3 prelog
+terminal6 0907_3 prelog log和log做MSE loss 还是L1，论文中是MSE
 
-terminal1 0907_4 liuNet prelog
+terminal1 0907_4 liuNet prelog L1
 
 terminal7 0908_1 liu nocrop 用老的那个 切成10片
+
+terminal8 0908_2 liu nocrop nochop 直接把30s的数据喂进去
 
 # 注意事项
 
