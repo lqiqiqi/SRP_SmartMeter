@@ -143,6 +143,8 @@ class Tester(BaseTrain):
             print(flag)
             flag += 1
 
+            print(y_test.size())
+            print(model_out_test.size())
             for i in range(0, len(y_test.squeeze(0).squeeze(0)), 100):
                 if i+99 < len(y_test.squeeze(0).squeeze(0)):
                     temp_dtw = soft_dtw(model_out_test.squeeze(0).squeeze(0)[i:i+99], y_test.squeeze(0).squeeze(0)[i:i+99])
