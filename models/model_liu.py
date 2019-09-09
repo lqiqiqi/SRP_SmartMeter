@@ -10,10 +10,12 @@ class SRPResNet_Residual_Block(nn.Module):
         super(SRPResNet_Residual_Block, self).__init__()
 
         self.conv1 = nn.Conv1d(in_channels=ndf, out_channels=ndf, kernel_size=5, stride=1, padding=2, bias=False)
-        self.in1 = nn.InstanceNorm1d(ndf, affine=True, track_running_stats=True)
+        # self.in1 = nn.InstanceNorm1d(ndf, affine=True, track_running_stats=True)
+        self.in1 = nn.InstanceNorm1d(ndf, affine=True)
         self.relu = nn.LeakyReLU(0.2)
         self.conv2 = nn.Conv1d(in_channels=ndf, out_channels=ndf, kernel_size=5, stride=1, padding=2, bias=False)
-        self.in2 = nn.InstanceNorm1d(ndf, affine=True, track_running_stats=True)
+        # self.in2 = nn.InstanceNorm1d(ndf, affine=True, track_running_stats=True)
+        self.in1 = nn.InstanceNorm1d(ndf, affine=True)
 
     def forward(self, x):
         identity_data = x
@@ -68,7 +70,8 @@ class Net(nn.Module, BaseModel):
         self.residual = self.make_layer(SRPResNet_Residual_Block, residual_blocks)
 
         self.conv_mid = nn.Conv1d(in_channels=ndf, out_channels=ndf, kernel_size=5, stride=1, padding=2, bias=False)
-        self.bn_mid = nn.InstanceNorm1d(ndf, affine=True, track_running_stats=True)
+        # self.bn_mid = nn.InstanceNorm1d(ndf, affine=True, track_running_stats=True)
+        self.bn_mid = nn.InstanceNorm1d(ndf, affine=True)
 
         if self.scale == 10:
             self.upsample = nn.Sequential(*[
