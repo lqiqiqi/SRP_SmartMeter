@@ -134,27 +134,25 @@ class Tester(BaseTrain):
             model_out_test = self.model(x_test)
 
             # out_postlog = torch.div(torch.exp(model_out_test * math.log(100)) - 1.0, 1000.)
-
-            loss_test += torch.sqrt(
-                self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
+            #
+            # loss_test += torch.sqrt(
+            #     self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
             dtw_one_sample = 0
             # print(y_test.size())
             print(flag)
             flag += 1
 
-            # for i in range(len(y_test.squeeze(0).squeeze(0))):
-            #     if i+99 < len(y_test.squeeze(0).squeeze(0)):
-            #         temp_dtw = soft_dtw(model_out_test.squeeze(0).squeeze(0)[i:i+99], y_test.squeeze(0).squeeze(0)[i:i+99])
-            #         dtw_one_sample += temp_dtw
-            #         dtw_one_sample = dtw_one_sample / 2
-            #     else:
-            #         break
-            #
-            # # dtw_test += dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
-            # # print(dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1))
-            # dtw_test += dtw_one_sample
-            # print(dtw_one_sample)
+            for i in range(0, len(y_test.squeeze(0).squeeze(0)), 100):
+                if i+99 < len(y_test.squeeze(0).squeeze(0)):
+                    temp_dtw = soft_dtw(model_out_test.squeeze(0).squeeze(0)[i:i+99], y_test.squeeze(0).squeeze(0)[i:i+99])
+                    dtw_one_sample += temp_dtw
+                else:
+                    break
+
+            # dtw_test += dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
+            # print(dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1))
+            dtw_test += dtw_one_sample / 300
 
         avg_loss = loss_test / 2000
         avg_dtw_test = dtw_test / 2000
