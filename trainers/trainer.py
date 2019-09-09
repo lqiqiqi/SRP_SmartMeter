@@ -149,8 +149,10 @@ class Tester(BaseTrain):
                 for i in range(0, y_test.size()[-1], 100):
                     if i+99 < y_test.size()[-1]:
                         temp_dtw = dtw(model_out_test[sample][-1][i:i+99], y_test[sample][-1][i:i+99])
+                        print(temp_dtw)
                         dtw_one_sample += temp_dtw
                     else:
+                        print(i)
                         break
 
             # dtw_test += dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
