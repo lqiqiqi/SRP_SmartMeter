@@ -150,8 +150,12 @@ class Tester(BaseTrain):
             loss_test += torch.sqrt(
                 self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
+            epoch_snr = 0
             for sample in range(y_test.size()[0]):
-                snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
+                epoch_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
+
+            snr += epoch_snr
+            print("epoch_SNR: ", epoch_snr/32)
 
             dtw_one_sample = 0
             # print(y_test.size())
