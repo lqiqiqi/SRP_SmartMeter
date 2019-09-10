@@ -22,8 +22,8 @@ class Trainer(BaseTrain):
 
         # load model if model exists weigh initialization
         if self.config.load_model is True:
-            # self.load_model()
-            self.load_spec_model()
+            self.load_model()
+            # self.load_spec_model()
         else:
             self.weight_init()
 
@@ -39,7 +39,7 @@ class Trainer(BaseTrain):
         self.momentum = 0.9
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
-        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=200, gamma=0.1)
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         print('---------- Networks architecture -------------')
