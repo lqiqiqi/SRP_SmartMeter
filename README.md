@@ -561,6 +561,8 @@ terminal7 0908_1 liu nocrop 用老的那个 切成10片
 
 terminal8 0908_2 liu nocrop nochop 直接把30s的数据喂进去 这个要是再不行就算了
 
+terminal7 0910_1 用batchsize8 1晚上就达到了batchsize32 一天多的loss。因为batch size增大要求更多epoch，而读取数据要花很多时间
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`
