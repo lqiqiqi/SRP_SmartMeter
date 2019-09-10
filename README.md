@@ -591,6 +591,19 @@ Total number of parameters: 905984
 
 Total number of parameters: 7260
 
+## 0908_2 scale10 liu nocrop nochop batchsize32
+
+![0908_2_train_test](../LQ_SRP_SmartMeter/pic/0908_2_train_test.PNG)
+
+## 0910_1 scale10 liu nocrop nochop batchsize8
+
+![0910_1_train_test](../LQ_SRP_SmartMeter/pic/0910_1_train_test.PNG)
+
+batchsize 大时需要更多epoch才能达到小batchsize的效果
+
+avg_loss:  53.076214
+avg_loss_log with original data:  56.53602600097656
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`

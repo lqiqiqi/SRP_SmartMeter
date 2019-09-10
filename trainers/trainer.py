@@ -150,34 +150,35 @@ class Tester(BaseTrain):
             loss_test += torch.sqrt(
                 self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
-            batch_snr = 0
-            for sample in range(y_test.size()[0]):
-                batch_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
-
-            snr += batch_snr
-            print("batch_SNR: ", batch_snr/32)
+            # batch_snr = 0
+            # for sample in range(y_test.size()[0]):
+            #     batch_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
+            #
+            # snr += batch_snr
+            # print("batch_SNR: ", batch_snr/32)
 
             dtw_one_sample = 0
             # print(y_test.size())
             print(flag)
             flag += 1
 
-            # # print(y_test.size()) torch.Size([32, 1, 30000])
-            # # print(model_out_test.size()) torch.Size([32, 1, 30000])
-            # for sample in range(y_test.size()[0]):
-            #     for i in range(0, y_test.size()[-1], 100):
-            #         if i+99 < y_test.size()[-1]:
-            #             temp_dtw = dtw(model_out_test[sample][-1][i:i+99], y_test[sample][-1][i:i+99])
-            #             print(temp_dtw)
-            #             dtw_one_sample += temp_dtw
-            #         else:
-            #             print(i)
-            #             break
-            #
-            # # dtw_test += dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
+            # print(y_test.size()) torch.Size([32, 1, 30000])
+            # print(model_out_test.size()) torch.Size([32, 1, 30000])
+            for sample in range(y_test.size()[0]):
+                for i in range(0, y_test.size()[-1], 100):
+                    if i+99 < y_test.size()[-1]:
+                        temp_dtw = dtw(model_out_test[sample][-1][i:i+99], y_test[sample][-1][i:i+99])
+                        # print(temp_dtw)
+                        dtw_one_sample += temp_dtw
+                    else:
+                        break
+
+
+            # dtw_test += dtw_one_batch / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
             # # print(dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1))
             # dtw_test += dtw_one_sample / 300
-            # print(dtw_one_sample / (300*32))
+            dtw_test += dtw_one_sample / (300*32)
+            print(dtw_one_sample / (300 * 32))
 
         snr_avg = snr / 2000
         avg_loss = loss_test / len(test_data_loader)
