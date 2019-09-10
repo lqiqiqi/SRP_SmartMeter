@@ -9,6 +9,17 @@ from base.base_train import BaseTrain
 from utils import utils
 
 
+def SNR(out, ground):
+    sum = 0
+    for i in range(len(ground)):
+        sum += ground[i] ** 2
+
+    noise_sum = 0
+    for j in range(len(ground)):
+        noise_sum += (ground[j] - out[j]) ** 2
+
+    return 10 * math.log(sum/noise_sum ,10)
+
 class Trainer(BaseTrain):
     def __init__(self, model, config, data, logger):
         super(Trainer, self).__init__(model, config, data, logger)
@@ -117,6 +128,7 @@ class Tester(BaseTrain):
 
         loss_test = 0
         dtw_test = 0
+        snr = 0
         flag = 0
 
         for input_test, target_test, groundtruth in test_data_loader:
@@ -137,6 +149,9 @@ class Tester(BaseTrain):
             #
             loss_test += torch.sqrt(
                 self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
+
+            for sample in range(y_test.size()[0]):
+                snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
 
             dtw_one_sample = 0
             # print(y_test.size())
@@ -160,9 +175,11 @@ class Tester(BaseTrain):
             # dtw_test += dtw_one_sample / 300
             # print(dtw_one_sample / (300*32))
 
+        snr_avg = snr / 2000
         avg_loss = loss_test / len(test_data_loader)
         avg_dtw_test = dtw_test / len(test_data_loader)
 
+        print("average SNR: ", snr_avg)
         print('avg_loss with original data: ', avg_loss)
         print('avg_dtw_test with original data: ', avg_dtw_test)
         print('Test is finished')
@@ -170,7 +187,7 @@ class Tester(BaseTrain):
     def load_spec_model(self):
         model_dir = os.path.join(self.config.save_dir, 'model_' + self.config.exp_name)
 
-        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_780.pkl'  # get specific model
+        model_name = model_dir + '/' + self.config.model_name + '_param_epoch_30.pkl'  # get specific model
         if os.path.exists(model_name):
             state_dict = torch.load(model_name)
             # from collections import OrderedDict

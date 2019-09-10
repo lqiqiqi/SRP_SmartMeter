@@ -549,19 +549,43 @@ avg_loss_log with original data:  37.56041717529297
 
 ## TEMP
 
-terminal4 0907_1 liuNet
-
-terminal1 mynet L1
-
-terminal6 0907_3 prelog log和log做MSE loss 还是L1，论文中是MSE
-
-terminal1 0907_4 liuNet prelog L1 log和log做MSE loss 还是L1，论文中是MSE
-
-terminal7 0908_1 liu nocrop 用老的那个 切成10片
+terminal4 0910_2 myNet batchsize8 为了和0908_2和0910_1做对比
 
 terminal8 0908_2 liu nocrop nochop 直接把30s的数据喂进去 这个要是再不行就算了
 
-terminal7 0910_1 用batchsize8 1晚上就达到了batchsize32 一天多的loss。因为batch size增大要求更多epoch，而读取数据要花很多时间
+terminal7 0910_1 用batchsize8 1晚上就达到了batchsize32 一天多的loss。因为batch size增大要求更多epoch
+
+## 0907_1 liuNet scale100 L1
+
+![0907_1_train_test](../LQ_SRP_SmartMeter/pic/0907_1_train_test.PNG)
+
+使用L1做loss
+
+avg_loss_log with original data:  111
+
+效果很不好
+
+## 0907_2 myNet scale100 L1
+
+![0907_2_train_test](../LQ_SRP_SmartMeter/pic/0907_2_train_test.PNG)
+
+没有测，但是应该效果也很差
+
+## 0907_3 scale100 L1loss prelog
+
+log和log做MSE loss 还是L1 loss
+
+这样很明显会放大误差，结果很糟糕，可以不用看了
+
+## 0907_4 liuNet scale100 L1loss prelog
+
+## 0908_1 liu nocrop 用老的那个 切成10片
+
+![0908_1_train_test](../LQ_SRP_SmartMeter/pic/0908_1_train_test.PNG)
+
+不收敛
+
+## 
 
 # 注意事项
 
