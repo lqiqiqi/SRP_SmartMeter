@@ -585,7 +585,11 @@ log和log做MSE loss 还是L1 loss
 
 不收敛
 
-## 
+## num of params
+
+Total number of parameters: 905984
+
+Total number of parameters: 7260
 
 # 注意事项
 

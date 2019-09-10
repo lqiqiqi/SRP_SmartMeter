@@ -13,39 +13,39 @@ class Net(torch.nn.Module, BaseModel):
         # self.config.m = 16 # number of layer of hidden layer block
 
         # self.upsample = nn.Upsample(scale_factor=self.config.scale_factor, mode='nearest')
-        if self.config.scale_factor == 10:
-            self.upsample = nn.Sequential(*[
-                nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
-                SRPUpsampleBlock(scale=10),
-                nn.LeakyReLU(0.2)
-            ])
-        elif self.config.scale_factor == 100:
-            self.upsample = nn.Sequential(*[
-                nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
-                SRPUpsampleBlock(scale=10),
-                nn.LeakyReLU(0.2),
-                nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
-                SRPUpsampleBlock(scale=10),
-                nn.LeakyReLU(0.2)
-            ])
-        elif self.config.scale_factor == 1000:
-            self.upsample = nn.Sequential(*[
-                nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
-                SRPUpsampleBlock(scale=10),
-                nn.LeakyReLU(0.2),
-                nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
-                SRPUpsampleBlock(scale=10),
-                nn.LeakyReLU(0.2),
-                nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
-                SRPUpsampleBlock(scale=10),
-                nn.LeakyReLU(0.2)
-            ])
-        else:
-            self.upsample = nn.Sequential(*[
-                nn.Conv1d(in_channels=self.config.num_channels, out_channels=self.config.scale_factor, kernel_size=5, stride=1, padding=2, bias=False),
-                SRPUpsampleBlock(scale=self.config.scale_factor),
-                nn.LeakyReLU(0.2)
-            ])
+        # if self.config.scale_factor == 10:
+        self.upsample = nn.Sequential(*[
+            nn.Conv1d(in_channels=self.config.num_channels, out_channels=self.config.scale_factor, kernel_size=5, stride=1, padding=2, bias=False),
+            SRPUpsampleBlock(scale=self.config.scale_factor),
+            nn.LeakyReLU(0.2)
+        ])
+        # elif self.config.scale_factor == 100:
+        #     self.upsample = nn.Sequential(*[
+        #         nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
+        #         SRPUpsampleBlock(scale=10),
+        #         nn.LeakyReLU(0.2),
+        #         nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
+        #         SRPUpsampleBlock(scale=10),
+        #         nn.LeakyReLU(0.2)
+        #     ])
+        # elif self.config.scale_factor == 1000:
+        #     self.upsample = nn.Sequential(*[
+        #         nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
+        #         SRPUpsampleBlock(scale=10),
+        #         nn.LeakyReLU(0.2),
+        #         nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
+        #         SRPUpsampleBlock(scale=10),
+        #         nn.LeakyReLU(0.2),
+        #         nn.Conv1d(in_channels=self.config.num_channels, out_channels=10, kernel_size=5, stride=1, padding=2, bias=False),
+        #         SRPUpsampleBlock(scale=10),
+        #         nn.LeakyReLU(0.2)
+        #     ])
+        # else:
+        #     self.upsample = nn.Sequential(*[
+        #         nn.Conv1d(in_channels=self.config.num_channels, out_channels=self.config.scale_factor, kernel_size=5, stride=1, padding=2, bias=False),
+        #         SRPUpsampleBlock(scale=self.config.scale_factor),
+        #         nn.LeakyReLU(0.2)
+        #     ])
 
         # Feature extraction
         # if the last is conv, padding is 2
