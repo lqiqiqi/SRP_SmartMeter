@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data_loader/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_loader/data_generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainers/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +67,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1391" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="12683" />
+          <entry key="py" value="12699" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -76,7 +75,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1391" />
-          <entry key="Python" value="12879" />
+          <entry key="Python" value="12895" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -87,14 +86,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="182" column="55" lean-forward="true" selection-start-line="182" selection-start-column="55" selection-end-line="182" selection-end-column="55" />
+            <state relative-caret-position="-2607">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#3338#6223#0" expanded="true" />
                 <element signature="e#6288#7146#0" expanded="true" />
                 <element signature="e#7184#7977#0" expanded="true" />
-                <marker date="1568183759874" expanded="true" signature="243:464" ph="..." />
-                <marker date="1568183759874" expanded="true" signature="489:494" ph="..." />
+                <marker date="1568186425169" expanded="true" signature="260:481" ph="..." />
+                <marker date="1568186425169" expanded="true" signature="506:511" ph="..." />
               </folding>
             </state>
           </provider>
@@ -332,36 +331,6 @@
             <path>
               <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
               <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
-              <item name="configs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
-              <item name="data_loader" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
-              <item name="trainers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SRP_SmartMeter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SRP_SmartMeter" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -868,14 +837,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="182" column="55" lean-forward="true" selection-start-line="182" selection-start-column="55" selection-end-line="182" selection-end-column="55" />
+        <state relative-caret-position="-2607">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#3338#6223#0" expanded="true" />
             <element signature="e#6288#7146#0" expanded="true" />
             <element signature="e#7184#7977#0" expanded="true" />
-            <marker date="1568183759874" expanded="true" signature="243:464" ph="..." />
-            <marker date="1568183759874" expanded="true" signature="489:494" ph="..." />
+            <marker date="1568186425169" expanded="true" signature="260:481" ph="..." />
+            <marker date="1568186425169" expanded="true" signature="506:511" ph="..." />
           </folding>
         </state>
       </provider>
