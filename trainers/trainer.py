@@ -5,6 +5,7 @@ import numpy as np
 import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
+from scipy.spatial.distance import cdist
 # from tslearn.metrics import dtw
 # from dtw import dtw
 from base.base_train import BaseTrain
