@@ -215,7 +215,7 @@ class Tester(BaseTrain):
                 for i in range(0, y_test.size()[-1],100):
                     if i+100 <= y_test.size()[-1]:
                         temp_dtw, _, _, _ = dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
-                        print("sample{} {}/{} dtw: {}".format(sample, i,  y_test.size()[-1], temp_dtw))
+                        print("flag{} sample{} {}/{} dtw: {}".format(flag, sample, i,  y_test.size()[-1], temp_dtw))
                         dtw_batch += temp_dtw
                     else:
                         break
