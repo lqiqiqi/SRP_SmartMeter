@@ -604,6 +604,15 @@ batchsize 大时需要更多epoch才能达到小batchsize的效果
 avg_loss:  53.076214
 avg_loss_log with original data:  56.53602600097656
 
+
+
+## 0910_3 scale100 mynet batchsize8
+
+
+
+avg_loss:  95.13373
+avg_loss_log with original data:  96.4037094116211
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`

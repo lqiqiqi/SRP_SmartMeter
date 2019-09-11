@@ -64,6 +64,10 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
 
         highdata_raw = np.expand_dims(raw0, 0)
         highdata = torch.from_numpy(highdata_raw).type('torch.FloatTensor')
+
+        # 如果highdata是100Hz的话，需要先把highdata降到100
+        highdata = torch.take(highdata, torch.arange(0, highdata.size()[1], 10).long()).unsqueeze(0)
+
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
 
         # interpolate需要三维输入，先升为三维后，再squeeze降维
