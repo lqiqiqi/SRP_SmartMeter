@@ -1,6 +1,7 @@
 import os
 import math
 import torch
+import numpy as np
 import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
@@ -131,6 +132,8 @@ class Tester(BaseTrain):
         dtw_test = 0
         snr = 0
         flag = 0
+
+        euclidean_norm = lambda x, y: np.abs(x - y)
 
         for input_test, target_test, groundtruth in test_data_loader:
             # input data (low resolution)
