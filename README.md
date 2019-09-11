@@ -613,6 +613,8 @@ avg_loss_log with original data:  56.53602600097656
 average SNR:  11.793153934806663
 avg_loss with original data:  tensor(36.0520, device='cuda:0')
 
+32samples dtw 3.0719233596348348
+
 ## 0910_3 scale100 mynet batchsize8
 
 ![0910_3_train_test](../LQ_SRP_SmartMeter/pic/0910_3_train_test.PNG)
@@ -629,15 +631,13 @@ avg_loss with original data:  tensor(96.6952, device='cuda:0')
 
 ## temp
 
-terminal4 s8 10to100
-
 terminal5 s16 10to100
 
 terminal1 100 to 1000
 
 terminal6  0910_3 10to1000
 
-
+terminal4 0910_2 整个去测fastdtw
 
 ## 0911_1 10to100 mynet batchsize8 s8
 
@@ -646,7 +646,14 @@ terminal6  0910_3 10to1000
 avg_loss:  93.0454
 avg_loss_log with original data:  94.9924087524414
 
-32samples dtw 3.0719233596348348
+
+
+## 0911_2 10to100 mynet batchsize8 s16
+
+![0911_2_train_test](../LQ_SRP_SmartMeter/pic/0911_2_train_test.PNG)
+
+avg_loss:  92.810684
+avg_loss_log with original data:  94.58523559570312
 
 
 

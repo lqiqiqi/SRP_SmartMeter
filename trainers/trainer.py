@@ -222,7 +222,7 @@ class Tester(BaseTrain):
             #             break
 
             for sample in range(y_test.size()[0]):
-                temp_dtw, _, _, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
+                temp_dtw, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
                 print("flag{} sample{} dtw: {}".format(flag, sample, temp_dtw))
                 dtw_batch += temp_dtw
 

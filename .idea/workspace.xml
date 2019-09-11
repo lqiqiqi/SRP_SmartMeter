@@ -87,14 +87,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
+            <state relative-caret-position="374">
+              <caret line="230" lean-forward="true" selection-start-line="230" selection-end-line="230" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#6288#7146#0" expanded="true" />
                 <element signature="e#7184#7977#0" expanded="true" />
-                <marker date="1568213108420" expanded="true" signature="348:2335" ph="..." />
-                <marker date="1568213108420" expanded="true" signature="2360:2365" ph="..." />
+                <marker date="1568213398008" expanded="true" signature="348:2335" ph="..." />
+                <marker date="1568213398008" expanded="true" signature="2360:2365" ph="..." />
               </folding>
             </state>
           </provider>
@@ -145,7 +145,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-726">
+            <state relative-caret-position="-1213">
               <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
@@ -763,16 +763,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-726">
-          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -815,20 +805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0910_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0910_3.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0911_1.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -857,16 +833,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0910_3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0910_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1213">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="227" lean-forward="true" selection-start-line="227" selection-end-line="227" />
+        <state relative-caret-position="374">
+          <caret line="230" lean-forward="true" selection-start-line="230" selection-end-line="230" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#6288#7146#0" expanded="true" />
             <element signature="e#7184#7977#0" expanded="true" />
-            <marker date="1568213108420" expanded="true" signature="348:2335" ph="..." />
-            <marker date="1568213108420" expanded="true" signature="2360:2365" ph="..." />
+            <marker date="1568213398008" expanded="true" signature="348:2335" ph="..." />
+            <marker date="1568213398008" expanded="true" signature="2360:2365" ph="..." />
           </folding>
         </state>
       </provider>
