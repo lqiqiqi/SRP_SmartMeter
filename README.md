@@ -633,6 +633,21 @@ terminal4 s8 10to100
 
 terminal5 s16 10to100
 
+terminal1 100 to 1000
+
+terminal6  0910_3 10to1000
+
+
+
+## 0911_1 10to100 mynet batchsize8 s8
+
+![0911_1_train_test](../LQ_SRP_SmartMeter/pic/0911_1_train_test.PNG)
+
+avg_loss:  93.0454
+avg_loss_log with original data:  94.9924087524414
+
+32samples dtw 3.0719233596348348
+
 
 
 # 注意事项
