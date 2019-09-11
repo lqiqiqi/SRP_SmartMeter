@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
 from scipy.spatial.distance import cdist
-# from tslearn.metrics import dtw
+from tslearn.metrics import dtw
 # from dtw import dtw
 from base.base_train import BaseTrain
 from utils import utils
@@ -23,49 +23,48 @@ def SNR(out, ground):
 
     return 10 * math.log(sum/noise_sum ,10)
 
-def dtw(x, y, dist, warp=1, w=np.inf, s=1.0):
-    """
-    Computes Dynamic Time Warping (DTW) of two sequences.
-    :param array x: N1*M array
-    :param array y: N2*M array
-    :param func dist: distance used as cost measure
-    :param int warp: how many shifts are computed.
-    :param int w: window size limiting the maximal distance between indices of matched entries |i,j|.
-    :param float s: weight applied on off-diagonal moves of the path. As s gets larger, the warping path is increasingly biased towards the diagonal
-    Returns the minimum distance, the cost matrix, the accumulated cost matrix, and the wrap path.
-    """
-    assert len(x)
-    assert len(y)
-    assert math.isinf(w) or (w >= abs(len(x) - len(y)))
-    assert s > 0
-    r, c = len(x), len(y)
-    if not math.isinf(w):
-        D0 = np.full((r + 1, c + 1), np.inf)
-        for i in range(1, r + 1):
-            D0[i, max(1, i - w):min(c + 1, i + w + 1)] = 0
-        D0[0, 0] = 0
-    else:
-        D0 = np.zeros((r + 1, c + 1))
-        D0[0, 1:] = np.inf
-        D0[1:, 0] = np.inf
-    D1 = D0[1:, 1:]  # view
-    for i in range(r):
-        for j in range(c):
-            if (math.isinf(w) or (max(0, i - w) <= j <= min(c, i + w))):
-                D1[i, j] = dist(x[i], y[j])
-    jrange = range(c)
-    for i in range(r):
-        if not math.isinf(w):
-            jrange = range(max(0, i - w), min(c, i + w + 1))
-        for j in jrange:
-            min_list = [D0[i, j]]
-            for k in range(1, warp + 1):
-                i_k = min(i + k, r)
-                j_k = min(j + k, c)
-                min_list += [D0[i_k, j] * s, D0[i, j_k] * s]
-            D1[i, j] += min(min_list)
-
-    return D1[-1, -1]
+# def dtw(x, y, dist, warp=1, w=np.inf, s=1.0):
+#     """
+#     Computes Dynamic Time Warping (DTW) of two sequences.
+#     :param array x: N1*M array
+#     :param array y: N2*M array
+#     :param func dist: distance used as cost measure
+#     :param int warp: how many shifts are computed.
+#     :param int w: window size limiting the maximal distance between indices of matched entries |i,j|.
+#     :param float s: weight applied on off-diagonal moves of the path. As s gets larger, the warping path is increasingly biased towards the diagonal
+#     Returns the minimum distance, the cost matrix, the accumulated cost matrix, and the wrap path.
+#     """
+#     assert len(x)
+#     assert len(y)
+#     assert math.isinf(w) or (w >= abs(len(x) - len(y)))
+#     assert s > 0
+#     r, c = len(x), len(y)
+#     if not math.isinf(w):
+#         D0 = np.full((r + 1, c + 1), np.inf)
+#         for i in range(1, r + 1):
+#             D0[i, max(1, i - w):min(c + 1, i + w + 1)] = 0
+#         D0[0, 0] = 0
+#     else:
+#         D0 = np.zeros((r + 1, c + 1))
+#         D0[0, 1:] = np.inf
+#         D0[1:, 0] = np.inf
+#     D1 = D0[1:, 1:]  # view
+#     for i in range(r):
+#         for j in range(c):
+#             if (math.isinf(w) or (max(0, i - w) <= j <= min(c, i + w))):
+#                 D1[i, j] = dist(x[i], y[j])
+#     jrange = range(c)
+#     for i in range(r):
+#         if not math.isinf(w):
+#             jrange = range(max(0, i - w), min(c, i + w + 1))
+#         for j in jrange:
+#             min_list = [D0[i, j]]
+#             for k in range(1, warp + 1):
+#                 i_k = min(i + k, r)
+#                 j_k = min(j + k, c)
+#                 min_list += [D0[i_k, j] * s, D0[i, j_k] * s]
+#             D1[i, j] += min(min_list)
+#     return D1[-1, -1]
 
 class Trainer(BaseTrain):
     def __init__(self, model, config, data, logger):
@@ -223,7 +222,7 @@ class Tester(BaseTrain):
 
             for sample in range(y_test.size()[0]):
                 temp_dtw = dtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
-                # print(temp_dtw)
+                print(temp_dtw)
                 dtw_batch += temp_dtw
 
 

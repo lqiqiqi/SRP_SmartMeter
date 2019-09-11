@@ -86,15 +86,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="225" column="16" selection-start-line="225" selection-start-column="16" selection-end-line="225" selection-end-column="16" />
+            <state relative-caret-position="291">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="66" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#590#2229#0" expanded="true" />
+                <element signature="e#5006#7968#0" expanded="true" />
                 <element signature="e#6288#7146#0" expanded="true" />
                 <element signature="e#7184#7977#0" expanded="true" />
-                <marker date="1568190617652" expanded="true" signature="322:2226" ph="..." />
-                <marker date="1568190617652" expanded="true" signature="2251:2256" ph="..." />
+                <marker date="1568192247381" expanded="true" signature="320:2307" ph="..." />
+                <marker date="1568192247381" expanded="true" signature="2332:2337" ph="..." />
               </folding>
             </state>
           </provider>
@@ -419,7 +419,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13918306" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13918306" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -438,8 +438,8 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" weight="0.32980332" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13918306" />
@@ -838,15 +838,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="225" column="16" selection-start-line="225" selection-start-column="16" selection-end-line="225" selection-end-column="16" />
+        <state relative-caret-position="291">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="66" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#590#2229#0" expanded="true" />
+            <element signature="e#5006#7968#0" expanded="true" />
             <element signature="e#6288#7146#0" expanded="true" />
             <element signature="e#7184#7977#0" expanded="true" />
-            <marker date="1568190617652" expanded="true" signature="322:2226" ph="..." />
-            <marker date="1568190617652" expanded="true" signature="2251:2256" ph="..." />
+            <marker date="1568192247381" expanded="true" signature="320:2307" ph="..." />
+            <marker date="1568192247381" expanded="true" signature="2332:2337" ph="..." />
           </folding>
         </state>
       </provider>
