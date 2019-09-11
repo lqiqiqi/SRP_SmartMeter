@@ -170,7 +170,7 @@ class Tester(BaseTrain):
             for sample in range(y_test.size()[0]):
                 for i in range(0, y_test.size()[-1]):
                     if i+100 <= y_test.size()[-1]:
-                        temp_dtw = dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
+                        temp_dtw, _, _, _ = dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
                         print(temp_dtw)
                         dtw_batch += temp_dtw
                     else:
