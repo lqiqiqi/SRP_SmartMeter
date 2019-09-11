@@ -627,6 +627,14 @@ avg_loss with original data:  tensor(96.6952, device='cuda:0')
 
 
 
+## temp
+
+terminal4 s8 10to100
+
+terminal5 s16 10to100
+
+
+
 # 注意事项
 
 1. 执行方式：在terminal中运行，注意不能加引号，argparse会自动解析为string `python main.py -c .\configs\example.json`

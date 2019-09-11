@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
-from tslearn.metrics import dtw
+from tslearn.metrics import soft_dtw
 from base.base_train import BaseTrain
 from utils import utils
 
@@ -164,16 +164,16 @@ class Tester(BaseTrain):
 
             # print(y_test.size()) torch.Size([32, 1, 30000])
             # print(model_out_test.size()) torch.Size([32, 1, 30000])
-            # for sample in range(y_test.size()[0]):
-            #     for i in range(0, y_test.size()[-1], 100):
-            #         if i+99 < y_test.size()[-1]:
-            #             temp_dtw = dtw(model_out_test[sample][-1][i:i+99], y_test[sample][-1][i:i+99])
-            #             # print(temp_dtw)
-            #             dtw_one_sample += temp_dtw
-            #         else:
-            #             break
-            # dtw_test += dtw_one_sample / (300*32)
-            # print(dtw_one_sample / (300 * 32))
+            for sample in range(y_test.size()[0]):
+                for i in range(0, y_test.size()[-1], 100):
+                    if i+100 <= y_test.size()[-1]:
+                        temp_dtw = soft_dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100])
+                        # print(temp_dtw)
+                        dtw_one_sample += temp_dtw
+                    else:
+                        break
+            dtw_test += dtw_one_sample / (300*32)
+            print(dtw_one_sample / (300 * 32))
 
             # dtw_test += dtw_one_batch / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
             # # print(dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1))
