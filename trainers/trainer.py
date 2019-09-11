@@ -202,18 +202,20 @@ class Tester(BaseTrain):
             # print(y_test.size()) torch.Size([32, 1, 30000])
             # print(model_out_test.size()) torch.Size([32, 1, 30000])
             for sample in range(y_test.size()[0]):
-                for i in range(0, y_test.size()[-1]):
+                for i in range(0, y_test.size()[-1],100):
                     if i+100 <= y_test.size()[-1]:
                         temp_dtw, _, _, _ = accelerated_dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
-                        print(temp_dtw)
+                        # print(temp_dtw)
                         dtw_batch += temp_dtw
                     else:
                         break
-            dtw_test += dtw_batch / ((len(y_test.size()[-1]) - 100 + 1)*self.config.test_batch_size)
+
+            # dtw_test += dtw_batch / ((len(y_test.size()[-1]) - 100 + 1)*self.config.test_batch_size)
 
             # dtw_test += dtw_one_batch / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
             # # print(dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1))
-            # dtw_test += dtw_one_sample / 300
+            dtw_test += dtw_batch / (300*self.config.test_batch_size)
+            print(dtw_batch / (300*self.config.test_batch_size))
 
 
         snr_avg = snr / 2000
