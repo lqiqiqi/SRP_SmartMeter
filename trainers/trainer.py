@@ -23,36 +23,46 @@ def SNR(out, ground):
 
     return 10 * math.log(sum/noise_sum ,10)
 
-def accelerated_dtw(x, y, dist, warp=1):
+def dtw(x, y, dist, warp=1, w=inf, s=1.0):
     """
-    Computes Dynamic Time Warping (DTW) of two sequences in a faster way.
-    Instead of iterating through each element and calculating each distance,
-    this uses the cdist function from scipy (https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html)
+    Computes Dynamic Time Warping (DTW) of two sequences.
     :param array x: N1*M array
     :param array y: N2*M array
-    :param string or func dist: distance parameter for cdist. When string is given, cdist uses optimized functions for the distance metrics.
-    If a string is passed, the distance function can be 'braycurtis', 'canberra', 'chebyshev', 'cityblock', 'correlation', 'cosine', 'dice', 'euclidean', 'hamming', 'jaccard', 'kulsinski', 'mahalanobis', 'matching', 'minkowski', 'rogerstanimoto', 'russellrao', 'seuclidean', 'sokalmichener', 'sokalsneath', 'sqeuclidean', 'wminkowski', 'yule'.
+    :param func dist: distance used as cost measure
     :param int warp: how many shifts are computed.
+    :param int w: window size limiting the maximal distance between indices of matched entries |i,j|.
+    :param float s: weight applied on off-diagonal moves of the path. As s gets larger, the warping path is increasingly biased towards the diagonal
     Returns the minimum distance, the cost matrix, the accumulated cost matrix, and the wrap path.
     """
     assert len(x)
     assert len(y)
-    if np.ndim(x) == 1:
-        x = x.reshape(-1, 1)
-    if np.ndim(y) == 1:
-        y = y.reshape(-1, 1)
+    assert math.isinf(w) or (w >= abs(len(x) - len(y)))
+    assert s > 0
     r, c = len(x), len(y)
-    D0 = np.zeros((r + 1, c + 1))
-    D0[0, 1:] = np.inf
-    D0[1:, 0] = np.inf
-    D1 = D0[1:, 1:]
-    D0[1:, 1:] = cdist(x, y, dist)
+    if not math.isinf(w):
+        D0 = np.full((r + 1, c + 1), np.inf)
+        for i in range(1, r + 1):
+            D0[i, max(1, i - w):min(c + 1, i + w + 1)] = 0
+        D0[0, 0] = 0
+    else:
+        D0 = np.zeros((r + 1, c + 1))
+        D0[0, 1:] = np.inf
+        D0[1:, 0] = np.inf
+    D1 = D0[1:, 1:]  # view
     for i in range(r):
         for j in range(c):
+            if (math.isinf(w) or (max(0, i - w) <= j <= min(c, i + w))):
+                D1[i, j] = dist(x[i], y[j])
+    jrange = range(c)
+    for i in range(r):
+        if not math.isinf(w):
+            jrange = range(max(0, i - w), min(c, i + w + 1))
+        for j in jrange:
             min_list = [D0[i, j]]
             for k in range(1, warp + 1):
-                min_list += [D0[min(i + k, r), j],
-                             D0[i, min(j + k, c)]]
+                i_k = min(i + k, r)
+                j_k = min(j + k, c)
+                min_list += [D0[i_k, j] * s, D0[i, j_k] * s]
             D1[i, j] += min(min_list)
 
     return D1[-1, -1]
