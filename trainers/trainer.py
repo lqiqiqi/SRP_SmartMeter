@@ -23,7 +23,7 @@ def SNR(out, ground):
 
     return 10 * math.log(sum/noise_sum ,10)
 
-def dtw(x, y, dist, warp=1, w=inf, s=1.0):
+def dtw(x, y, dist, warp=1, w=np.inf, s=1.0):
     """
     Computes Dynamic Time Warping (DTW) of two sequences.
     :param array x: N1*M array

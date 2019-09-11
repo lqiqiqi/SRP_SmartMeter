@@ -67,7 +67,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1391" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="12810" />
+          <entry key="py" value="12813" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -75,7 +75,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1391" />
-          <entry key="Python" value="13006" />
+          <entry key="Python" value="13009" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -86,15 +86,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            <state relative-caret-position="297">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#5006#7968#0" expanded="true" />
                 <element signature="e#6288#7146#0" expanded="true" />
                 <element signature="e#7184#7977#0" expanded="true" />
-                <marker date="1568189110570" expanded="true" signature="322:2223" ph="..." />
-                <marker date="1568189110570" expanded="true" signature="2248:2253" ph="..." />
+                <marker date="1568189414303" expanded="true" signature="322:2226" ph="..." />
+                <marker date="1568189414303" expanded="true" signature="2251:2256" ph="..." />
               </folding>
             </state>
           </provider>
@@ -838,15 +838,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        <state relative-caret-position="297">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#5006#7968#0" expanded="true" />
             <element signature="e#6288#7146#0" expanded="true" />
             <element signature="e#7184#7977#0" expanded="true" />
-            <marker date="1568189110570" expanded="true" signature="322:2223" ph="..." />
-            <marker date="1568189110570" expanded="true" signature="2248:2253" ph="..." />
+            <marker date="1568189414303" expanded="true" signature="322:2226" ph="..." />
+            <marker date="1568189414303" expanded="true" signature="2251:2256" ph="..." />
           </folding>
         </state>
       </provider>
