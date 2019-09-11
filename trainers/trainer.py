@@ -212,14 +212,20 @@ class Tester(BaseTrain):
 
             # print(y_test.size()) torch.Size([32, 1, 30000])
             # print(model_out_test.size()) torch.Size([32, 1, 30000])
+            # for sample in range(y_test.size()[0]):
+            #     for i in range(0, y_test.size()[-1],100):
+            #         if i+100 <= y_test.size()[-1]:
+            #             temp_dtw = dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
+            #             # print(temp_dtw)
+            #             dtw_batch += temp_dtw
+            #         else:
+            #             break
+
             for sample in range(y_test.size()[0]):
-                for i in range(0, y_test.size()[-1],100):
-                    if i+100 <= y_test.size()[-1]:
-                        temp_dtw = dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
-                        # print(temp_dtw)
-                        dtw_batch += temp_dtw
-                    else:
-                        break
+                temp_dtw = dtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
+                # print(temp_dtw)
+                dtw_batch += temp_dtw
+
 
             # dtw_test += dtw_batch / ((len(y_test.size()[-1]) - 100 + 1)*self.config.test_batch_size)
 
