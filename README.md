@@ -604,14 +604,28 @@ batchsize 大时需要更多epoch才能达到小batchsize的效果
 avg_loss:  53.076214
 avg_loss_log with original data:  56.53602600097656
 
+## 0910_2 scale10 mynet batchsize8
 
+
+
+![0910_2_train_test](../LQ_SRP_SmartMeter/pic/0910_2_train_test.PNG)
+
+average SNR:  11.793153934806663
+avg_loss with original data:  tensor(36.0520, device='cuda:0')
 
 ## 0910_3 scale100 mynet batchsize8
 
-
+![0910_3_train_test](../LQ_SRP_SmartMeter/pic/0910_3_train_test.PNG)
 
 avg_loss:  95.13373
 avg_loss_log with original data:  96.4037094116211
+
+
+
+average SNR:  2.190822482769241
+avg_loss with original data:  tensor(96.6952, device='cuda:0')
+
+
 
 # 注意事项
 
