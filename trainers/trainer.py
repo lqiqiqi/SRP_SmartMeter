@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
 # from tslearn.metrics import dtw
-from dtw import dtw
+# from dtw import dtw
 from base.base_train import BaseTrain
 from utils import utils
 
@@ -21,6 +21,40 @@ def SNR(out, ground):
         noise_sum += (ground[j] - out[j]) ** 2
 
     return 10 * math.log(sum/noise_sum ,10)
+
+def accelerated_dtw(x, y, dist, warp=1):
+    """
+    Computes Dynamic Time Warping (DTW) of two sequences in a faster way.
+    Instead of iterating through each element and calculating each distance,
+    this uses the cdist function from scipy (https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.cdist.html)
+    :param array x: N1*M array
+    :param array y: N2*M array
+    :param string or func dist: distance parameter for cdist. When string is given, cdist uses optimized functions for the distance metrics.
+    If a string is passed, the distance function can be 'braycurtis', 'canberra', 'chebyshev', 'cityblock', 'correlation', 'cosine', 'dice', 'euclidean', 'hamming', 'jaccard', 'kulsinski', 'mahalanobis', 'matching', 'minkowski', 'rogerstanimoto', 'russellrao', 'seuclidean', 'sokalmichener', 'sokalsneath', 'sqeuclidean', 'wminkowski', 'yule'.
+    :param int warp: how many shifts are computed.
+    Returns the minimum distance, the cost matrix, the accumulated cost matrix, and the wrap path.
+    """
+    assert len(x)
+    assert len(y)
+    if np.ndim(x) == 1:
+        x = x.reshape(-1, 1)
+    if np.ndim(y) == 1:
+        y = y.reshape(-1, 1)
+    r, c = len(x), len(y)
+    D0 = np.zeros((r + 1, c + 1))
+    D0[0, 1:] = np.inf
+    D0[1:, 0] = np.inf
+    D1 = D0[1:, 1:]
+    D0[1:, 1:] = cdist(x, y, dist)
+    for i in range(r):
+        for j in range(c):
+            min_list = [D0[i, j]]
+            for k in range(1, warp + 1):
+                min_list += [D0[min(i + k, r), j],
+                             D0[i, min(j + k, c)]]
+            D1[i, j] += min(min_list)
+
+    return D1[-1, -1]
 
 class Trainer(BaseTrain):
     def __init__(self, model, config, data, logger):
@@ -170,7 +204,7 @@ class Tester(BaseTrain):
             for sample in range(y_test.size()[0]):
                 for i in range(0, y_test.size()[-1]):
                     if i+100 <= y_test.size()[-1]:
-                        temp_dtw, _, _, _ = dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
+                        temp_dtw, _, _, _ = accelerated_dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
                         print(temp_dtw)
                         dtw_batch += temp_dtw
                     else:
