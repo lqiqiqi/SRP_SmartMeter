@@ -199,9 +199,9 @@ class Tester(BaseTrain):
                 self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
             sample_snr = 0
-            # for sample in range(y_test.size()[0]):
-            #     sample_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
-            # snr += sample_snr
+            for sample in range(y_test.size()[0]):
+                sample_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
+            snr += sample_snr
 
             dtw_batch = 0
             # print(y_test.size())
@@ -220,12 +220,12 @@ class Tester(BaseTrain):
             #         else:
             #             break
 
-            for sample in range(y_test.size()[0]):
-                # temp_dtw, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
-                print(model_out_test[sample][-1].size())
-                temp_dtw = dtw(model_out_test[sample][-1], y_test[sample][-1])
-                print("flag{} sample{} dtw: {}".format(flag, sample, temp_dtw))
-                dtw_batch += temp_dtw
+            # for sample in range(y_test.size()[0]):
+            #     # temp_dtw, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
+            #     print(model_out_test[sample][-1].size())
+            #     temp_dtw = dtw(model_out_test[sample][-1], y_test[sample][-1])
+            #     print("flag{} sample{} dtw: {}".format(flag, sample, temp_dtw))
+            #     dtw_batch += temp_dtw
 
 
             # dtw_test += dtw_batch / ((len(y_test.size()[-1]) - 100 + 1)*self.config.test_batch_size)
