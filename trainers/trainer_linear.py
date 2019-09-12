@@ -81,11 +81,8 @@ class Tester(BaseTrain):
 
         # load dataset
         test_data_loader = self.data_test
-
-        self.model.eval()
-
-        if self.config.gpu_mode:
-            self.model.cuda()
+        
+        self.MSE_loss = nn.MSELoss()
 
         loss_test = 0
         dtw_test = 0
