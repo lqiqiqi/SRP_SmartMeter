@@ -68,7 +68,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1391" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="12956" />
+          <entry key="py" value="12959" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -76,7 +76,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1391" />
-          <entry key="Python" value="13152" />
+          <entry key="Python" value="13155" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -87,12 +87,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="219" column="107" selection-start-line="219" selection-start-column="107" selection-end-line="219" selection-end-column="107" />
+            <state relative-caret-position="396">
+              <caret line="237" column="51" selection-start-line="237" selection-start-column="51" selection-end-line="237" selection-end-column="51" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1568252928820" expanded="true" signature="379:2366" ph="..." />
-                <marker date="1568252928820" expanded="true" signature="2391:2396" ph="..." />
+                <marker date="1568253879517" expanded="true" signature="379:2366" ph="..." />
+                <marker date="1568253879517" expanded="true" signature="2391:2396" ph="..." />
               </folding>
             </state>
           </provider>
@@ -848,12 +848,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="219" column="107" selection-start-line="219" selection-start-column="107" selection-end-line="219" selection-end-column="107" />
+        <state relative-caret-position="396">
+          <caret line="237" column="51" selection-start-line="237" selection-start-column="51" selection-end-line="237" selection-end-column="51" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1568252928820" expanded="true" signature="379:2366" ph="..." />
-            <marker date="1568252928820" expanded="true" signature="2391:2396" ph="..." />
+            <marker date="1568253879517" expanded="true" signature="379:2366" ph="..." />
+            <marker date="1568253879517" expanded="true" signature="2391:2396" ph="..." />
           </folding>
         </state>
       </provider>

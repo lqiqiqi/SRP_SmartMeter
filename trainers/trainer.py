@@ -213,21 +213,21 @@ class Tester(BaseTrain):
 
             # print(y_test.size()) torch.Size([32, 1, 30000])
             # print(model_out_test.size()) torch.Size([32, 1, 30000])
-            for sample in range(y_test.size()[0]):
-                for i in range(0, y_test.size()[-1]):
-                    if i+100 <= y_test.size()[-1]:
-                        # temp_dtw, _, _, _ = dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
-                        temp_dtw = dtw(model_out_test[sample][-1][i:i + 100], y_test[sample][-1][i:i + 100])
-                        print("flag{} sample{} {}/{} dtw: {}".format(flag, sample, i,  y_test.size()[-1], temp_dtw))
-                        dtw_batch += temp_dtw
-                    else:
-                        break
-
             # for sample in range(y_test.size()[0]):
-            #     # temp_dtw, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
-            #     temp_dtw = dtw.distance(model_out_test[sample][-1], y_test[sample][-1])
-            #     print("flag{} sample{} dtw: {}".format(flag, sample, temp_dtw))
-            #     dtw_batch += temp_dtw
+            #     for i in range(0, y_test.size()[-1]):
+            #         if i+100 <= y_test.size()[-1]:
+            #             # temp_dtw, _, _, _ = dtw(model_out_test[sample][-1][i:i+100], y_test[sample][-1][i:i+100], dist=euclidean_norm)
+            #             temp_dtw = dtw(model_out_test[sample][-1][i:i + 100], y_test[sample][-1][i:i + 100])
+            #             print("flag{} sample{} {}/{} dtw: {}".format(flag, sample, i,  y_test.size()[-1], temp_dtw))
+            #             dtw_batch += temp_dtw
+            #         else:
+            #             break
+
+            for sample in range(y_test.size()[0]):
+                # temp_dtw, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
+                temp_dtw = dtw(model_out_test[sample][-1], y_test[sample][-1])
+                print("flag{} sample{} dtw: {}".format(flag, sample, temp_dtw))
+                dtw_batch += temp_dtw
 
 
             # dtw_test += dtw_batch / ((len(y_test.size()[-1]) - 100 + 1)*self.config.test_batch_size)
