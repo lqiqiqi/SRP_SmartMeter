@@ -610,10 +610,14 @@ avg_loss_log with original data:  56.53602600097656
 
 ![0910_2_train_test](../LQ_SRP_SmartMeter/pic/0910_2_train_test.PNG)
 
-average SNR:  11.793153934806663
+**average SNR:  11.793153934806663**
 avg_loss with original data:  tensor(36.0520, device='cuda:0')
 
-32samples dtw 3.0719233596348348
+average SNR:  11.793153931733588
+avg_loss with original data:  tensor(35.9867, device='cuda:0')
+**100fastdtw** avg_dtw_test with original data:  1667.1892600609751
+
+32samples 100dtw 3.0719233596348348
 
 ## 0910_3 scale100 mynet batchsize8
 
@@ -624,20 +628,16 @@ avg_loss_log with original data:  96.4037094116211
 
 
 
-average SNR:  2.190822482769241
+**average SNR:  2.190822482769241**
 avg_loss with original data:  tensor(96.6952, device='cuda:0')
 
 
 
 ## temp
 
-terminal5 s16 10to100
-
 terminal1 100 to 1000
 
 terminal6  0910_3 10to1000
-
-terminal4 0910_2 整个去测fastdtw
 
 ## 0911_1 10to100 mynet batchsize8 s8
 
