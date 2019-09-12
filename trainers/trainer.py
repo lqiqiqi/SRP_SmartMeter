@@ -8,7 +8,8 @@ from torch.autograd import Variable
 from scipy.spatial.distance import cdist
 from fastdtw import fastdtw
 # from tslearn.metrics import dtw
-from dtw import dtw
+from dtaidistance import dtw
+# from dtw import dtw
 from base.base_train import BaseTrain
 from utils import utils
 
@@ -222,7 +223,8 @@ class Tester(BaseTrain):
             #             break
 
             for sample in range(y_test.size()[0]):
-                temp_dtw, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
+                # temp_dtw, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
+                temp_dtw = dtw.distance(model_out_test[sample][-1], y_test[sample][-1])
                 print("flag{} sample{} dtw: {}".format(flag, sample, temp_dtw))
                 dtw_batch += temp_dtw
 
