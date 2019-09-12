@@ -195,20 +195,17 @@ class Tester(BaseTrain):
             # prediction
             model_out_test = self.model(x_test)
 
-            # out_postlog = torch.div(torch.exp(model_out_test * math.log(100)) - 1.0, 1000.)
-            #
             loss_test += torch.sqrt(
                 self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
-
-            sample_snr = 0
-            for sample in range(y_test.size()[0]):
-                sample_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
-
-            snr += sample_snr
+            #
+            # for sample in range(y_test.size()[0]):
+            #     sample_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
+            # snr += sample_snr
 
             dtw_batch = 0
             # print(y_test.size())
             print(flag)
+            sample_snr = 0
             flag += 1
 
             # print(y_test.size()) torch.Size([32, 1, 30000])
@@ -225,6 +222,7 @@ class Tester(BaseTrain):
 
             for sample in range(y_test.size()[0]):
                 # temp_dtw, _ = fastdtw(model_out_test[sample][-1], y_test[sample][-1], dist=euclidean_norm)
+                print(model_out_test[sample][-1].size())
                 temp_dtw = dtw(model_out_test[sample][-1], y_test[sample][-1])
                 print("flag{} sample{} dtw: {}".format(flag, sample, temp_dtw))
                 dtw_batch += temp_dtw
