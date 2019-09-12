@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trainers/trainer.py" beforeDir="false" afterPath="$PROJECT_DIR$/trainers/trainer.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,7 +68,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1391" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="12954" />
+          <entry key="py" value="12956" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -77,7 +76,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1391" />
-          <entry key="Python" value="13150" />
+          <entry key="Python" value="13152" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -88,12 +87,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="225" column="87" selection-start-line="225" selection-start-column="87" selection-end-line="225" selection-end-column="87" />
+            <state relative-caret-position="176">
+              <caret line="219" column="107" selection-start-line="219" selection-start-column="107" selection-end-line="219" selection-end-column="107" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
-                <marker date="1568252143365" expanded="true" signature="348:2335" ph="..." />
-                <marker date="1568252143365" expanded="true" signature="2360:2365" ph="..." />
+                <marker date="1568252928820" expanded="true" signature="379:2366" ph="..." />
+                <marker date="1568252928820" expanded="true" signature="2391:2396" ph="..." />
               </folding>
             </state>
           </provider>
@@ -128,10 +127,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
+            <state relative-caret-position="-3406">
+              <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="31" />
               <folding>
-                <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#474#549#0" expanded="true" />
                 <element signature="e#586#5144#0" expanded="true" />
                 <element signature="e#5204#6117#0" expanded="true" />
@@ -797,20 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#474#549#0" expanded="true" />
-            <element signature="e#586#5144#0" expanded="true" />
-            <element signature="e#5204#6117#0" expanded="true" />
-            <element signature="e#7575#8428#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/model_bilinear.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -849,14 +833,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3406">
+          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#474#549#0" expanded="true" />
+            <element signature="e#586#5144#0" expanded="true" />
+            <element signature="e#5204#6117#0" expanded="true" />
+            <element signature="e#7575#8428#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="225" column="87" selection-start-line="225" selection-start-column="87" selection-end-line="225" selection-end-column="87" />
+        <state relative-caret-position="176">
+          <caret line="219" column="107" selection-start-line="219" selection-start-column="107" selection-end-line="219" selection-end-column="107" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
-            <marker date="1568252143365" expanded="true" signature="348:2335" ph="..." />
-            <marker date="1568252143365" expanded="true" signature="2360:2365" ph="..." />
+            <marker date="1568252928820" expanded="true" signature="379:2366" ph="..." />
+            <marker date="1568252928820" expanded="true" signature="2391:2396" ph="..." />
           </folding>
         </state>
       </provider>
