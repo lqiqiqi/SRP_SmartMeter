@@ -655,6 +655,16 @@ avg_loss_log with original data:  94.9924087524414
 avg_loss:  92.810684
 avg_loss_log with original data:  94.58523559570312
 
+## linear interpolation 100to1000
+
+average SNR:  0.0928077489481075
+avg_loss with original data:  tensor(123.7530, device='cuda:0')
+
+## linear interpolation 10to1000
+
+average SNR:  0.08965766130965715
+avg_loss with original data:  tensor(122.7640, device='cuda:0')
+
 
 
 # 注意事项
