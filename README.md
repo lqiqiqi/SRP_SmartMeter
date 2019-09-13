@@ -604,6 +604,11 @@ batchsize 大时需要更多epoch才能达到小batchsize的效果
 avg_loss:  53.076214
 avg_loss_log with original data:  56.53602600097656
 
+
+
+**average SNR:  9.602496792892103**
+**avg_loss with original data:  tensor(56.7189, device='cuda:0')**
+
 ## 0910_2 scale10 mynet batchsize8
 
 
@@ -665,7 +670,11 @@ avg_loss with original data:  tensor(123.7530, device='cuda:0')
 average SNR:  0.08965766130965715
 avg_loss with original data:  tensor(122.7640, device='cuda:0')
 
+## temp
 
+4 liunet snr
+
+5 liu 10to1000
 
 # 注意事项
 

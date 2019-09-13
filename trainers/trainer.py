@@ -201,6 +201,7 @@ class Tester(BaseTrain):
             sample_snr = 0
             for sample in range(y_test.size()[0]):
                 sample_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
+                print(sample_snr)
             snr += sample_snr
 
             dtw_batch = 0
@@ -233,7 +234,7 @@ class Tester(BaseTrain):
             # dtw_test += dtw_one_batch / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1)
             # # print(dtw_one_sample / (len(y_test.squeeze(0).squeeze(0)) - 100 + 1))
             dtw_test += dtw_batch / (300*self.config.test_batch_size)
-            print(dtw_batch / (300*self.config.test_batch_size))
+            # print(dtw_batch / (300*self.config.test_batch_size))
 
 
         snr_avg = snr / 2000
