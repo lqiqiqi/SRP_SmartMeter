@@ -684,6 +684,23 @@ terminal4 0914_1 scale10
 
 terminal5 0914_2 scale100
 
+terminal7 0914_3 10to100
+
+## bicubic scale10 0914_1
+
+average SNR:  0.09291463761178022
+avg_loss with original data:  tensor(123.0696)
+
+## bicubic scale100 0914_2
+
+average SNR:  0.08995502638316355
+avg_loss with original data:  tensor(123.4973)
+
+## bicubic 10to100 0914_3
+
+average SNR:  0.09325874421487514
+avg_loss with original data:  tensor(123.6413)
+
 
 
 # 注意事项
