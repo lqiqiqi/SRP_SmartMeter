@@ -158,8 +158,6 @@ class Tester(BaseTrain):
         self.load_model()
         # self.load_spec_model()
 
-        # self.model.load_state_dict(torch.load('SRPResNet_100-1000_64ndf.pth'))
-
         # Test
         print('Test is started.')
 
