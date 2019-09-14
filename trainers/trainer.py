@@ -277,7 +277,7 @@ class Tester(BaseTrain):
             #     namekey = k[7:]  # remove `module.`
             #     new_state_dict[namekey] = v
             # self.model.load_state_dict(new_state_dict)
-            self.model.load_state_dict(state_dict)
+            self.model.load_state_dict(state_dict, map_location=torch.device('cpu'))
             print('Trained generator model is loaded.')
             return True
         else:
