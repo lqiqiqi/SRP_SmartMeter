@@ -12,7 +12,7 @@
   "save_dir": "../saving_model",
   "lr": 0.0001,
   "gpu_mode": true,
-  "load_model": true,
+  "load_model": false,
   "m": 13,
   "d":56,
   "s":16,
