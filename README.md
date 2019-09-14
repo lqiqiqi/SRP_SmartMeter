@@ -670,11 +670,21 @@ avg_loss with original data:  tensor(123.7530, device='cuda:0')
 average SNR:  0.08965766130965715
 avg_loss with original data:  tensor(122.7640, device='cuda:0')
 
-## temp
+## 0912_2: 10to1000 liunet batchsize8 
 
-4 liunet snr
 
-5 liu 10to1000
+
+![0912_2_train_test](../LQ_SRP_SmartMeter/pic/0912_2_train_test.PNG)
+
+
+
+## temp: 
+
+terminal4 0914_1 scale10
+
+terminal5 0914_2 scale100
+
+
 
 # 注意事项
 

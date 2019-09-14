@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/models/model_bicubic.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/model_bicubic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configs/0914_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_loader/data_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_loader/data_generator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,11 +49,11 @@
         <counts>
           <entry key="0805_fsrcnn_resnet_xavier" value="1" />
           <entry key="0813_2" value="1" />
-          <entry key="json" value="173" />
+          <entry key="json" value="174" />
           <entry key="main_sacred" value="1" />
           <entry key="model_CARN" value="1" />
           <entry key="model_VDSR" value="1" />
-          <entry key="py" value="217" />
+          <entry key="py" value="218" />
           <entry key="sDTW" value="1" />
           <entry key="trianer_multiGPU" value="1" />
           <entry key="yml" value="4" />
@@ -58,15 +61,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="175" />
-          <entry key="Python" value="222" />
+          <entry key="JSON" value="176" />
+          <entry key="Python" value="223" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="27" />
-          <entry key="json" value="1441" />
+          <entry key="json" value="1461" />
           <entry key="model_VDSR" value="122" />
           <entry key="py" value="14062" />
           <entry key="sDTW" value="47" />
@@ -75,7 +78,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="1441" />
+          <entry key="JSON" value="1461" />
           <entry key="Python" value="14258" />
           <entry key="YAML" value="82" />
         </counts>
@@ -97,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/model_bicubic.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
                 <element signature="e#187#371#0" expanded="true" />
@@ -113,12 +116,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer_linear.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1507">
+            <state relative-caret-position="2880">
               <caret line="154" column="63" selection-start-line="154" selection-start-column="63" selection-end-line="154" selection-end-column="63" />
               <folding>
+                <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#5916#6774#0" expanded="true" />
                 <element signature="e#6812#7605#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="68" column="74" lean-forward="true" selection-start-line="68" selection-start-column="74" selection-end-line="68" selection-end-column="74" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#227#438#0" expanded="true" />
+                <element signature="e#459#806#0" expanded="true" />
+                <element signature="e#888#1043#0" expanded="true" />
+                <marker date="1568432463773" expanded="false" signature="1874:1875" ph="..." />
+                <marker date="1568432463773" expanded="true" signature="3007:3073" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/configs/0914_3.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -149,45 +179,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
               <caret line="14" column="17" selection-end-line="19" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configs/0914_1.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/configs/0914_2.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/base_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/base/base_networks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-              <folding>
-                <element signature="e#1435#2403#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -248,7 +239,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/search_space.json" />
         <option value="$PROJECT_DIR$/main_nni.py" />
         <option value="$PROJECT_DIR$/base/base_networks.py" />
         <option value="$PROJECT_DIR$/utils/config.py" />
@@ -285,7 +275,6 @@
         <option value="$PROJECT_DIR$/configs/0910_3.json" />
         <option value="$PROJECT_DIR$/configs/0911_1.json" />
         <option value="$PROJECT_DIR$/configs/0911_2.json" />
-        <option value="$PROJECT_DIR$/data_loader/data_generator.py" />
         <option value="$PROJECT_DIR$/configs/0910_2.json" />
         <option value="$PROJECT_DIR$/models/model_linear.py" />
         <option value="$PROJECT_DIR$/configs/0912_1.json" />
@@ -295,10 +284,12 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/trainers/trainer.py" />
         <option value="$PROJECT_DIR$/models/model_audionet.py" />
-        <option value="$PROJECT_DIR$/configs/0914_1.json" />
-        <option value="$PROJECT_DIR$/configs/0914_2.json" />
         <option value="$PROJECT_DIR$/main_test.py" />
         <option value="$PROJECT_DIR$/models/model_bicubic.py" />
+        <option value="$PROJECT_DIR$/configs/0914_1.json" />
+        <option value="$PROJECT_DIR$/configs/0914_2.json" />
+        <option value="$PROJECT_DIR$/data_loader/data_generator.py" />
+        <option value="$PROJECT_DIR$/configs/0914_3.json" />
       </list>
     </option>
   </component>
@@ -511,13 +502,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/configs/0904_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="20" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0904_2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -772,21 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="65" column="75" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#227#438#0" expanded="true" />
-            <element signature="e#459#806#0" expanded="true" />
-            <element signature="e#888#1043#0" expanded="true" />
-            <marker date="1568183585494" expanded="false" signature="1874:1875" ph="..." />
-            <marker date="1568183585494" expanded="true" signature="3009:3075" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -836,52 +805,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0912_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="17" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0912_2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" column="44" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0914_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0914_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
-          <folding>
-            <element signature="e#369#1776#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer_linear.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1507">
-          <caret line="154" column="63" selection-start-line="154" selection-start-column="63" selection-end-line="154" selection-end-column="63" />
-          <folding>
-            <element signature="e#5916#6774#0" expanded="true" />
-            <element signature="e#6812#7605#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,14 +823,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0914_2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/model_bicubic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+          <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
             <element signature="e#187#371#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer_linear.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="154" column="63" selection-start-line="154" selection-start-column="63" selection-end-line="154" selection-end-column="63" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#5916#6774#0" expanded="true" />
+            <element signature="e#6812#7605#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="42" lean-forward="true" selection-start-line="3" selection-start-column="42" selection-end-line="3" selection-end-column="42" />
+          <folding>
+            <element signature="e#369#1776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="68" column="74" lean-forward="true" selection-start-line="68" selection-start-column="74" selection-end-line="68" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#227#438#0" expanded="true" />
+            <element signature="e#459#806#0" expanded="true" />
+            <element signature="e#888#1043#0" expanded="true" />
+            <marker date="1568432463773" expanded="false" signature="1874:1875" ph="..." />
+            <marker date="1568432463773" expanded="true" signature="3007:3073" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0914_1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="22" lean-forward="true" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0912_1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="17" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/configs/0914_3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
         </state>
       </provider>
     </entry>

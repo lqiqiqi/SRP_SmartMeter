@@ -66,7 +66,7 @@ class TxtDataset(Dataset):  # 这是一个Dataset子类
         highdata = torch.from_numpy(highdata_raw).type('torch.FloatTensor')
 
         # 如果highdata是100Hz的话，需要先把highdata降到100
-        # highdata = torch.take(highdata, torch.arange(0, highdata.size()[1], 10).long()).unsqueeze(0)
+        highdata = torch.take(highdata, torch.arange(0, highdata.size()[1], 10).long()).unsqueeze(0)
 
         highdata_log = torch.div(torch.log(torch.mul(highdata, 1000) + 1), math.log(100))
 
