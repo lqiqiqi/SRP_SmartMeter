@@ -9,11 +9,11 @@ class Net(torch.nn.Module, BaseModel):
         super(Net, self).__init__() # super只能init第一个父类
         BaseModel.__init__(self, config)
 
-        self.upsample = nn.Upsample(scale_factor=self.config.scale_factor, mode='bicubic')
+        self.upsample = nn.Upsample(scale_factor=(1, self.config.scale_factor), mode='bicubic')
 
 
     def forward(self, x):
-        x = x.unsqueeze(1).unsqueeze(1)
+        x = x.unsqueeze(1)
         out = self.upsample(x)
-
+        out = out.squeeze(1)
         return out
