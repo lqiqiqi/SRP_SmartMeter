@@ -68,7 +68,7 @@
           <entry key="Python Console" value="27" />
           <entry key="json" value="1473" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="14088" />
+          <entry key="py" value="14089" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
@@ -76,7 +76,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="1473" />
-          <entry key="Python" value="14284" />
+          <entry key="Python" value="14285" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -84,58 +84,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="279" column="83" selection-start-line="279" selection-start-column="83" selection-end-line="279" selection-end-column="83" />
+            <state relative-caret-position="161">
+              <caret line="272" column="80" selection-start-line="272" selection-start-column="80" selection-end-line="272" selection-end-column="80" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#384#598#0" expanded="true" />
                 <element signature="e#600#647#0" />
                 <element signature="e#5240#8731#0" expanded="true" />
-                <marker date="1568435352813" expanded="true" signature="379:2366" ph="..." />
-                <marker date="1568435352813" expanded="true" signature="2391:2396" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/model_linear.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#187#365#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/model_bicubic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="28" lean-forward="true" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#187#371#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/trainers/trainer_linear.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2880">
-              <caret line="154" column="63" selection-start-line="154" selection-start-column="63" selection-end-line="154" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-                <element signature="e#5916#6774#0" expanded="true" />
-                <element signature="e#6812#7605#0" expanded="true" />
+                <marker date="1568435561586" expanded="true" signature="379:2366" ph="..." />
+                <marker date="1568435561586" expanded="true" signature="2391:2396" ph="..." />
               </folding>
             </state>
           </provider>
@@ -144,13 +104,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="68" column="100" lean-forward="true" selection-start-line="68" selection-start-column="100" selection-end-line="68" selection-end-column="100" />
+            <state relative-caret-position="421">
+              <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
                 <element signature="e#227#438#0" expanded="true" />
                 <element signature="e#459#806#0" expanded="true" />
                 <element signature="e#888#1043#0" expanded="true" />
+                <element signature="e#1883#2885#0" expanded="true" />
                 <marker date="1568434111376" expanded="false" signature="1874:1875" ph="..." />
                 <marker date="1568434111376" expanded="true" signature="3007:3073" ph="..." />
               </folding>
@@ -185,7 +146,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -865,21 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="68" column="100" lean-forward="true" selection-start-line="68" selection-start-column="100" selection-end-line="68" selection-end-column="100" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#227#438#0" expanded="true" />
-            <element signature="e#459#806#0" expanded="true" />
-            <element signature="e#888#1043#0" expanded="true" />
-            <marker date="1568434111376" expanded="false" signature="1874:1875" ph="..." />
-            <marker date="1568434111376" expanded="true" signature="3007:3073" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0914_3.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -898,27 +844,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="279" column="83" selection-start-line="279" selection-start-column="83" selection-end-line="279" selection-end-column="83" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-            <element signature="e#384#598#0" expanded="true" />
-            <element signature="e#600#647#0" />
-            <element signature="e#5240#8731#0" expanded="true" />
-            <marker date="1568435352813" expanded="true" signature="379:2366" ph="..." />
-            <marker date="1568435352813" expanded="true" signature="2391:2396" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
           <folding>
             <element signature="e#369#1776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_loader/data_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="87" column="32" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#227#438#0" expanded="true" />
+            <element signature="e#459#806#0" expanded="true" />
+            <element signature="e#888#1043#0" expanded="true" />
+            <element signature="e#1883#2885#0" expanded="true" />
+            <marker date="1568434111376" expanded="false" signature="1874:1875" ph="..." />
+            <marker date="1568434111376" expanded="true" signature="3007:3073" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="272" column="80" selection-start-line="272" selection-start-column="80" selection-end-line="272" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#384#598#0" expanded="true" />
+            <element signature="e#600#647#0" />
+            <element signature="e#5240#8731#0" expanded="true" />
+            <marker date="1568435561586" expanded="true" signature="379:2366" ph="..." />
+            <marker date="1568435561586" expanded="true" signature="2391:2396" ph="..." />
           </folding>
         </state>
       </provider>
