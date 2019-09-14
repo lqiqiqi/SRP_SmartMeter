@@ -64,8 +64,8 @@ class Net(torch.nn.Module, BaseModel):
                 nn.LeakyReLU(0.2)
             ])
 
-        self.conv_output = nn.Conv1d(in_channels=self.config.num_channels, out_channels=1, kernel_size=5, stride=1, padding=2, bias=False)
-        self.final_relu = nn.ReLU()
+        # self.conv_output = nn.Conv1d(in_channels=self.config.num_channels, out_channels=1, kernel_size=5, stride=1, padding=2, bias=False)
+        # self.final_relu = nn.ReLU()
 
 
     def forward(self, x):
@@ -75,7 +75,7 @@ class Net(torch.nn.Module, BaseModel):
         out = self.mid_part(out)
         out = torch.add(out, residual)
         out = self.upsample(out)
-        out = self.final_relu(self.conv_output(out))
+        # out = self.final_relu(self.conv_output(out))
         return out
 
     def weight_init(self):
