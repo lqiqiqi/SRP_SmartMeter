@@ -57,7 +57,7 @@ class Trainer(BaseTrain):
         avg_loss_log_test = []
         # step = 0
 
-        es = EarlyStopping(patience=30)
+        es = EarlyStopping(patience=50)
 
         self.model.train()  # It just sets the training mode.model.eval() to set testing mode
         for epoch in range(self.config.num_epochs):
