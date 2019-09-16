@@ -18,8 +18,8 @@ class Net(torch.nn.Module):
 
         # Deconvolution
         # TODO stride, padding, outpadding需要根据scale修改 n_out=(n_in−1)×S−2P+F
-        self.last_part = nn.ConvTranspose1d(256, 1, kernel_size=7, stride=10, padding=1,
-                                            output_padding=1)
+        self.last_part = nn.ConvTranspose1d(256, 1, kernel_size=7, stride=10, padding=0,
+                                            output_padding=3)
 
     def forward(self, x):
         out = self.first_layer(x)
