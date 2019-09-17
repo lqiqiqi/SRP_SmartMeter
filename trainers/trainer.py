@@ -17,7 +17,7 @@ from utils import utils
 def SNR(out, ground):
     sum = 0
     for i in range(len(ground)):
-        sum += ground[i] ** 2
+        sum += out[i] ** 2
 
     noise_sum = 0
     for j in range(len(ground)):

@@ -698,7 +698,10 @@ avg_loss with original data:  tensor(123.4973)
 average SNR:  0.09325874421487514
 avg_loss with original data:  tensor(123.6413)
 
+# 0914_5: scale10 endupsamp
 
+avg_loss:  41.499355
+avg_loss_log with original data:  43.61781692504883
 
 
 
