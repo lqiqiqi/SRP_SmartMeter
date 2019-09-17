@@ -270,7 +270,7 @@ class Tester(BaseTrain):
 
         model_name = model_dir + '/' + self.config.model_name + '_param.pkl'  # get final model
         if os.path.exists(model_name):
-            state_dict = torch.load(model_name, map_location=torch.device('cpu'))
+            state_dict = torch.load(model_name)
             from collections import OrderedDict
             new_state_dict = OrderedDict()
             for k, v in state_dict.items():
