@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73714d59-1e41-40c4-afac-d269c26ca91f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configs/0910_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/configs/0910_2.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,11 +47,11 @@
         <counts>
           <entry key="0805_fsrcnn_resnet_xavier" value="1" />
           <entry key="0813_2" value="1" />
-          <entry key="json" value="179" />
+          <entry key="json" value="180" />
           <entry key="main_sacred" value="1" />
           <entry key="model_CARN" value="1" />
           <entry key="model_VDSR" value="1" />
-          <entry key="py" value="231" />
+          <entry key="py" value="232" />
           <entry key="sDTW" value="1" />
           <entry key="trianer_multiGPU" value="1" />
           <entry key="yml" value="4" />
@@ -60,25 +59,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JSON" value="181" />
-          <entry key="Python" value="236" />
+          <entry key="JSON" value="182" />
+          <entry key="Python" value="237" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="27" />
-          <entry key="json" value="1505" />
+          <entry key="json" value="1509" />
           <entry key="model_VDSR" value="122" />
-          <entry key="py" value="14305" />
+          <entry key="py" value="14308" />
           <entry key="sDTW" value="47" />
           <entry key="yml" value="82" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="1505" />
-          <entry key="Python" value="14501" />
+          <entry key="JSON" value="1509" />
+          <entry key="Python" value="14504" />
           <entry key="YAML" value="82" />
         </counts>
       </usages-collector>
@@ -155,14 +154,32 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/configs/0910_2.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1397">
-              <caret line="267" column="27" lean-forward="true" selection-start-line="267" selection-start-column="27" selection-end-line="267" selection-end-column="27" />
+            <state relative-caret-position="241">
+              <caret line="276" column="51" lean-forward="true" selection-start-line="276" selection-start-column="51" selection-end-line="276" selection-end-column="51" />
               <folding>
                 <element signature="e#384#598#0" expanded="true" />
-                <element signature="e#9668#10548#0" expanded="true" />
+                <element signature="e#5240#8731#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -270,7 +287,6 @@
         <option value="$PROJECT_DIR$/configs/0910_1.json" />
         <option value="$PROJECT_DIR$/configs/0910_3.json" />
         <option value="$PROJECT_DIR$/configs/0911_2.json" />
-        <option value="$PROJECT_DIR$/configs/0910_2.json" />
         <option value="$PROJECT_DIR$/models/model_linear.py" />
         <option value="$PROJECT_DIR$/configs/0912_1.json" />
         <option value="$PROJECT_DIR$/trainers/trainer_linear.py" />
@@ -281,9 +297,7 @@
         <option value="$PROJECT_DIR$/configs/0914_2.json" />
         <option value="$PROJECT_DIR$/configs/0914_3.json" />
         <option value="$PROJECT_DIR$/configs/0914_4.json" />
-        <option value="$PROJECT_DIR$/main_test.py" />
         <option value="$PROJECT_DIR$/configs/0911_1.json" />
-        <option value="$PROJECT_DIR$/trainers/trainer.py" />
         <option value="$PROJECT_DIR$/models/model_bilinear.py" />
         <option value="$PROJECT_DIR$/models/model_endupsamp.py" />
         <option value="$PROJECT_DIR$/data_loader/data_generator.py" />
@@ -292,6 +306,9 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/models/model_SRCNN.py" />
         <option value="$PROJECT_DIR$/trainers/trainer_origin_target.py" />
+        <option value="$PROJECT_DIR$/main_test.py" />
+        <option value="$PROJECT_DIR$/trainers/trainer.py" />
+        <option value="$PROJECT_DIR$/configs/0910_2.json" />
       </list>
     </option>
   </component>
@@ -301,7 +318,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="765" />
@@ -452,7 +469,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09304085" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17019667" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -656,13 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/configs/0910_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/configs/0910_3.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -748,13 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/model_bicubic.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -773,6 +776,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="63" selection-start-line="63" selection-end-line="63" />
+          <folding>
+            <element signature="e#1435#2403#0" expanded="true" />
+            <element signature="e#2440#2831#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -787,6 +794,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="66" column="138" lean-forward="true" selection-start-line="65" selection-start-column="8" selection-end-line="66" selection-end-column="138" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#3813#4018#0" expanded="true" />
+            <element signature="e#4055#4680#0" expanded="true" />
+            <element signature="e#4852#5289#0" expanded="true" />
+            <element signature="e#5518#5630#0" expanded="true" />
+            <element signature="e#5666#5699#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -849,6 +864,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="276" column="51" lean-forward="true" selection-start-line="276" selection-start-column="51" selection-end-line="276" selection-end-column="51" />
+          <folding>
+            <element signature="e#384#598#0" expanded="true" />
+            <element signature="e#5240#8731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/trainers/trainer_origin_target.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -862,14 +895,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/trainers/trainer.py">
+    <entry file="file://$PROJECT_DIR$/configs/0910_2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1397">
-          <caret line="267" column="27" lean-forward="true" selection-start-line="267" selection-start-column="27" selection-end-line="267" selection-end-column="27" />
-          <folding>
-            <element signature="e#384#598#0" expanded="true" />
-            <element signature="e#9668#10548#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
