@@ -16,20 +16,6 @@ def load_data(filepath):
         data = np.array(data)
     return data
 
-def shuffle():
-    validation_split = 0.125
-    random_seed = 40 # 本来是42
-    dataset_size = 16000
-
-    indices = list(range(dataset_size))
-    split = int(np.floor(validation_split * dataset_size))
-
-    np.random.seed(random_seed)
-    np.random.shuffle(indices)
-    train_indices, val_indices = indices[split:], indices[:split]
-
-    return train_indices, val_indices
-
 def sequence_random_crop(sequence: object, sequence_len: object) -> object:
     # print(len(sequence), sequence_len)
     start = np.random.randint(0, len(sequence) - sequence_len)
@@ -45,17 +31,10 @@ def sequence_crop(sequence, sequence_len, start):
 class TxtDataset(Dataset):  # 这是一个Dataset子类
     def __init__(self, config, dataset):
         self.config = config
-        self.filenames_ = []
-        for file in os.listdir(self.config.data_dir):
-            self.filenames_.append(os.path.join(self.config.data_dir, file))
-        if dataset == 'train':
-            indices, _ = shuffle()
-        elif dataset == 'test':
-            _, indices = shuffle()
-        elif dataset == 'debug':
-            _, indices = shuffle()
-            indices = indices[:200]
-        self.filenames = [self.filenames_[i] for i in indices]
+        self.filenames = []
+        for file in os.listdir('../LQ_SRP_SmartMeter/data'):
+            self.filenames.append(os.path.join('../LQ_SRP_SmartMeter/data', file))
+        self.filenames = sorted(self.filenames, key=lambda x:x[:-4])
 
     def __getitem__(self, index):
         # highdata_raw二维，经过dataloader输出为三维，与conv层match
