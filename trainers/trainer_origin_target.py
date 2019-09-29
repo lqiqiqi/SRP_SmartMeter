@@ -1,6 +1,6 @@
 import os
 import math
-# import nni
+import nni
 import torch
 import numpy as np
 import torch.nn as nn
@@ -39,7 +39,7 @@ class Trainer(BaseTrain):
         self.momentum = 0.9
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.config.lr, weight_decay=1.0)
 
-        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=30, gamma=0.1)
+        scheduler = lr_scheduler.StepLR(self.optimizer, step_size=100, gamma=0.1)
         # scheduler = lr_scheduler.ExponentialLR(self.optimizer, gamma=0.9)
 
         print('---------- Networks architecture -------------')
@@ -75,19 +75,13 @@ class Trainer(BaseTrain):
                 # scale是10的话，x_.shape is (batchsize, 1, 300)
                 # scale是100的话，x_.shape is (batchsize, 1, 30)
 
-                chop_num = 1
-                slice = int(30000 / (self.config.scale_factor * chop_num)) # 改了最后的数字看要切成几份
-                slice2 = int(30000 / chop_num)
-
-                for i in range(chop_num):
-                    x_1 = x_[:, :, slice*i:slice*(i+1)]
-                    # update network
-                    self.optimizer.zero_grad()
-                    model_out = self.model(x_1)
-                    loss = torch.sqrt(self.MSE_loss(model_out, y_[:, :, slice2*i:slice2*(i+1)]))
-                    loss.backward()  # 结果得到是tensor
-                    self.optimizer.step()
-                    epoch_loss += loss
+                # update network
+                self.optimizer.zero_grad()
+                model_out = self.model(x_)
+                loss = torch.sqrt(self.MSE_loss(model_out, y_))
+                loss.backward()  # 结果得到是tensor
+                self.optimizer.step()
+                epoch_loss += loss
 
                 # 注意：len(train_data_loader) 是 # train samples/batchsize，有多少个train_data_loader即需要iter多少个batch
                 print("Epoch: [%2d] [%4d/%4d] loss: %.8f" % ((epoch + 1), (iter + 1), len(train_data_loader), loss))
@@ -111,8 +105,8 @@ class Trainer(BaseTrain):
 
             avg_loss_test.append(float(epoch_loss_test))
 
-            # nni.report_intermediate_result(
-            #     {"default": float(epoch_loss_test), "epoch_loss": float(avg_loss[-1])})
+            #nni.report_intermediate_result(
+             #    {"default": float(epoch_loss_test), "epoch_loss": float(avg_loss[-1])})
 
             # if es.step(avg_loss[-1]):
             #     self.save_model(epoch=None)
@@ -122,7 +116,7 @@ class Trainer(BaseTrain):
             if epoch % 10 == 0 and epoch != 0:
                 utils.plot_loss(self.config, [avg_loss, avg_loss_test])
 
-        # nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
+        #nni.report_final_result({"default": float(avg_loss_test[-1]), "epoch_loss": float(avg_loss[-1])})
 
         # Plot avg. loss
         utils.plot_loss(self.config, [avg_loss, avg_loss_test])

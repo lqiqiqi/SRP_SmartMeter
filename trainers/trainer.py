@@ -6,24 +6,42 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.autograd import Variable
 from scipy.spatial.distance import cdist
-from fastdtw import fastdtw
-from tslearn.metrics import dtw
+import librosa 
+# from fastdtw import fastdtw
+# from tslearn.metrics import dtw
 # from dtaidistance import dtw
 # from dtw import dtw
+
 from base.base_train import BaseTrain
 from utils import utils
 
 
 def SNR(out, ground):
+    print('out:', out[:100])
+    print('groung:', ground[:100])
+         
     sum = 0
     for i in range(len(ground)):
-        sum += out[i] ** 2
+        sum += ground[i] ** 2
 
     noise_sum = 0
     for j in range(len(ground)):
         noise_sum += (ground[j] - out[j]) ** 2
 
     return 10 * math.log(sum/noise_sum ,10)
+
+def LSD(out, ground):
+    out_stft = librosa.core.stft(out)
+    ground_stft = librosa.core.stft(ground)
+
+    true_X = np.log10(np.abs(ground_stft)**2)
+    ds_X = np.log10(np.abs(out_stft)**2)
+
+    ds_X_diff_squared = (true_X - ds_X)**2
+    ds_lsd = np.mean(np.sqrt(np.mean(ds_X_diff_squared, axis=0)))
+
+    return ds_lsd
+    
 
 # def dtw(x, y, dist, warp=1, w=np.inf, s=1.0):
 #     """
@@ -109,7 +127,7 @@ class Trainer(BaseTrain):
         for epoch in range(self.config.num_epochs):
 
             epoch_loss = 0
-            for iter, (input, target, _) in enumerate(train_data_loader):
+            for iter, (input, _, target) in enumerate(train_data_loader):
                 # input data (low resolution image)
                 if self.config.gpu_mode:
                     x_ = Variable(input.cuda())
@@ -175,6 +193,7 @@ class Tester(BaseTrain):
         loss_test = 0
         dtw_test = 0
         snr = 0
+        lsd = 0
         flag = 0
 
         euclidean_norm = lambda x, y: np.abs(x - y)
@@ -193,14 +212,16 @@ class Tester(BaseTrain):
             # prediction
             model_out_test = self.model(x_test)
 
-            loss_test += torch.sqrt(
-                self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
+            # loss_test += torch.sqrt(
+            #    self.MSE_loss(model_out_test, y_test))  # RMSE for re-log result and original meter data
 
             sample_snr = 0
+            sample_lsd = 0
             for sample in range(y_test.size()[0]):
                 sample_snr += SNR(model_out_test[sample][-1], y_test[sample][-1])
-                print(sample_snr)
-            snr += sample_snr
+                sample_lsd += LSD(np.array(model_out_test[sample][-1]), np.array(y_test[sample][-1]))
+            snr += sample_snr / y_test.size()[0]
+            lsd += sample_lsd / y_test.size()[0]
 
             dtw_batch = 0
             # print(y_test.size())
@@ -235,11 +256,13 @@ class Tester(BaseTrain):
             # print(dtw_batch / (300*self.config.test_batch_size))
 
 
-        snr_avg = snr / 2000
+        snr_avg = snr / len(test_data_loader)
+        lsd_avg = lsd / len(test_data_loader)
         avg_loss = loss_test / len(test_data_loader)
         avg_dtw_test = dtw_test / len(test_data_loader)
 
         print("average SNR: ", snr_avg)
+        print('average LSD: ', lsd_avg)
         print('avg_loss with original data: ', avg_loss)
         print('avg_dtw_test with original data: ', avg_dtw_test)
         print('Test is finished')
